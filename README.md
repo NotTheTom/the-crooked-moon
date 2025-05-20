@@ -1,2 +1,2 @@
 # the-crooked-moon
-The Crooked Moon Character Options for Aurora Character Builder
+An implementation of The Crooked Moon for [Aurora Builder](https://aurorabuilder.com).
