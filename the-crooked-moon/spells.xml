@@ -3,7 +3,7 @@
 	<info>
 		<name>Spells</name>
 		<update version="0.0.1">
-			<file name="spells.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/spells.xml" />
+			<file name="spells.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/spells.xml" />
 		</update>
 	</info>
 

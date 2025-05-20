@@ -6,3 +6,6 @@
 			<file name="the-crooked-moon.index" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon.index" />
 		</update>
 	</info>
+	<files>
+		<file name="spells.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/spells.xml" />
+	</files>
