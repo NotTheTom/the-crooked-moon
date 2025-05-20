@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <update version="0.0.1">
+            <file name="source.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/source.xml" />
+        </update>
+    </info>
+    <element name="The Crooked Moon" type="Source" source="Core" id="ID_LOA_THE_CROOKED_MOON">
+        <description>
+            <p>You are about to embark upon a journey into the unknown, where uncanny folk with strange superstitions revere the Old Ways, and creatures of folklore lurk on the isolated fringes of civilization. The Crooked Moon is a tome intended to equip you with all the tools you’ll need to bring Folk Horror to 5E and turn your game into a terrifying tale told among friends.</p>
+        </description>
+        <setters>
+            <set name="abbreviation">TCM</set>
+            <set name="url"></set>
+            <set name="image"></set>
+            <set name="author" abbreviation="LOA" url="https://legendsofavantris.com/">Legends of Avantris</set>
+            <set name="third-party">true</set>
+            <set name="release">20250613</set>
+        </setters>
+    </element>
+</elements>
