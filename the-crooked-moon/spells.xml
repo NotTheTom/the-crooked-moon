@@ -118,7 +118,8 @@
     <element name="Captivate Undead" type="Spell" source="The Crooked Moon" id="ID_LOA_TCM_SPELL_CAPTIVATE_UNDEAD">
         <supports>Bard, Cleric, Sorcerer, Warlock, Wizard, Spell Saving Throw</supports>
         <description>
-            <p></p>
+            <p>You usurp the negative energy animating an Undead creature that you can see within range, attempting to take control of it. The target must make a Charisma saving throw. On a failed save, for the duration, the target is charmed by you (ignoring any immunity to that condition), and it is friendly toward you. On a successful save, the target has disadvantage on the next attack roll it makes against you before the start of your next turn. If you or any of your allies damage the target or force it to make a saving throw, the spell ends.</p>
+            <p class="indent"><b><i>At Higher Levels.</i></b> When you cast this spell using a spell slot of 2nd level or higher, you can target one additional creature for each slot level above 1st.</p>
         </description>
         <setters>
             <set name="keywords"></set>
