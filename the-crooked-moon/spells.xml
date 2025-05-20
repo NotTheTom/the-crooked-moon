@@ -577,7 +577,7 @@
         </setters>
     </element>
 
-    <element name="Mirrored Agony" type="Spell" source="Th Crooked Moon" id="ID_LOA_TCM_SPELL_MIRRORED_AGONY">
+    <element name="Mirrored Agony" type="Spell" source="The Crooked Moon" id="ID_LOA_TCM_SPELL_MIRRORED_AGONY">
         <supports>Bard, Sorcerer, Wizard, Spell Saving Throw</supports>
         <description>
             <p>The triggering creature makes a Wisdom saving throw. On a failed save, it takes an amount of psychic damage equal to the damage it dealt to your ally. On a successful save, it takes half as much damage.</p>
