@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Feats</name>
+        <update version="0.0.1">
+            <file name="feats.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/feats.xml" />
+        </update>
+    </info>
+
+    <element name="Altered" type="Feat" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_ALTERED">
+        <description>
+            <p>You have been changed through magic, science, or a volatile blend of the two. You have a blatant physical augmentation of your choice from the options below. The augmentation is obvious—such as with stitches, grafts of other creature’s body parts, or implants—unless disguised.</p>
+            <p class="indent"><b><i>Aquatic Adaptation.</i></b> You have gills or mucus membranes that allow you to breathe water, and you have webbed extremities that grant you a swimming speed equal to your walking speed.</p>
+            <p class="indent"><b><i>Natural Armor.</i></b> You have scales, plates, or thick hide that grants you an AC of 13 + your Dexterity or Constitution modifier (choose the ability when you select this feat).</p>
+            <p class="indent"><b><i>Natural Weapons.</i></b> You have claws, fangs, horns, or some other natural weapon that you can use to make unarmed strikes that deal 1d8 damage on a hit. The damage is bludgeoning, piercing, or slashing as appropriate to the form.</p>
+            <p class="indent"><b><i>Night Vision.</i></b> You have darkvision with a range of 60 feet. If you already have darkvision, its range increases by 30 feet.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Feat Feature" name="Augmentation (Altered)" supports="Augmentation" />
+        </rules>
+    </element>
+    <element name="Aquatic Adaptation" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FEATURE_ADAPTATION">
+        <supports>Augmentation</supports>
+        <compendium display="false" />
+        <description>
+            <p>You have gills or mucus membranes that allow you to breathe water, and you have webbed extremities that grant you a swimming speed equal to your walking speed.</p>
+        </description>
+        <sheet alt="Altered">
+            <description>You are able to breathe water.</description>
+        </sheet>
+        <rules>
+            <stat name="innate speed:swim" value="innate speed" bonus="base" />
+        </rules>
+    </element>
+    <element name="Natural Armor" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FEATURE_NATURAL_ARMOR">
+        <supports>Augmentation</supports>
+        <compendium display="false" />
+        <description>
+            <p>You have scales, plates, or thick hide that grants you an AC of 13 + your Dexterity or Constitution modifier (choose the ability when you select this feat).</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Feat Feature" name="Ability Score (Natural Armor)" supports="Altered Armor" />
+        </rules>
+    </element>
+    <element name="Dexterity" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FEATURE_DEXTERITY">
+        <supports>Altered Armor</supports>
+        <compendium display="false" />
+        <description>
+            <p>Your Unarmored AC is 13 + your Dexterity modifier.</p>
+        </description>
+        <sheet alt="Altered">
+            <description>Your Unarmored AC is {{altered armor:ac}}.</description>
+        </sheet>
+        <rules>
+			<stat name="altered armor:ac" value="13" bonus="base" />
+			<stat name="altered armor:ac" value="dexterity:modifier" bonus="ability" />
+			<stat name="ac:calculation" value="altered armor:ac" bonus="calculation" equipped="[armor:none]" />
+		</rules>
+    </element>
+    <element name="Constitution" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FEATURE_CONSTITUTION">
+        <supports>Altered Armor</supports>
+        <compendium display="false" />
+        <description>
+            <p>Your Unarmored AC is 13 + your Constitution modifier.</p>
+        </description>
+        <sheet alt="Altered">
+            <description>Your Unarmored AC is {{altered armor:ac}}.</description>
+        </sheet>
+        <rules>
+			<stat name="altered armor:ac" value="13" bonus="base" />
+			<stat name="altered armor:ac" value="constitution:modifier" bonus="ability" />
+			<stat name="ac:calculation" value="altered armor:ac" bonus="calculation" equipped="[armor:none]" />
+		</rules>
+    </element>
+    <element name="Natural Weapons" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FEATURE_NATURAL_WEAPONS">
+        <supports>Augmentation</supports>
+        <compendium display="false" />
+        <description>
+            <p>You have claws, fangs, horns, or some other natural weapon that you can use to make unarmed strikes that deal 1d8 damage on a hit. The damage is bludgeoning, piercing, or slashing as appropriate to the form.</p>
+        </description>
+        <sheet alt="Altered">
+            <description>You can use claws, fangs, horns, or some other natural weapon for unarmed strikes. When you hit with them, the strike deals 1d8 + {{strenght:modifier}} bludgeoning, piercing or slashing as appropriate.</description>
+        </sheet>
+    </element>
+    <element name="Night Vision" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FEATURE_NIGHT_VISION">
+        <supports>Augmentation</supports>
+        <compendium display="false" />
+        <description>
+            <p>You have darkvision with a range of 60 feet. If you already have darkvision, its range increases by 30 feet.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Feat Feature" id="ID_LOA_TCM_FEAT_FEATURE_NIGHT_VISION_PLUS" requirements="ID_VISION_DARKVISION" />
+            <grant type="Vision" id="ID_VISION_DARKVISION" requirements="!ID_VISION_DARKVISION" />        
+        </rules>
+    </element>
+    <element name="Night Vision Plus" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FEATURE_NIGHT_VISION_PLUS">
+        <compendium display="false" />
+        <description>
+            <p>Your darkvision range increases by 30 feet.</p>
+        </description>
+        <sheet alt="Altered">
+            <description>Your darkvision range increases by 30 feet.</description>
+        </sheet>
+    </element>
+
+    <element name="Charm Twister" type="Feat" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_CHARM_TWISTER">
+        <description>
+            <p>You know hedge remedies and hexes passed down through Old Ways teachings, and you can impart them into small wicker charms you weave. You gain the following benefits.</p>
+            <p class="indent"><b><i>Old Blessing.</i></b> You can cast the Bless spell once using this benefit, targeting only creatures carrying a wicker charm you’ve woven, and you can’t do so again until you finish a long rest. You can also cast the spell using any spell slots you have. Your spellcasting ability for casting the spell in this way is Intelligence, Wisdom, or Charisma (choose the ability when you select this feat).</p>
+            <p class="indent"><b><i>Twisted Hex.</i></b> As an action, you can weave spite into a wicker charm you touch. Choose an ability. When another creature is carrying the charm, or while this charm is within an area that the creature considers home, it has disadvantage on ability checks and attack rolls using the chosen ability. When the creature fails one of these rolls, it can make a Charisma saving throw, destroying the charm on a success (DC = 8 plus your proficiency bonus and the ability modifier you chose for Old Blessing). You can only have one Twisted Hex charm at a time. If you make a new one, the previous one loses its magic.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_BLESS" />
+            <select type="Feat Feature" name="Spellcasting Ability (Charm Twister)" supports="ID_LOA_TCM_FEAT_FEATURE_CHARM_TWISTER_INTELLIGENCE|ID_LOA_TCM_FEAT_FEATURE_CHARM_TWISTER_WISDOM|ID_LOA_TCM_FEAT_FEATURE_CHARM_TWISTER_CHARISMA" />
+        </rules>
+    </element>
+    <element name="Intelligence" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FEATURE_CHARM_TWISTER_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for this feat’s spells is Intelligence.</p>
+		</description>
+		<sheet alt="Charm Twister">
+			<description>You can cast <i>Bless</i> only targeting creatures that carry a wicker charm you've woven. Your spellcasting ability modifier is Intelligence and you can cast <i>Bless</i> in this way once per long rest. You can also cast this spell using any spell slots you have. 
+            As an action you can weave spite into a wicker charm you touch. Choose an ability, whilst this charm is being carried by another creature or in an area the creature considers home, it has disadvantage on ability checks and attack rolls made using the chosen ability. When the creature fails one of these rolls, it can make a DC {{twisted hex:dc}} Charisma saving throw, destroying the charm on a success. You can only have one Twisted Hex charm at a time, and if you make a new one the previous one loses its magic.</description>
+		</sheet>
+        <rules>
+            <stat name="twisted hex:dc" value="8" />
+			<stat name="twisted hex:dc" value="intelligence:modifier" />
+			<stat name="twisted hex:dc" value="proficiency" />
+        </rules>
+	</element>
+	<element name="Wisdom" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FEATURE_CHARM_TWISTER_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for this feat’s spells is Wisdom.</p>
+		</description>
+		<sheet alt="Charm Twister">
+            <description>You can cast <i>Bless</i> only targeting creatures that carry a wicker charm you've woven. Your spellcasting ability modifier is Wisdom and you can cast <i>Bless</i> in this way once per long rest. You can also cast this spell using any spell slots you have. 
+            As an action you can weave spite into a wicker charm you touch. Choose an ability, whilst this charm is being carried by another creature or in an area the creature considers home, it has disadvantage on ability checks and attack rolls made using the chosen ability. When the creature fails one of these rolls, it can make a DC {{twisted hex:dc}} Charisma saving throw, destroying the charm on a success. You can only have one Twisted Hex charm at a time, and if you make a new one the previous one loses its magic.</description>
+		</sheet>
+        <rules>
+            <stat name="twisted hex:dc" value="8" />
+			<stat name="twisted hex:dc" value="wisdom:modifier" />
+			<stat name="twisted hex:dc" value="proficiency" />
+        </rules>
+	</element>
+	<element name="Charisma" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FEATURE_CHARM_TWISTER_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for this feat’s spells is Charisma.</p>
+		</description>
+		<sheet alt="Charm Twister">
+			<description>You can cast <i>Bless</i> only targeting creatures that carry a wicker charm you've woven. Your spellcasting ability modifier is Charisma and you can cast <i>Bless</i> in this way once per long rest. You can also cast this spell using any spell slots you have. 
+            As an action you can weave spite into a wicker charm you touch. Choose an ability, whilst this charm is being carried by another creature or in an area the creature considers home, it has disadvantage on ability checks and attack rolls made using the chosen ability. When the creature fails one of these rolls, it can make a DC {{twisted hex:dc}} Charisma saving throw, destroying the charm on a success. You can only have one Twisted Hex charm at a time, and if you make a new one the previous one loses its magic.</description>
+		</sheet>
+        <rules>
+            <stat name="twisted hex:dc" value="8" />
+			<stat name="twisted hex:dc" value="charisma:modifier" />
+			<stat name="twisted hex:dc" value="proficiency" />
+        </rules>
+	</element>
+
+    <element name="Crimson Ritualist" type="Feat" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_CRIMSON_RITUALIST">
+        <description>
+            <p>Your study of blood magic and life force has borne fruit, granting you the following benefits.</p>
+            <p class="indent"><b><i>Blood Lash.</i></b> You learn the Blood Bolt cantrip. Your spellcasting ability for it is Intelligence, Wisdom, or Charisma (choose the ability when you select this feat).</p>
+            <p class="indent"><b><i>Bottled Life.</i></b> When you finish a long rest, you can perform a 1-minute ritual to transfer some of your life essence into a vessel for later use. Expend a number of Hit Dice up to your proficiency bonus, and bleed into a vial of water or other liquid. As a bonus action, a creature can drink the vial to roll the Hit Dice you expended. The creature regains a number of hit points equal to the total rolled plus its Constitution modifier. The vial remains potent until you finish a long rest.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Spell" id="ID_LOA_TCM_SPELL_BLOOD_BOLT" />
+            <select type="Feat Feature" name="Spellcasting Ability (Crimson Ritualist)" supports="ID_LOA_TCM_FEAT_FEATURE_CRIMSON_RITUALIST_INTELLIGENCE|ID_LOA_TCM_FEAT_FEATURE_CRIMSON_RITUALIST_WISDOM|ID_LOA_TCM_FEAT_FEATURE_CRIMSON_RITUALIST_CHARISMA" />
+        </rules>
+    </element>
+    <element name="Intelligence" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FEATURE_CRIMSON_RITUALIST_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for this feat’s spells is Intelligence.</p>
+		</description>
+		<sheet alt="Crimson Ritualist">
+			<description>You can cast the <i>Blood Bolt</i> cantrip using Intelligence as your spellcasting ability modifier.
+            When you finih a long rest you can expend a number of Hit Dice up to {{proficiency}}, and bleed into a vial of liquid. As a bonus action a creature can drink this vial to roll the Hit Dice you expended. The creature regains a number of hit points equal to the total rolled plus its Constitution modifier. This vial reamins potent until you finish a long rest.</description>
+		</sheet>
+	</element>
+	<element name="Wisdom" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FEATURE_CRIMSON_RITUALIST_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for this feat’s spells is Wisdom.</p>
+		</description>
+		<sheet alt="Crimson Ritualist">
+            <description>You can cast the <i>Blood Bolt</i> cantrip using Wisdom as your spellcasting ability modifier.
+            When you finih a long rest you can expend a number of Hit Dice up to {{proficiency}}, and bleed into a vial of liquid. As a bonus action a creature can drink this vial to roll the Hit Dice you expended. The creature regains a number of hit points equal to the total rolled plus its Constitution modifier. This vial reamins potent until you finish a long rest.</description>
+		</sheet>
+	</element>
+	<element name="Charisma" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FEATURE_CRIMSON_RITUALIST_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for this feat’s spells is Charisma.</p>
+		</description>
+		<sheet alt="Crimson Ritualist">
+			<description>You can cast the <i>Blood Bolt</i> cantrip using Charisma as your spellcasting ability modifier.
+            When you finih a long rest you can expend a number of Hit Dice up to {{proficiency}}, and bleed into a vial of liquid. As a bonus action a creature can drink this vial to roll the Hit Dice you expended. The creature regains a number of hit points equal to the total rolled plus its Constitution modifier. This vial reamins potent until you finish a long rest.</description>
+		</sheet>
+	</element>
+
+    <element name="Cult Initiate" type="Feat" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_CULT_INITIATE">
+        <description>
+            <p>Your cult instructs you in eldritch rites, granting you the following benefits.</p>
+            <p class="indent"><b><i>Two Cantrips.</i></b> You learn two cantrips of your choice from the warlock spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for this feat’s spells (choose the ability when you select this feat).</p>
+            <p class="indent"><b><i>Level 1 Spell.</i></b> Choose a 1st-level spell from the warlock spell list. You always have that spell prepared. You can cast it once without a spell slot, and you regain the ability to cast it in that way when you finish a short or long rest. You can also cast the spell using any spell slots you have.</p>
+            <p class="indent"><b><i>Spell Change.</i></b> Whenever you gain a new level, you can replace one of the spells you chose for this feat with a different spell of the same level from the warlock spell list.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Spell" name="Cantrip (Cult Initiate)" supports="0,Warlock" />
+            <select type="Spell" name="Cantrip (Cult Initiate)" supports="0,Warlock" />
+            <select type="Spell" name="1st-Level Spell (Cult Initiate)" supports="1,Warlock" />
+            <select type="Feat Feature" name="Spellcasting Ability (Cult Initiate)" supports="ID_LOA_TCM_FEAT_FEATURE_CULT_INITIATE_INTELLIGENCE|ID_LOA_TCM_FEAT_FEATURE_CULT_INITIATE_WISDOM|ID_LOA_TCM_FEAT_FEATURE_CULT_INITIATE_CHARISMA" />
+        </rules>
+    </element>
+    <element name="Intelligence" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FEATURE_CULT_INITIATE_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for this feat’s spells is Intelligence.</p>
+		</description>
+		<sheet alt="Cult Initiate">
+			<description>Intelligence is your spellcasting ability modifier for the spells granted by this feat. You can cast the 1st-level spell granted by this feat once per rest. You can also cast this spell using any spell slots you have. You can replace one of the spells you chose with this feat whenever you gain a new level.</description>
+		</sheet>
+	</element>
+	<element name="Wisdom" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FEATURE_CULT_INITIATE_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for this feat’s spells is Wisdom.</p>
+		</description>
+		<sheet alt="Cult Initiate">
+            <description>Wisdom is your spellcasting ability modifier for the spells granted by this feat. You can cast the 1st-level spell granted by this feat once per rest. You can also cast this spell using any spell slots you have. You can replace one of the spells you chose with this feat whenever you gain a new level.</description>
+		</sheet>
+	</element>
+	<element name="Charisma" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FEATURE_CULT_INITIATE_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for this feat’s spells is Charisma.</p>
+		</description>
+		<sheet alt="Cult Initiate">
+			<description>Charisma is your spellcasting ability modifier for the spells granted by this feat. You can cast the 1st-level spell granted by this feat once per rest. You can also cast this spell using any spell slots you have. You can replace one of the spells you chose with this feat whenever you gain a new level.</description>
+		</sheet>
+    </element>
+
+    <element name="Death Defier" type="Feat" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_DEATH_DEFIER">
+        <prerequisite>4th level</prerequisite>
+        <requirements>[level:4]</requirements>
+        <description>
+            <p><i>Prerequisite: 4th Level</i></p>
+            <p>When the hand of death reaches for your soul, you have found a way to reject its call. You gain the following benefits.</p>
+            <p class="indent"><b><i>Ability Score Increase.</i></b> Increase your Constitution score by 1, to a maximum of 20.</p>
+            <p class="indent"><b><i>Cling to Life.</i></b> You add your Constitution modifier (minimum of 1) to death saving throws.</p>
+            <p class="indent"><b><i>Enduring Vitality.</i></b> If an effect would kill you outright without death saving throws or would reduce you directly to 0 hit points without dealing damage, you are instead reduced to a number of hit points equal to your level. You can’t use this benefit again until you finish a long rest.</p>
+        </description>
+        <sheet>
+            <description>You add your Constitution modifier (minimum of 1) to your death saving throws.
+            If an effect kills you without death saving throws or reduces you directly to 0 hit points without dealing damage, you are instead reduced to a number of hit points equal to your level. You can't use this benefit again until you finish a long rest.</description>
+        </sheet>
+        <rules>
+            <stat name="constitution" value="1" />
+        </rules>
+    </element>
+
+    <element name="Dread Speech" type="Feat" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_DREAD_SPEECH">
+        <description>
+            <p>You have articulated a few words of forbidden truth that resonate with—and fray—the fabric of creation, granting you the following benefits.</p>
+            <p class="indent"><b><i>Eldritch Word.</i></b> As a bonus action, you can speak a magical word aloud to force a creature within 60 feet of yourself to make a Wisdom saving throw (DC = 8 plus your proficiency bonus and Intelligence, Wisdom, or Charisma modifier; choose the ability when you select this feat). On a failed save, the target is frightened of you until the start of your next turn. You can use this benefit safely once, and you regain the ability to do so when you finish a short or long rest. You can use it again before resting, but you take 1d6 necrotic damage, which can’t be reduced or prevented in any way.</p>
+            <p class="indent"><b><i>Shred Fate.</i></b> Your dread secrets can unravel the destiny of your foes. You can cast the Bane spell using this benefit without requiring a material component, and your spellcasting ability for it is the ability you chose for Eldritch Word. Once you cast the spell using this benefit, you can’t cast it that way again until you finish a long rest. You can also cast the spell using any spell slots you have.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_BANE" />
+            <select type="Feat Feature" name="Spellcasting Ability (Dread Speech)" supports="ID_LOA_TCM_FEAT_FEATURE_DREAD_SPEECH_INTELLIGENCE|ID_LOA_TCM_FEAT_FEATURE_DREAD_SPEECH_WISDOM|ID_LOA_TCM_FEAT_FEATURE_DREAD_SPEECH_CHARISMA" />
+        </rules>
+    </element>
+    <element name="Intelligence" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FEATURE_DREAD_SPEECH_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for this feat’s spells is Intelligence.</p>
+		</description>
+		<sheet alt="Dread Speech">
+			<description>As a bonus action you can force a creature within 60 feet of you to make a DC{{eldritch word:ac}} Wisdom saving throw. On a failed save the target is frightened of you until the start of your next turn. You can safely use this feature once per rest, you can use it again before resting but you take 1d6 necrotic damage, which can't be reduced or prevented.
+            You can cast the <i>Bane</i> spell without material components once per long rest. You can also cast this spell using any spell slots you have. Your spellcasting ability modifier for this spell is Intelligence.</description>
+		</sheet>
+        <rules>
+            <stat name="eldritch word:dc" value="8" />
+			<stat name="eldritch word:dc" value="intelligence:modifier" />
+			<stat name="eldritch word:dc" value="proficiency" />
+        </rules>
+	</element>
+	<element name="Wisdom" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FEATURE_DREAD_SPEECH_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for this feat’s spells is Wisdom.</p>
+		</description>
+		<sheet alt="Dread Speech">
+            <description>As a bonus action you can force a creature within 60 feet of you to make a DC{{eldritch word:ac}} Wisdom saving throw. On a failed save the target is frightened of you until the start of your next turn. You can safely use this feature once per rest, you can use it again before resting but you take 1d6 necrotic damage, which can't be reduced or prevented.
+            You can cast the <i>Bane</i> spell without material components once per long rest. You can also cast this spell using any spell slots you have. Your spellcasting ability modifier for this spell is Wisdom.</description>
+		</sheet>
+        <rules>
+            <stat name="eldritch word:dc" value="8" />
+			<stat name="eldritch word:dc" value="charisma:modifier" />
+			<stat name="eldritch word:dc" value="proficiency" />
+        </rules>
+	</element>
+	<element name="Charisma" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FEATURE_DREAD_SPEECH_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for this feat’s spells is Charisma.</p>
+		</description>
+		<sheet alt="Dread Speech">
+			<description>As a bonus action you can force a creature within 60 feet of you to make a DC{{eldritch word:ac}} Wisdom saving throw. On a failed save the target is frightened of you until the start of your next turn. You can safely use this feature once per rest, you can use it again before resting but you take 1d6 necrotic damage, which can't be reduced or prevented.
+            You can cast the <i>Bane</i> spell without material components once per long rest. You can also cast this spell using any spell slots you have. Your spellcasting ability modifier for this spell is Charisma.</description>
+		</sheet>
+        <rules>
+            <stat name="eldritch word:dc" value="8" />
+			<stat name="eldritch word:dc" value="charisma:modifier" />
+			<stat name="eldritch word:dc" value="proficiency" />
+        </rules>
+    </element>
+
+    <element name="Fate Gambler" type="Feat" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FATED_GAMBLER">
+        <description>
+            <p>Coming out ahead, whether in games of chance or in life-or-death contention, fills you with resolve and vigor. You gain the following benefits.</p>
+            <p class="indent"><b><i>Bet Big.</i></b> If you don’t already have it, you gain inspiration whenever you succeed on an ability check made against another creature, when you reduce a creature to 0 hit points, or when a creature fails a saving throw you forced it to make. If, in any of these cases, the creature has a CR of 0 or lacks a CR (such as another player character), you don’t gain inspiration.</p>
+            <p class="indent"><b><i>Win Big.</i></b> As a bonus action, you can expend your inspiration to gain a number of temporary hit points equal to your level.</p>
+        </description>
+        <sheet>
+            <description>If you don't already have it, you gain inspiration whenever you succeed on an ability made against another creature,when you reduce a creature to 0 hit points, or when a creature fails a saving throw you caused. If the creature has a CR of 0 or lacks a CR you don't gain inspiration.
+            As a bonus action you can expend your inspiration to gain temporary hit points equal to your level.</description>
+        </sheet>
+    </element>
+
+    <element name="Ghostlight Medium" type="Feat" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_GHOSTLIGHT_MEDIUM">
+        <description>
+            <p>You formed a mystical connection to the <i>Ghostlight Express</i> that affords you insight into the nature of spirits, granting the following benefits.</p>
+            <p class="indent"><b><i>Ghostly Touch.</i></b> When you damage a creature with the Incorporeal Movement trait, you can ignore the creature’s damage resistances, if any.</p>
+            <p class="indent"><b><i>Spirit Sense.</i></b> As a bonus action, you can sense any Undead within 60 feet of you, or any creatures in the Ethereal Plane that overlaps that area. You learn the distance and direction to any creatures you detect (or an Ethereal creature’s equivalent position on your plane). Once you detect a creature with this benefit, you can’t use it again until you finish a short or long rest.</p>
+        </description>
+        <sheet>
+            <description>When you damage a creature with the Incorporeal Movement trait you ignore the creature's damage resistances.
+            As a bonus action you can sense any Undead within 60 feet of you, or any creatures in the Ethereal Plane that overlaps that area. You learn the distance and direction to any creatures (or an Ethereal creature's eqiuvalent position on your plane). Once you detect a creature you can't use this feature again until you finish a rest.</description>
+        </sheet>
+    </element>
+
+    <element name="Grave Keeper" type="Feat" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_GRAVE_KEEPER">
+        <description>
+            <p>Studying funeral rites and tending the dead’s rest has made you a conduit between the worlds of the living and the dead. You gain the following benefits.</p>
+            <p class="indent"><b><i>Divine Channel.</i></b> You gain one use of the Channel Divinity feature from the cleric class, and you can create the Turn Undead effect with it. If you already have Channel Divinity, you add this use to the feature from one class of your choice. Your save DC for this benefit is 8 plus your Wisdom modifier and proficiency bonus.</p>
+            <p class="indent"><b><i>Last Rites.</i></b> You can enact a 10-minute ritual to prepare the corpse of a Medium or smaller creature, expending at least 10 gp worth of incense, oils, linen wraps, or similar trappings. The prepared corpse can’t become Undead.</p>
+        </description>
+        <sheet>
+            <description>You gain one use of Channel Divinity and you can create the turn Undead effect with a save DC of {{divine channel:dc}}. If you already have Channel Divinity you gain an additional use of it for one class of your choice.
+            You can enact a 10-minute ritual to prepare the corpse of a Medium or smaller creature expending at least 10 gp worth of incense, oils, linen wraps, or similar trappings. This corpse cannot become Undead.</description>
+        </sheet>
+        <rules>
+            <stat name="divine channel:dc" value="8" />
+			<stat name="divine channel:dc" value="wisdom:modifier" />
+			<stat name="divine channel:dc" value="proficiency" />
+        </rules>
+    </element>
+
+    <element name="Hunter of Hunters" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FEATURE_HUNTER_OF_HUNTERS">
+        <description>
+            <p>You are adept at hunting monstrous prey, granting you the following benefits.</p>
+            <p class="indent"><b><i>Dead Aim.</i></b> As a bonus action, you can scrutinize a creature to spot its vulnerable points. The next time you deal damage to the creature before the start of your next turn, you ignore the creature’s damage resistances, if any.</p>
+            <p class="indent"><b><i>Studied Quarry.</i></b> You have advantage on ability checks made to recall information about a creature.</p>
+        </description>
+        <sheet>
+            <description>As a bonus action you can scrutinize a creature to spot its weak points. The next time you deal damage to the creature creature before the start of your next turn, you ignore the creature's damage resistances.
+            You have advantage on ability checks made to recall information about a creature.</description>
+        </sheet>
+    </element>
+
+    <element name="Memory Starved" type="Feat" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_MEMORY_STARVED">
+        <description>
+            <p>Your mind ravenously gathers details and desperately clings to its memories and faculties, granting you the following benefits.</p>
+            <p class="indent"><b><i>Desperate Detail.</i></b> You have advantage on Intelligence (Investigation) checks.</p>
+            <p class="indent"><b><i>Iron Mind.</i></b> You have advantage on saving throws made to avoid or end the charmed condition, and to avoid having your memories read or altered.</p>
+        </description>
+        <sheet>
+            <description>You have advantage on Intelligence (Investigation) checks.
+            You have advantage on saving throws made to avoid or end the charmed condition, and to avoid having your memories read or altered.</description>
+        </sheet>
+    </element>
+
+    <element name="Reveling Fool" type="Feat" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_REVELING_FOOL">
+        <description>
+            <p>You joined a troupe of madcap revelers and learned to take on the guise of a fool, channeling otherworldly laughter and joviality. You gain the following benefits.</p>
+            <p class="indent"><b><i>Fool’s Mask.</i></b> By donning a jovial mask and a fool’s, jester’s, or clown’s costume, you take on a new identity that hides your own. In the guise of the fool, you can get away with minor transgressions against people in positions of authority or station.</p>
+            <p class="indent"><b><i>Jester’s Repartee.</i></b> You can cast the <i>Hideous Laughter</i> spell using this benefit without requiring material components, and your spellcasting ability for it is Intelligence, Wisdom, or Charisma (choose the ability when you select this feat). Once you cast the spell using this benefit, you can’t do so again until you finish a long rest. You can also cast the spell using any spell slots you have.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_TASHAS_HIDEOUS_LAUGHTER" />
+            <select type="Feat Feature" name="Spellcasting Ability (Reveling Fool)" supports="ID_LOA_TCM_FEAT_FEATURE_REVELING_FOOL_INTELLIGENCE|ID_LOA_TCM_FEAT_FEATURE_REVELING_FOOL_WISDOM|ID_LOA_TCM_FEAT_FEATURE_REVELING_FOOL_CHARISMA" />
+        </rules>
+    </element>
+    <element name="Intelligence" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FEATURE_REVELING_FOOL_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for this feat’s spells is Intelligence.</p>
+		</description>
+		<sheet alt="Reveling Fool">
+			<description>By donning a jovial mask and a fool's, jester's, or clown's costume you take on a new identity that hides your own. In the guise of the fool, you can get away with minor trangressions against people in positions of authority or station.
+            You can cast the <i>Hideous Laughter</i> spell without requiring material components once per long rest. You can also cast this spell using any spell slots you have. Your spellcasting ability for this spell is Intelligence.</description>
+		</sheet>
+	</element>
+	<element name="Wisdom" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FEATURE_REVELING_FOOL_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for this feat’s spells is Wisdom.</p>
+		</description>
+		<sheet alt="Reveling Fool">
+            <description>By donning a jovial mask and a fool's, jester's, or clown's costume you take on a new identity that hides your own. In the guise of the fool, you can get away with minor trangressions against people in positions of authority or station.
+            You can cast the <i>Hideous Laughter</i> spell without requiring material components once per long rest. You can also cast this spell using any spell slots you have. Your spellcasting ability for this spell is Wisdom.</description>
+		</sheet>
+	</element>
+	<element name="Charisma" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FEATURE_REVELING_FOOL_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for this feat’s spells is Charisma.</p>
+		</description>
+		<sheet alt="Reveling Fool">
+			<description>By donning a jovial mask and a fool's, jester's, or clown's costume you take on a new identity that hides your own. In the guise of the fool, you can get away with minor trangressions against people in positions of authority or station.
+            You can cast the <i>Hideous Laughter</i> spell without requiring material components once per long rest. You can also cast this spell using any spell slots you have. Your spellcasting ability for this spell is Charisma.</description>
+		</sheet>
+    </element>
+
+    <element name="Unreflected" type="Feat" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_UNREFLECTED">
+        <description>
+            <p>Your image is separated from you, making you unable to cast a reflection or a shadow, but you’re able to easily slip notice. You gain the following benefits.</p>
+            <p class="indent"><b><i>Inscrutable.</i></b> Creatures have disadvantage on Wisdom (Insight) checks made against you.</p>
+            <p class="indent"><b><i>Unremarkable.</i></b> The loss of some part of yourself leaves you able to fade into the background. While you are within a group of at least two other creatures of your type and that there are no more than one size larger or smaller than you, you can take the Hide action from creatures outside that group by making a Charisma (Deception) check instead of Dexterity (Stealth), with no need for being behind cover or heavily obscured. If you are ever more than 5 feet from at least two other such creatures while hiding this way, you are revealed.</p>
+        </description>
+        <sheet>
+            <description>Creatures have disadvantage on Wisdom (Insight) checks made against you.
+            While you are within a group of at least two other creatures of your type and that they are no more than one size larger or smaller than you, you take the Hide action from creatures outside that group by making a Charisma (Deception) check instead of a Dexterity (Stealth), with no need to for being behind cover or heavily obscured. If you are ever more than 5 feet from at least two other such creatures while hiding this way, you are revealed.</description>
+        </sheet>
+    </element>
+
+    <element name="Swift Witchcraft" type="Feat" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_SWIFT_WITCHCRAFT">
+        <prerequisite>4th level; Spellcasting or Pact Magic feature</prerequisite>
+        <requirements>([level:4],[type:spell])</requirements>
+        <description>
+            <p><i>Prerequisite: 4th Level or higher; Spellcasting or Pact Magic Feature</i></p>
+            <p>You have honed your skills in the rituals of witchcraft and can quickly weave your magic in times of need. You gain the following benefits.</p>
+            <p class="indent"><b><i>Ability Score Increase.</i></b> Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.</p>
+            <p class="indent"><b><i>Swift Invocation.</i></b> You can use an action to cast a spell that has a casting time of 1 minute. Once you use this benefit, you can’t do so again until you finish a long rest.</p>
+        </description>
+        <sheet>
+            <description>You can use an action to cast a spell that has a casting time of 1 minute. Once you us this benefit you cannot do so again until you finish a long rest.</description>
+        </sheet>
+        <rules>
+            <select type="Ability Score Improvement" name="Ability Score Improvement (Swift Witchcraft)" supports="ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
+        </rules>
+    </element>
+</elements>
