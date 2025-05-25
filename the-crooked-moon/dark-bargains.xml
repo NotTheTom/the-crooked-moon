@@ -29,8 +29,8 @@
 		<description>
 			<p>Your spellcasting ability for this Dark Bargain's spells is Intelligence.</p>
 		</description>
-		<sheet alt="Bestial Awakening">
-			<description>You can cast the <i>Polymorph</i> spell using this benefit without requiring material components, your spellcasting ability modifier is Intelligence. You cannot do so again until you finish a long rest. You can also cast it using any spell slots you have.
+		<sheet alt="Bestial Awakening" usage="1/Long Rest">
+			<description>You can cast the <i>Polymorph</i> spell using this benefit without requiring material components, your spellcasting ability modifier is Intelligence. You can also cast this spell using any spell slots you have.
             Damage from silvered weapons ignores any resistance or immunity to damage you have. If you take damage from a silvered weapon or touch silver with your bare skin, you cannot regain hit points until you finish a rest.</description>
 		</sheet>
 	</element>
@@ -39,8 +39,8 @@
 		<description>
 			<p>Your spellcasting ability for this Dark Bargain's spells is Wisdom.</p>
 		</description>
-		<sheet alt="Bestial Awakening">
-            <description>You can cast the <i>Polymorph</i> spell using this benefit without requiring material components, your spellcasting ability modifier is Intelligence. You cannot do so again until you finish a long rest. You can also cast it using any spell slots you have.
+		<sheet alt="Bestial Awakening" usage="1/Long Rest">
+            <description>You can cast the <i>Polymorph</i> spell using this benefit without requiring material components, your spellcasting ability modifier is Wisdom. You can also cast this spell using any spell slots you have.
             Damage from silvered weapons ignores any resistance or immunity to damage you have. If you take damage from a silvered weapon or touch silver with your bare skin, you cannot regain hit points until you finish a rest.</description>
 		</sheet>
 	</element>
@@ -49,8 +49,8 @@
 		<description>
 			<p>Your spellcasting ability for this Dark Bargain's spells is Charisma.</p>
 		</description>
-		<sheet alt="Bestial Awakeningw">
-			<description>You can cast the <i>Polymorph</i> spell using this benefit without requiring material components, your spellcasting ability modifier is Intelligence. You cannot do so again until you finish a long rest. You can also cast it using any spell slots you have.
+		<sheet alt="Bestial Awakening" usage="1/Long Rest">
+			<description>You can cast the <i>Polymorph</i> spell using this benefit without requiring material components, your spellcasting ability modifier is Charisma. You can also cast this spell using any spell slots you have.
             Damage from silvered weapons ignores any resistance or immunity to damage you have. If you take damage from a silvered weapon or touch silver with your bare skin, you cannot regain hit points until you finish a rest.</description>
 		</sheet>
 	</element>
@@ -78,8 +78,8 @@
         <description>
             <p></p>
         </description>
-        <sheet>
-            <description>When no other creatures are able to see you, you can use a bonus action to call your companion which appears in an unnoccupied space within 10 feet of you. It takes the form of a person or vague silhouette and it uses the doppelganger stat block. It is friendly towards you and takes it turn on your initiative in combat. It disappears after 1 hour, when it dies, when you die, or when you an action to dismiss it. When it disappears it drops everything it was wearing or carrying. You cannot use this feature again until you finish a long rest.
+        <sheet usage="1/Long Rest">
+            <description>When no other creatures are able to see you, you can use a bonus action to call your companion which appears in an unnoccupied space within 10 feet of you. It takes the form of a person or vague silhouette and it uses the doppelganger stat block. It is friendly towards you and takes it turn on your initiative in combat. It disappears after 1 hour, when it dies, when you die, or when you an action to dismiss it. When it disappears it drops everything it was wearing or carrying.
             The companion sometimes appears with trinkets, Cursed Curios, or other items. It may or may not tell you where it got them.
             While your companion is summoned, a creature that isn't hostile to you that starts its turn able to see your or the companion must succeed on a DC 15 Wisdom saving throw or be frightened until the start of its next turn.</description>
         </sheet>
@@ -107,8 +107,8 @@
 		<description>
 			<p>Your spellcasting ability for this Dark Bargain's spells is Intelligence.</p>
 		</description>
-		<sheet alt="Collector of Stories">
-			<description>You can cast the <i>Legend Lore</i> spell using this benefit without requiring material components, your spellcasting ability modifier is Intelligence. You cannot do so again until you finish a long rest. You can also cast it using any spell slots you have.
+		<sheet alt="Collector of Stories" usage="1/Long Rest">
+			<description>You can cast the <i>Legend Lore</i> spell using this benefit without requiring material components, your spellcasting ability modifier is Intelligence. You can also cast it using any spell slots you have.
             When you use this bargain to cast Legend Lore, a friendly NPC forgets ever meeting you. The NPC's attitude towards you can't ever improve beyond indifferent, and you have disadvantage on all Charisma checks against them.</description>
 		</sheet>
 	</element>
@@ -117,8 +117,8 @@
 		<description>
 			<p>Your spellcasting ability for this Dark Bargain's spells is Wisdom.</p>
 		</description>
-		<sheet alt="Collector of Stories">
-            <description>You can cast the <i>Legend Lore</i> spell using this benefit without requiring material components, your spellcasting ability modifier is Intelligence. You cannot do so again until you finish a long rest. You can also cast it using any spell slots you have.
+		<sheet alt="Collector of Stories" usage="1/Long Rest">
+            <description>You can cast the <i>Legend Lore</i> spell using this benefit without requiring material components, your spellcasting ability modifier is Intelligence. You can also cast it using any spell slots you have.
             When you use this bargain to cast Legend Lore, a friendly NPC forgets ever meeting you. The NPC's attitude towards you can't ever improve beyond indifferent, and you have disadvantage on all Charisma checks against them.</description>
 		</sheet>
 	</element>
@@ -127,8 +127,8 @@
 		<description>
 			<p>Your spellcasting ability for this Dark Bargain's spells is Charisma.</p>
 		</description>
-		<sheet alt="Collector of Stories">
-			<description>You can cast the <i>Legend Lore</i> spell using this benefit without requiring material components, your spellcasting ability modifier is Intelligence. You cannot do so again until you finish a long rest. You can also cast it using any spell slots you have.
+		<sheet alt="Collector of Stories" usage="1/Long Rest">
+			<description>You can cast the <i>Legend Lore</i> spell using this benefit without requiring material components, your spellcasting ability modifier is Intelligence. You can also cast it using any spell slots you have.
             When you use this bargain to cast Legend Lore, a friendly NPC forgets ever meeting you. The NPC's attitude towards you can't ever improve beyond indifferent, and you have disadvantage on all Charisma checks against them.</description>
 		</sheet>
 	</element>
@@ -182,7 +182,7 @@
         <description>
             <p></p>
         </description>
-        <sheet>
+        <sheet usage="1/Rest">
             <description>As an action you can charm a creature within 60 feet of you. The creature is charmed for 24 hours, until you use this feature again, or until you or your allies deal any damage the creature or force it to make a saving throw. The charmed creature is your ally and follows your commands as long as they don't require the creature to harm itself. If the creature carries out a command it finds oudious, it makes a DC 15 Wisdom saving throw, ending the condition on itself on a success. Once the condition ends the creature is immunne to this feature for 24 hours. If the creature is immune to being charmed it instead gains disadvantage on ability checks, attack rolls, and saving throw until the start of your next turn, and you gain temporary hit points equual to your level. Once you use this feature you cannot do so again until you finish a rest.
             If you start your turn with no allies you can see or hear within 20 feet of you, you losse any temporary hit point you have from any source, and you have disadvantage on ability checks, attack rolls, and saving throws until the start of your next turn.</description>
         </sheet>
@@ -243,7 +243,7 @@
             <p></p>
         </description>
         <sheet>
-            <description>As a bonus action you can raise your Strength score for 1 minute, during which you deal double damage to objects. Once you use this feature, you cannot use it again until you finish a long rest.
+            <description usage="1/Long Rest">As a bonus action you can raise your Strength score for 1 minute, during which you deal double damage to objects.
             When you use this feature, you gain vulnerability to fire damage. You lose this vulnerability when you finish a long rest.</description>
         </sheet>
     </element>
@@ -272,8 +272,8 @@
 		<description>
 			<p>Your spellcasting ability for this Dark Bargain's spells is Intelligence.</p>
 		</description>
-		<sheet alt="Self-Serving Sacrifice">
-			<description>When a creature within 120 feet of you is subjected to a critical hit or is reduced to 0 hit points, you can use your reaction magically switch places with the target. Roll a number of d6s equal to half your level, you take force damage equal to the total rolled, you gain inspiration, and your exhaustion level is reduced by one. The target regains hit points equal to the total rolled and gains 1 level of exhaustion. You cannot use this feature again until you finish a rest.
+		<sheet alt="Self-Serving Sacrifice" usage="1/Rest">
+			<description>When a creature within 120 feet of you is subjected to a critical hit or is reduced to 0 hit points, you can use your reaction magically switch places with the target. Roll a number of d6s equal to half your level, you take force damage equal to the total rolled, you gain inspiration, and your exhaustion level is reduced by one. The target regains hit points equal to the total rolled and gains 1 level of exhaustion.
             When you finish a rest, each creature within 100 feet of you loses one Hit Die.
             You can cast the <i>True Resurrection</i> spell without requiring material components. Intelligence is your spellcasting ability modifier for this spell. When you cast this spell you ddie, nothing can prevent it, and you cannot be raised from the dead by any means. When the creature that you returned to life takes a long rest, it must roll a d20 halfway through the rest's duration. On a 1, your soul takes the form of a Wraith within 100 feet of the creature and tries to kill it. The Wraith vanishes after 8 hours, or when it dies. Once the Wraith appears, it can't appear again for 30 days.</description>
 		</sheet>
@@ -283,8 +283,8 @@
 		<description>
 			<p>Your spellcasting ability for this Dark Bargain's spells is Wisdom.</p>
 		</description>
-		<sheet alt="Self-Serving Sacrifice">
-            <description>When a creature within 120 feet of you is subjected to a critical hit or is reduced to 0 hit points, you can use your reaction magically switch places with the target. Roll a number of d6s equal to half your level, you take force damage equal to the total rolled, you gain inspiration, and your exhaustion level is reduced by one. The target regains hit points equal to the total rolled and gains 1 level of exhaustion. You cannot use this feature again until you finish a rest.
+		<sheet alt="Self-Serving Sacrifice" usage="1/Rest">
+            <description>When a creature within 120 feet of you is subjected to a critical hit or is reduced to 0 hit points, you can use your reaction magically switch places with the target. Roll a number of d6s equal to half your level, you take force damage equal to the total rolled, you gain inspiration, and your exhaustion level is reduced by one. The target regains hit points equal to the total rolled and gains 1 level of exhaustion.
             When you finish a rest, each creature within 100 feet of you loses one Hit Die.
             You can cast the <i>True Resurrection</i> spell without requiring material components. Wisdom is your spellcasting ability modifier for this spell. When you cast this spell you ddie, nothing can prevent it, and you cannot be raised from the dead by any means. When the creature that you returned to life takes a long rest, it must roll a d20 halfway through the rest's duration. On a 1, your soul takes the form of a Wraith within 100 feet of the creature and tries to kill it. The Wraith vanishes after 8 hours, or when it dies. Once the Wraith appears, it can't appear again for 30 days.</description>
 		</sheet>
@@ -294,8 +294,8 @@
 		<description>
 			<p>Your spellcasting ability for this Dark Bargain's spells is Charisma.</p>
 		</description>
-		<sheet alt="Self-Serving Sacrifice">
-			<description>When a creature within 120 feet of you is subjected to a critical hit or is reduced to 0 hit points, you can use your reaction magically switch places with the target. Roll a number of d6s equal to half your level, you take force damage equal to the total rolled, you gain inspiration, and your exhaustion level is reduced by one. The target regains hit points equal to the total rolled and gains 1 level of exhaustion. You cannot use this feature again until you finish a rest.
+		<sheet alt="Self-Serving Sacrifice" usage="1/Rest">
+			<description>When a creature within 120 feet of you is subjected to a critical hit or is reduced to 0 hit points, you can use your reaction magically switch places with the target. Roll a number of d6s equal to half your level, you take force damage equal to the total rolled, you gain inspiration, and your exhaustion level is reduced by one. The target regains hit points equal to the total rolled and gains 1 level of exhaustion.
             When you finish a rest, each creature within 100 feet of you loses one Hit Die.
             You can cast the <i>True Resurrection</i> spell without requiring material components. Charisma is your spellcasting ability modifier for this spell. When you cast this spell you ddie, nothing can prevent it, and you cannot be raised from the dead by any means. When the creature that you returned to life takes a long rest, it must roll a d20 halfway through the rest's duration. On a 1, your soul takes the form of a Wraith within 100 feet of the creature and tries to kill it. The Wraith vanishes after 8 hours, or when it dies. Once the Wraith appears, it can't appear again for 30 days.</description>
 		</sheet>
@@ -437,8 +437,8 @@
         <description>
             <p></p>
         </description>
-        <sheet>
-            <description>As a bonus action or when you take the Attack action on your turn, you can choose to enter a fury. While in this fury, you can make one additional melee attack when you take the Attack action on your turn, and you reduce all you take by an amount equal to your proficiency bonus. The fury ends if you are incapacitated, id you die, or if you end your turn and there are no creatures within 60 feet of you that you can see or hear. You cannot use this feature again until you finish a long rest or if you kill a Humanoid.
+        <sheet usage="1/Long Rest">
+            <description>As a bonus action or when you take the Attack action on your turn, you can choose to enter a fury. While in this fury, you can make one additional melee attack when you take the Attack action on your turn, and you reduce all you take by an amount equal to your proficiency bonus. The fury ends if you are incapacitated, id you die, or if you end your turn and there are no creatures within 60 feet of you that you can see or hear. You can also use this feature again if you kill a Humanoid.
             While you are in a fury, you must make a DC 15 Wisdom saving throw at the start of each of your turns. On a successful save you can choose to end your fury or continue. On a failed save, you no longer make the saving throw at the start of your turns, and you regard the creature nearest to you that you can see or hear as your enemy. On each of your turns you must move as close to the creature as possible take the Attack action, targeting that creature with melee attacks. If you're unable to get close enough to the creature to attack it, your turn ends after you've used up all your movement. It the creature dies or can no longer be seen or heard by you, the next nearest creature that you can see or hear becomes your new target.</description>
         </sheet>
     </element>
@@ -464,8 +464,8 @@
         <description>
             <p></p>
         </description>
-        <sheet>
-            <description>As a bonus action, you can magically gain a flying Speed equal to your walking speed for 10 minutes. During this time a mass of shadowy birds fill the area within 20 feet of you.  Once you use this feature you cannot do so again until you finish a rest. You can gain 1 level exhaustion to use this feature again early.
+        <sheet usage="1/Rest">
+            <description>As a bonus action, you can magically gain a flying Speed equal to your walking speed for 10 minutes. During this time a mass of shadowy birds fill the area within 20 feet of you. Once you use this feature you cannot do so again until you finish a rest. You can gain 1 level exhaustion to use this feature again early.
             The birds that when you use this feature remain and follow you until you finish a rest. While the birds are present you disadvantage on Dexterity (Stealth) checks, and other creatures gain advantage on Wisdom (Insight or Perception) checks made against you.</description>
         </sheet>
     </element>

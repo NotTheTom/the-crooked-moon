@@ -183,7 +183,7 @@
 		</description>
 		<sheet alt="Crimson Ritualist">
 			<description>You can cast the <i>Blood Bolt</i> cantrip using Intelligence as your spellcasting ability modifier.
-            When you finih a long rest you can expend a number of Hit Dice up to {{proficiency}}, and bleed into a vial of liquid. As a bonus action a creature can drink this vial to roll the Hit Dice you expended. The creature regains a number of hit points equal to the total rolled plus its Constitution modifier. This vial reamins potent until you finish a long rest.</description>
+            When you finih a long rest you can expend a number of Hit Dice up to {{proficiency}}, and bleed into a vial of liquid. As a bonus action a creature can drink this vial to roll the Hit Dice you expended. The creature regains a number of hit points equal to the total rolled plus its Constitution modifier. This vial remains potent until you finish a long rest.</description>
 		</sheet>
 	</element>
 	<element name="Wisdom" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FEATURE_CRIMSON_RITUALIST_WISDOM">
@@ -193,7 +193,7 @@
 		</description>
 		<sheet alt="Crimson Ritualist">
             <description>You can cast the <i>Blood Bolt</i> cantrip using Wisdom as your spellcasting ability modifier.
-            When you finih a long rest you can expend a number of Hit Dice up to {{proficiency}}, and bleed into a vial of liquid. As a bonus action a creature can drink this vial to roll the Hit Dice you expended. The creature regains a number of hit points equal to the total rolled plus its Constitution modifier. This vial reamins potent until you finish a long rest.</description>
+            When you finih a long rest you can expend a number of Hit Dice up to {{proficiency}}, and bleed into a vial of liquid. As a bonus action a creature can drink this vial to roll the Hit Dice you expended. The creature regains a number of hit points equal to the total rolled plus its Constitution modifier. This vial remains potent until you finish a long rest.</description>
 		</sheet>
 	</element>
 	<element name="Charisma" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FEATURE_CRIMSON_RITUALIST_CHARISMA">
@@ -203,7 +203,7 @@
 		</description>
 		<sheet alt="Crimson Ritualist">
 			<description>You can cast the <i>Blood Bolt</i> cantrip using Charisma as your spellcasting ability modifier.
-            When you finih a long rest you can expend a number of Hit Dice up to {{proficiency}}, and bleed into a vial of liquid. As a bonus action a creature can drink this vial to roll the Hit Dice you expended. The creature regains a number of hit points equal to the total rolled plus its Constitution modifier. This vial reamins potent until you finish a long rest.</description>
+            When you finih a long rest you can expend a number of Hit Dice up to {{proficiency}}, and bleed into a vial of liquid. As a bonus action a creature can drink this vial to roll the Hit Dice you expended. The creature regains a number of hit points equal to the total rolled plus its Constitution modifier. This vial remains potent until you finish a long rest.</description>
 		</sheet>
 	</element>
 
@@ -260,9 +260,9 @@
             <p class="indent"><b><i>Cling to Life.</i></b> You add your Constitution modifier (minimum of 1) to death saving throws.</p>
             <p class="indent"><b><i>Enduring Vitality.</i></b> If an effect would kill you outright without death saving throws or would reduce you directly to 0 hit points without dealing damage, you are instead reduced to a number of hit points equal to your level. You can’t use this benefit again until you finish a long rest.</p>
         </description>
-        <sheet>
+        <sheet usage="1/Long Rest">
             <description>You add your Constitution modifier (minimum of 1) to your death saving throws.
-            If an effect kills you without death saving throws or reduces you directly to 0 hit points without dealing damage, you are instead reduced to a number of hit points equal to your level. You can't use this benefit again until you finish a long rest.</description>
+            If an effect kills you without death saving throws or reduces you directly to 0 hit points without dealing damage, you are instead reduced to a number of hit points equal to your level.</description>
         </sheet>
         <rules>
             <stat name="constitution" value="1" />
@@ -456,8 +456,8 @@
             <p class="indent"><b><i>Ability Score Increase.</i></b> Increase your Intelligence, Wisdom, or Charisma score by 1, to a maximum of 20.</p>
             <p class="indent"><b><i>Swift Invocation.</i></b> You can use an action to cast a spell that has a casting time of 1 minute. Once you use this benefit, you can’t do so again until you finish a long rest.</p>
         </description>
-        <sheet>
-            <description>You can use an action to cast a spell that has a casting time of 1 minute. Once you us this benefit you cannot do so again until you finish a long rest.</description>
+        <sheet usage="1/Long Rest">
+            <description>You can use an action to cast a spell that has a casting time of 1 minute.</description>
         </sheet>
         <rules>
             <select type="Ability Score Improvement" name="Ability Score Improvement (Swift Witchcraft)" supports="ID_PHB_FEAT_ASI_INTELLIGENCE|ID_PHB_FEAT_ASI_WISDOM|ID_PHB_FEAT_ASI_CHARISMA" />
