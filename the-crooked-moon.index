@@ -7,7 +7,7 @@
 		</update>
 	</info>
 	<files>
-		<file name="dark-bargains.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/dark-bargains.xml"
+		<file name="dark-bargains.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/dark-bargains.xml" />
 		
 		<file name="feats.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/feats.xml" />
 		
