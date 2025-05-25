@@ -7,9 +7,11 @@
 		</update>
 	</info>
 	<files>
-		<file name="spells.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/spells.xml" />
+		<file name="dark-bargains.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/dark-bargains.xml"
 		
 		<file name="feats.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/feats.xml" />
+		
+		<file name="spells.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/spells.xml" />
 		
 		<file name="source.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/source.xml" />
 	</files>
