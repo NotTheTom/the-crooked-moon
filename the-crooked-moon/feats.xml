@@ -216,8 +216,7 @@
         </description>
         <sheet display="false" />
         <rules>
-            <select type="Spell" name="Cantrip (Cult Initiate)" supports="0,Warlock" />
-            <select type="Spell" name="Cantrip (Cult Initiate)" supports="0,Warlock" />
+            <select type="Spell" name="Cantrip (Cult Initiate)" supports="0,Warlock" number="2" />
             <select type="Spell" name="1st-Level Spell (Cult Initiate)" supports="1,Warlock" />
             <select type="Feat Feature" name="Spellcasting Ability (Cult Initiate)" supports="ID_LOA_TCM_FEAT_FEATURE_CULT_INITIATE_INTELLIGENCE|ID_LOA_TCM_FEAT_FEATURE_CULT_INITIATE_WISDOM|ID_LOA_TCM_FEAT_FEATURE_CULT_INITIATE_CHARISMA" />
         </rules>
@@ -368,14 +367,14 @@
         </rules>
     </element>
 
-    <element name="Hunter of Hunters" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_FEATURE_HUNTER_OF_HUNTERS">
+    <element name="Hunter of Hunters" type="Feat" source="The Crooked Moon" id="ID_LOA_TCM_FEAT_HUNTER_OF_HUNTERS">
         <description>
             <p>You are adept at hunting monstrous prey, granting you the following benefits.</p>
             <p class="indent"><b><i>Dead Aim.</i></b> As a bonus action, you can scrutinize a creature to spot its vulnerable points. The next time you deal damage to the creature before the start of your next turn, you ignore the creature’s damage resistances, if any.</p>
             <p class="indent"><b><i>Studied Quarry.</i></b> You have advantage on ability checks made to recall information about a creature.</p>
         </description>
         <sheet>
-            <description>As a bonus action you can scrutinize a creature to spot its weak points. The next time you deal damage to the creature creature before the start of your next turn, you ignore the creature's damage resistances.
+            <description>As a bonus action you can scrutinize a creature to spot its weak points. The next time you deal damage to the creature before the start of your next turn, you ignore the creature's damage resistances.
             You have advantage on ability checks made to recall information about a creature.</description>
         </sheet>
     </element>

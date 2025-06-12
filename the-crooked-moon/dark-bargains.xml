@@ -331,7 +331,7 @@
         </sheet>
     </element>
 
-    <element name="Skin of Coffin Nails" type="Item" source="The Crooekd Moon" id="ID_LOA_TCM_ITEM_SKIN_OF_COFFIN_NAILS">
+    <element name="Skin of Coffin Nails" type="Item" source="The Crooked Moon" id="ID_LOA_TCM_ITEM_SKIN_OF_COFFIN_NAILS">
         <description>
             <p><i>Once equipped, this item grants you the Skin of Coffin Nails Dark Bargain.</i></p>
             <p>Your body becomes as coldly unrelenting as iron nails sealing away the dead. You can shrug off staggering punishment, but the waters of the world no longer embrace you, as if spiting your defiance.</p>
@@ -405,7 +405,7 @@
             <grant type="Feat Feature" id="ID_LOA_TCM_DARK_BARGAIN_STILLED_HUNGERS" />
         </rules>
     </element>
-    <element name="Stilled Hungers" type="Feat Feature" source="source" id="ID_LOA_TCM_DARK_BARGAIN_STILLED_HUNGERS">
+    <element name="Stilled Hungers" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_DARK_BARGAIN_STILLED_HUNGERS">
         <compendium display="false" />
         <description>
             <p></p>

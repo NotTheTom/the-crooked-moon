@@ -7,6 +7,20 @@
 		</update>
 	</info>
 	<files>
+		<file name="background-amnesiac.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/backgrounds-amnesiac.xml" />
+		<file name="background-crimson-aspirant.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-crimson-aspirant.xml" />
+		<file name="background-crossroads-gambler.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-crossroads-gambler.xml" />
+		<file name="background-cultist.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-cultist.xml" />
+		<file name="background-druskenvald-dweller.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-druskenvald-dweller.xml" />
+		<file name="background-experiment.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-experiment.xml" />
+		<file name="background-ghostlight-passenger.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-ghostlight-passenger.xml" />
+		<file name="background-night-stalker.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-night-stalker.xml" />
+		<file name="background-reflected-wanderer.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-reflected-wanderer.xml" />
+		<file name="background-rest-warden.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-rest-warden.xml" />
+		<file name="background-reveler.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-reveler.xml" />
+		<file name="background-scholar-of-the-forbidden.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-scholar-of-the-forbiddden.xml" />
+		<file name="background-wicker-weaver.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-wicker-weaver.xml" />
+		
 		<file name="dark-bargains.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/dark-bargains.xml" />
 		
 		<file name="feats.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/feats.xml" />

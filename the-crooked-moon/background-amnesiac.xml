@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Amnesiac</name>
+        <update version="0.0.1">
+            <file name="background-amnesiac.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-amnesiac.xml" />
+        </update>
+    </info>
+    <element name="Amnesiac" type="Background" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_AMNESIAC">
+        <description>
+            <p>Some portion of your past has been swallowed by nothingness. The missing time could be a short interval—mere days or weeks gone from your memory— or you might have only vague hints at best of who you are and where you are from. Flashes of déjà vu are common, taunting you with recollection, but they almost always slip away, as ungraspable as the mists of Druskenvald. An injury, some traumatic experience, or the magical workings of a spell or curse could be the culprit behind your amnesia.</p>
+            <ul class="unstyled">
+                <li><b>Skill Proficiencies:</b> Choose two (see below)</li>
+                <li><b>Tool Proficiencies:</b> Choose two (see below)</li>
+                <li><b>Equipment:</b> book (personal notes), ink, ink pen, traveler's clothes, 11 gp; or 50 gp</li>
+            </ul>
+            <div element="ID_LOA_TCM_BACKGROUND_FEATURE_AMNESIAC_MEMORY_STARVED" />
+            <h5>SCATTERED MEMORIES</h5>
+            <p>You don’t choose skill proficiencies or a tool proficiency when you select this background, and you don’t choose any languages other than Common during character creation—these are parts of your past that you are missing. Instead, you can pick one of those proficiencies or languages during play at any time. The knowledge might return in a spontaneous flash, even as you make a roll that relies on the proficiency, or slowly emerge as you struggle to solve a problem. Once you choose one of these features, you can’t choose another one until you gain a level.</p> 
+            <p class="indent">The GM might rule that you can choose a new recalled feature early if something reminds you of your past, such as finding a piece of evidence from your missing memories or experiencing an event similar to one you have forgotten. Of particular value is an event relating to one of the story threads or trinkets presented below.</p>
+            <h5>BUILDING AN AMNESIAC</h5>
+            <p>Any character can face misfortune or a choice that steals their memory. Consider how your character came to lose their memory. Was it lost through injury or illness, or did something more sinister steal it with a toxin or curse? You might decide to leave this choice up to the GM, letting you as a player discover the cause alongside your character.</p>
+            <p class="indent"><b><i>Suggested Story Threads.</i></b> This background presents a paradox when considering threads to weave through a campaign, since the character may not remember them. Work with the GM to create some leading events or people that can serve as constants to trace a path through the void of the character’s past, especially if the GM can insert existing nonplayer characters into the thread to strengthen these connections. The Amnesiac Story Threads table suggests events and people who can be the start of these threads.</p>
+            <p><b>Amnesiac Story Threads</b></p>
+            <table>
+                <thead>
+                    <tr><td class="col-10">d6</td><td>Thread</td></tr>
+                </thead>
+                <tr><td>1</td><td>You have recurring dreams of someone you might recognize on your adventures.</td></tr>
+                <tr><td>2</td><td>You absent-mindedly doodle the same design or symbol over and over.</td></tr>
+                <tr><td>3</td><td>A friend has been traveling the provinces of Druskenvald with a caravan, searching for any hint of your past as they do.</td></tr>
+                <tr><td>4</td><td>A rhyme or song you've never heard before comes to mind when your thoughts wander.</td></tr>
+                <tr><td>5</td><td>Rainbow colors, such as those on a soap bubble or oil slick, fill you with unexplained terror.</td></tr>
+                <tr><td>6</td><td>You have a fragmented recollection of traveling to a remote place in the mountains.</td></tr>
+            </table>
+            <p class="indent"><b><i>Amnesiac Trinkets.</i></b> When you make your character, you can roll once on the Amnesiac Trinkets table instead of on the normal starting Trinkets table.</p>
+            <p><b>Amnesiac Trinkets</b></p>
+            <table>
+                <thead>
+                    <tr><td class="col-10">d6</td><td>Trinket</td></tr>
+                </thead>
+                <tr><td>1</td><td>Half of a tarnished silver ring with a partial inscription in a language you don't understand</td></tr>
+                <tr><td>2</td><td>A music boc that plays a sad turne you recognize but can't identify</td></tr>
+                <tr><td>3</td><td>A short note addressed to you signed with a name you don't recognize</td></tr>
+                <tr><td>4</td><td>A think silk scarf with a fading scent that stirs familiarity</td></tr>
+                <tr><td>5</td><td>A toy horse with unfamiliar initials inked on it</td></tr>
+                <tr><td>6</td><td>A locket whose portrait is burnt and unrecognizable</td></tr>
+            </table>
+        </description>
+        <setters>
+            <set name="short">2 Skills, 1 Tool</set>
+        </setters>
+        <rules>
+            <select type="Proficiency" name="Skill Proficiency (Amnesiac)" supports="Skill" number="2" />
+            <select type="Proficiency" name="Tool Proficiency (Amnesiac)" supports="Tool" />
+            <grant type="Background Feature" id="ID_LOA_TCM_BACKGROUND_FEATURE_AMNESIAC_MEMORY_STARVED" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+        </rules>
+    </element>
+    <element name="Feature: Memory Starved" type="Background Feature" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_FEATURE_AMNESIAC_MEMORY_STARVED">
+        <supports>Background Feature</supports>
+        <description>
+            <p>You gain the Memory Starved feat.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Feat" id="ID_LOA_TCM_FEAT_MEMORY_STARVED" />
+        </rules>
+    </element>
+</elements>

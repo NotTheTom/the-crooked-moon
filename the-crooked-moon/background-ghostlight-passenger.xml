@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Ghostlight Passenger</name>
+        <update version="0.0.1">
+            <file name="background-ghostlight-passenger.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-ghostlight-passenger.xml" />
+        </update>
+    </info>
+    <element name="Ghostlight Passenger" type="Background" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_GHOSTLIGHT_PASSENGER">
+        <description>
+            <p>Once, even before your most recent travel to Druskenvald, you rode the deathly train known as the <i>Ghostlight Express</i>. Your memories of that journey might be hazy and dreamlike, or they could be sharp and jarring in their clarity. You learned some of the workings of the ghostly engine and formed a connection with the conductor and fellow travelers that has stayed with you. At times, you are even more comfortable with the dead than the living.</p>
+            <ul class="unstyled">
+                <li><b>Skill Proficiencies:</b> Insight, Persuasion</li>
+                <li><b>Tool Proficiencies:</b> Smith's tools</li>
+                <li><b>Equipment:</b> Smith's tools, bullseye lantern, fine clothes, oil (3 flasks), 5 gp; or 50 </li>
+            </ul>
+            <div element="ID_LOA_TCM_BACKGROUND_FEATURE_GHOSTLIGHT_PASSENGER_GHOSTLIGHT_MEDIUM" />
+            <h5>BUILDING A GHOSTLIGHT PASSENGER</h5>
+            <p>Every person in Druskenvald travels the <i>Ghostlight Express</i> at least once, but very few form the deep and lasting connection that you have. Your first trip on the train might have been a near death experience from which you were saved, or perhaps you did die in earnest but were resurrected later.</p>
+            <p class="indent">Characters attuned to spirits or the lands of the dead, such as clerics, paladins, or those who had brushes with death, are the most common to exhibit this deep connection.</p>
+            <p class="indent"><b><i>Suggested Story Threads.</i></b> The Ghostlight Passenger Story Threads table suggests events and people who can be the start of story threads for your character that weave through the campaign.</p>
+            <p><b>Ghostlight Passenger Story Threads</b></p>
+            <table>
+                <thead>
+                    <tr><td class="col-10">d6</td><td>Thread</td></tr>
+                </thead>
+                <tr><td>1</td><td>Sometimes when you dream, you find yourself back on the <i>Ghostlight Express</i> in more than just a dream image.</td></tr>
+                <tr><td>2</td><td>Your first journey to the lands of the dead was confusing, but you realized you now may be abl to find the departed spirit of a loved one once thought lost forever.</td></tr>
+                <tr><td>3</td><td>A specific spirit returns to speak to and through you repeatedly</td></tr>
+                <tr><td>4</td><td>People sometimes speak to you as if they know you but later have no recollection of the conversation. During those moments of recognition, they know details from your visits on the <i>Ghostlight Express</i>.</td></tr>
+                <tr><td>5</td><td>You sometimes see people in your travels who you recognize from your time on the <i>Ghostlight Express</i>.</td></tr>
+                <tr><td>6</td><td>Someone greeted you with knowledge of your first journey on the <i>Ghostlight Express</i>, but you don't remember them.</td></tr>
+            </table>
+            <p class="indent"><b><i>Ghostlight Passenger Trinkets.</i></b> When you make your character, you can roll once on the Ghostlight Passenger Trinkets table instead of on the normal starting Trinkets table.</p>
+            <p><b>Ghostlight Passenger Trinkets</b></p>
+            <table>
+                <thead>
+                    <tr><td class="col-10">d6</td><td>Trinket</td></tr>
+                </thead>
+                <tr><td>1</td><td>A slate board smeared with erased chalk, where you sometimes find words scratched</td></tr>
+                <tr><td>2</td><td>A lump of coal that never burns away and gives off wispy smoke</td></tr>
+                <tr><td>3</td><td>A torn ticket stub that is slightely translucent</td></tr>
+                <tr><td>4</td><td>A dented train conductor's whistle that only the dead can hear</td></tr>
+                <tr><td>5</td><td>A pocket watch that runs backwards</td></tr>
+                <tr><td>6</td><td>A battered train conductor's hat</td></tr>
+            </table>
+        </description>
+        <setters>
+            <set name="short">Insight, Persuasion, Smith's tools</set>
+        </setters>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_SMITHS_TOOLS" />
+            <grant type="Background Feature" id="ID_LOA_TCM_BACKGROUND_FEATURE_GHOSTLIGHT_PASSENGER_GHOSTLIGHT_MEDIUM" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+        </rules>
+    </element>
+    <element name="Feature: Ghostlight Medium" type="Background Feature" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_FEATURE_GHOSTLIGHT_PASSENGER_GHOSTLIGHT_MEDIUM">
+        <description>
+            <p>You gain the Ghostlight Medium Feat.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Feat" id="ID_LOA_TCM_FEAT_GHOSTLIGHT_MEDIUM" />
+        </rules>
+    </element>
+</elements>

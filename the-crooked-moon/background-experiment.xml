@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Experiment</name>
+        <update version="0.0.1">
+            <file name="background-experiment.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-experiment.xml" />
+        </update>
+    </info>
+    <element name="Experiment" type="Background" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_EXPERIMENT">
+        <description>
+            <p>You are forever altered in some drastic, physical way, perhaps even made monstrous. A blasphemous fusion of science, alchemy, and magic changed you, possibly to mend some unrecoverable malady, or to test the limits of your biology. The process was a success, at least to a point, but the change left its mark on you. The indelible warping of your form can be a source of fear for those who do not understand what they see.</p>
+            <ul class="unstyled">
+                <li><b>Skill Proficiencies:</b> Intimidation, Medicine</li>
+                <li><b>Tool Proficiencies:</b> Alchemist's supplies</li>
+                <li><b>Equipment:</b> Alchemist's supplies, manacle, perfume (to cover chemical smell), traveler's clothes, (With hooded cloak), 5 gp; or 50 gp</li>
+            </ul>
+            <div element="ID_LOA_TCM_BACKGROUND_FEATURE_EXPERIMENT_ALTERED" />
+            <h5>BUILDING AN EXPERIMENT</h5>
+            <p>An experiment can come from any class or walk of life. Were you kidnapped and altered against your will, or did you volunteer for a heinous procedure? Was the experimenting done purely for discovery, to overcome a worse fate, or for someone to play at being a god? Whatever the reason, the process is never pleasant, and it always leaves scars—both those you can see and those that have marked your very soul.</p>
+            <p class="indent"><b><i>Suggested Story Threads.</i></b> The Experiment Story Threads table suggests events and people who can be the start of story threads for your character that weave through the campaign.</p>
+            <p><b>Experiemnt Story Threads</b></p>
+            <table>
+                <thead>
+                    <tr><td class="col-10">d6</td><td>Thread</td></tr>
+                </thead>
+                <tr><td>1</td><td>A particular song stirs feelings of sadness and overwhelming anger in you, reminding you of the process that changed you.</td></tr>
+                <tr><td>2</td><td>A portion of your altered body is very clearly grafted from a different person, and they might want it back.</td></tr>
+                <tr><td>3</td><td>Another person was changed alongside you. They fled before you left, urging you to do the same.</td></tr>
+                <tr><td>4</td><td>You have recurring nightmares of the procedure you endured, sometimes seeing glimpses of faces in the dream that you don't recognize.</td></tr>
+                <tr><td>5</td><td>Your physical difference invites curiosity and attention, which for some reason is more disturbing than disdain or fear.</td></tr>
+                <tr><td>6</td><td>A peculiar symbol is branded on or near your alteration.</td></tr>
+            </table>
+            <p class="indent"><b><i>Experiment Trinkets.</i></b> When you make your character, you can roll once on the Experiment Trinkets table instead of on the normal starting Trinkets table.</p>
+            <p><b>Experiment Trinkets</b></p>
+            <table>
+                <thead>
+                    <tr><td class="col-10">d6</td><td>Trinket</td></tr>
+                </thead>
+                <tr><td>1</td><td>A syringe with a faintly glowing purple residue</td></tr>
+                <tr><td>2</td><td>A wrench that is the only one that fits a bit of simple machinery built into your body</td></tr>
+                <tr><td>3</td><td>A sheaf of chemical-stained parchments covered in incomprehensible notes and schematics</td></tr>
+                <tr><td>4</td><td>A spool of silver thread that matches stitches in your altered body part</td></tr>
+                <tr><td>5</td><td>A metal hip flask with strange runes scratched into one side</td></tr>
+                <tr><td>6</td><td>A smooth stone that comforts and soothes you when you hold it tightely</td></tr>
+            </table>
+        </description>
+        <setters>
+            <set name="short">Intimidation, Medicine, Alchemist's supplies</set>
+        </setters>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INTIMIDATION" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_MEDICINE" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_ALCHEMISTS_SUPPLIES" />
+            <grant type="Background Feature" id="ID_LOA_TCM_BACKGROUND_FEATURE_EXPERIMENT_ALTERED" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+        </rules>
+    </element>
+    <element name="Feature: Altered" type="Background Feature" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_FEATURE_EXPERIMENT_ALTERED">
+        <description>
+            <p>You gain the Altered Feat.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Feat" id="ID_LOA_TCM_FEAT_ALTERED" />
+        </rules>
+    </element>
+</elements>

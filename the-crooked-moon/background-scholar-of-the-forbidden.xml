@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Scholar of the Forbidden</name>
+        <update version="0.0.1">
+            <file name="background-scholar-of-the-forbidden.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-scholar-of-the-forbidden.xml" />
+        </update>
+    </info>
+    <element name="Scholar of the Forbidden" type="Background" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_SCHOLAR_OF_THE_FORBIDDEN">
+        <description>
+            <p>Delving into the brittle pages of ancient tomes and weathered tablets carved with blasphemy, you have unearthed secrets of eldritch beings of unfathomable might. Most of their meaning slips like whispers out of your grasp, but you have seized both forbidden knowledge and cursed power from them. The deeper you plunge into depravity, the more certainty you feel that you are not there alone.</p>
+            <ul class="unstyled">
+                <li><b>Skill Proficiencies:</b> Arcana, Intimidation</li>
+                <li><b>Tool Proficiencies:</b> Calligrapher's supplies</li>
+                <li><b>Languages:</b> Choose one (Deep Speech recommended)</li>
+                <li><b>Equipment:</b> Calligrapher's supplies, book (a topic of arcana), ink, ink pen, lamp, oil (3 flasks), paper (10 sheets), 2 gp; or 50 gp</li>
+            </ul>
+            <div element="ID_LOA_TCM_BACKGROUND_FEATURE_SCHOLAR_OF_THE_FORBIDDEN_DREAD_SPEECH" />
+            <h5>BUILDING A SCHOLAR OF THE FORBIDDEN</h5>
+            <p>Wizards and warlocks make the most common scholars of the forbidden, but any character who stumbles onto the dread truths waiting beneath the surface of reality can find themselves walking the path. The secrets you unveil could threaten to destabilize any number of powerful beliefs and organizations, which makes you dangerous to them.</p>
+            <p class="indent"><b><i>Suggested Story Threads.</i></b> The Scholar of the Forbidden Story Threads table suggests events and people who can be the start of story threads for your character that weave through the campaign.</p>
+            <p><b>Scholar of the Forbidden Story Threads</b></p>
+            <table>
+                <thead>
+                    <tr><td class="col-10">d6</td><td>Thread</td></tr>
+                </thead>
+                <tr><td>1</td><td>A wealthy patron paid you handsomely to research what led to your discoveries, and they want what you found.</td></tr>
+                <tr><td>2</td><td>When you spoke aloud the first secret word you deciphered, you passed out and woke hours later to find your lips cracked and blackened.</td></tr>
+                <tr><td>3</td><td>Something has been following you since you uncovered the illicit secrets. You sense it always behind you, drawing closer.</td></tr>
+                <tr><td>4</td><td>Your shadow converses with you when you're alone, acting as a debate partner and sounding board in your studies.</td></tr>
+                <tr><td>5</td><td>The reflections of your eyes are black voids, but no one else seems to notice.</td></tr>
+                <tr><td>6</td><td>An order of inquisitors or witch hunters hound you wherever you travel, seeking to silence you and your discoveries forever.</td></tr>
+            </table>
+            <p class="indent"><b><i>Scholar of the Forbidden Trinkets.</i></b> When you make your character, you can roll once on the Scholar of the Forbidden Trinkets table instead of on the normal starting Trinkets table.</p>
+            <p><b>Scholar of the Forbidden Trinkets</b></p>
+            <table>
+                <thead>
+                    <tr><td class="col-10">d6</td><td>Trinket</td></tr>
+                </thead>
+                <tr><td>1</td><td>A broken fragment of a stone table carved with symbols that seem to slither and writhe</td></tr>
+                <tr><td>2</td><td>A desiccated bit of tentacle</td></tr>
+                <tr><td>3</td><td>A small soapstone idol that always seems to end up in your pocket, bag, or otherwise on your person</td></tr>
+                <tr><td>4</td><td>A book bound in Humanoid skin with blank pages that absorb ink or other pigments</td></tr>
+                <tr><td>5</td><td>An alien eyeball floating in a jar of preservative fluid</td></tr>
+                <tr><td>6</td><td>An antique amulet with indecipherable symbols, that whispers at the edge of consciousness when worn</td></tr>
+            </table>
+        </description>
+        <setters>
+            <set name="short">Arcana, Intimidation, 1 Language, Calligrapher's supplies</set>
+        </setters>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ARCANA" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INTIMIDATION" />
+            <select type="Language" name="Language (Scholar of the Forbidden)" supports="Standard||Exotic" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_CALLIGRAPHERS_SUPPLIES" />
+            <grant type="Background Feature" id="ID_LOA_TCM_BACKGROUND_FEATURE_SCHOLAR_OF_THE_FORBIDDEN_DREAD_SPEECH" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+        </rules>
+    </element>
+    <element name="Feature: Dread Speech" type="Background Feature" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_FEATURE_SCHOLAR_OF_THE_FORBIDDEN_DREAD_SPEECH">
+        <description>
+            <p>You gain the Dread Speech Feat.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Feat" id="ID_LOA_TCM_FEAT_DREAD_SPEECH" />
+        </rules>
+    </element>
+</elements>

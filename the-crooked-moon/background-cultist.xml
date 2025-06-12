@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Cultist</name>
+        <update version="0.0.1">
+            <file name="background-cultist.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-cultist.xml" />
+        </update>
+    </info>
+    <element name="Culltist" type="Background" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_CULTIST">
+        <description>
+            <p>You have been inducted into a secret society that venerates or pursues power from some otherworldly source. The cultists might serve as minions of an entity they worship, or they may seek to understand and claim its might for their own. Depending on the malevolence of the cult’s patron or the malefic purposes they may serve, cultists could be a force of wickedness or a group of closely bonded and dedicated people who pursue a common, if esoteric, goal.</p>
+            <ul class="unstyled">
+                <li><b>Skill Proficiencies:</b> Arcana, choose one (Cultist Affinity table skill recommended)</li>
+                <li><b>Tool Proficiencies:</b> Calligrapher's supplies</li>
+                <li><b>Languages:</b> Choose one (Cultist Affinity table language recommended)</li>
+                <li><b>Equipment:</b> Calligrapher's supplies, costume (cult garb), holy symbol (amulet: cult insignia), traveler's clothes, 10 gp; or 50 gp</li>
+            </ul>
+            <div element="ID_LOA_TCM_BACKGROUND_FEATURE_CULTIST_CULT_INITIATE" />
+            <p><b>Cultist Affinities</b></p>
+            <table>
+                <thead>
+                    <tr><td class="col-10">Cult Patron</td><td>Skill</td><td>Language</td></tr>
+                </thead>
+                <tr><td>Aberration</td><td>Perception</td><td>Deep Speech</td></tr>
+                <tr><td>Celestial</td><td>Religion</td><td>Celestial</td></tr>
+                <tr><td>Fiend (Demon)</td><td>Religion</td><td>Abyssal</td></tr>
+                <tr><td>Fiend (Devil)</td><td>Religion</td><td>Infernal</td></tr>
+                <tr><td>Fey</td><td>Nature</td><td>Sylvan</td></tr>
+            </table>
+            <h5>CULT VENERATION</h5>
+            <p>Cults propitiate beings of otherworldly power in hopes of sharing in that potency. Choose what type of cult you joined, such as the following.</p>
+            <p class="indent"><b><i>Aberration.</i></b> Alien creatures with inscrutable mindsets and motivations. Many originate from outside the known multiverse.</p>
+            <p class="indent"><b><i>Celestial.</i></b> Beings of the Upper Planes, and paragons of order or benevolence. Many can be overbearing and uncompromising.</p>
+            <p class="indent"><b><i>Fiend (Demon).</i></b> Creatures of utter evil and destruction that want to see all worlds and planes burn.</p>
+            <p class="indent"><b><i>Fiend (Devil).</i></b> Beings of cunning wickedness who prize structure and obedience. They seek to subjugate others and condemn souls.</p>
+            <p class="indent"><b><i>Fey.</i></b> Capricious beings often associated with nature and emotional extremes. They can be beautiful, terrible, intoxicating, and horrific.</p>
+            <h5>BUILDING A CULTIST</h5>
+            <p>Cultists are often lost souls—individuals severed from the fabric of society whose cult became a manipulative, surrogate family. Consider if your character agrees with the aims of the cult, if they fled the group, or if they remain for infiltration purposes.</p>
+            <p class="indent"><b><i>Suggested Story Threads.</i></b> The Cultist Story Threads table suggests events and people who can be the start of story threads for your character that weave through the campaign.</p>
+            <p><b>Cultist Story Threads</b></p>
+            <table>
+                <thead>
+                    <tr><td class="col-10">d6</td><td>Thread</td></tr>
+                </thead>
+                <tr><td>1</td><td>You learned that the cult that took you in manipulated you throughout your life.</td></tr>
+                <tr><td>2</td><td>A member of your cult betrayed and killed your leader and mentor.</td></tr>
+                <tr><td>3</td><td>Your cult's activities aroused the ire and superstition of locals, deserved or not.</td></tr>
+                <tr><td>4</td><td>You followed a loved one into joining the cult, trying to find out what happened to them.</td></tr>
+                <tr><td>5</td><td>You met someone who forced you to see the cult you always venerated in a different light.</td></tr>
+                <tr><td>6</td><td>You joined the cult to save yourself from an incurable illness or other certain doom.</td></tr>
+            </table>
+            <p class="indent"><b><i>Cultist Trinkets.</i></b> When you make your character, you can roll once on the Cultist Trinkets table instead of on the normal starting Trinkets table.</p>
+            <p><b>Cultist Trinkets</b></p>
+            <table>
+                <thead>
+                    <tr><td class="col-10">d6</td><td>Trinket</td></tr>
+                </thead>
+                <tr><td>1</td><td>A sealed scroll of esoteric knowledge</td></tr>
+                <tr><td>2</td><td>A steel ball bearing etched over its entire surface with your cult's sacred text</td></tr>
+                <tr><td>3</td><td>A crystal that feels strange to the touch</td></tr>
+                <tr><td>4</td><td>A ritual knife stained with blood, sap, or oils</td></tr>
+                <tr><td>5</td><td>A set of copper tattoo needles</td></tr>
+                <tr><td>6</td><td>An embroidered cloth half mask</td></tr>
+            </table>
+        </description>
+        <setters>
+            <set name="short">Arcana, 1 Skill, 1 Language, Calligrapher's supplies</set>
+        </setters>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ARCANA" />
+            <select type="Proficiency" name="Skill Proficiency (Cultist)" supports="Skill" />
+            <select type="Language" name="Language (Cultist)" supports="Standard||Exotic" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_CALLIGRAPHERS_SUPPLIES" />
+            <grant type="Background Feature" id="ID_LOA_TCM_BACKGROUND_FEATURE_CULTIST_CULT_INITIATE" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+        </rules>
+    </element>
+    <element name="Feature: Cult Initiate" type="Background Feature" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_FEATURE_CULTIST_CULT_INITIATE">
+        <supports>Background Feature</supports>
+        <description>
+            <p>You gain the Cult Initiate Feat.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Feat" id="ID_lOA_TCM_FEAT_CULT_INITIATE" />
+        </rules>
+    </element>
+</elements>

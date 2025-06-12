@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Reflected Wanderer</name>
+        <update version="0.0.1">
+            <file name="background-reflected-wanderer.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-reflected-wanderer.xml" />
+        </update>
+    </info>
+    <element name="Reflected Wanderer" type="Background" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_REFLECTED_WANDERER">
+        <description>
+            <p>You were once whole, but part of you has been separated from your being and now also wanders the world. This aspect of you took your reflection and shadow with it, and it travels about as a mirage that looks identical to you. You know this other self is out there—you can feel it—but what it wants and why is lost on you. Sometimes you encounter a stranger that knows you—for good or ill—though you’ve never met them before, and you can’t help but wonder if they met the other you.</p>
+            <ul class="unstyled">
+                <li><b>Skill Proficiencies:</b> Deception, Investigation</li>
+                <li><b>Tool Proficiencies:</b> Disguise kit</li>
+                <li><b>Equipment:</b> Disguise kit, mirror, traveler's clothes, 16 gp; or 50 gp</li>
+            </ul>
+            <div element="ID_LOA_TCM_BACKGROUND_FEATURE_REFLECTED_WANDERER_UNREFLECTED" />
+            <h5>BUILDING A REFLECTED WANDERER</h5>
+            <p>Any character can be a reflected wanderer. How was it that your being came to be divided? How much do you understand about your situation? Are you truly who you think you are, or are you, in reality, the very castoff reflection of your other self ?</p>
+            <p class="indent"><b><i>Suggested Story Threads.</i></b> The Reflected Wanderer Story Threads table suggests events and people who can be the start of story threads for your character that weave through the campaign.</p>
+            <p><b>Reflected Wanderer Story Threads</b></p>
+            <table>
+                <thead>
+                    <tr><td class="col-10">d6</td><td>Thread</td></tr>
+                </thead>
+                <tr><td>1</td><td>A close, long-term relationship went suddenly sour as if you wrongedd the other person.</td></tr>
+                <tr><td>2</td><td>Your other self leaves you messages and signs as it travels, sometimes seeming fond and other times resentful.</td></tr>
+                <tr><td>3</td><td>Animals are unsettled by you, becoming skittish and restless in your presence.</td></tr>
+                <tr><td>4</td><td>You're wanted for several minor crimes you never committed, though eyewitneses named you. Over time, more crimes of increasing severity occur</td></tr>
+                <tr><td>5</td><td>Someone you've been at odds with begins treating you with more respect and kindness.</td></tr>
+                <tr><td>6</td><td>Mirrors sometimes crack when you touch them.</td></tr>
+            </table>
+            <p class="indent"><b><i>Reflected Wanderer Trinkets.</i></b> When you make your character, you can roll once on the Reflected Wanderer Trinkets table instead of on the normal starting Trinkets table.</p>
+            <p><b>Reflected Wanderer Trinkests</b></p>
+            <table>
+                <thead>
+                    <tr><td class="col-10">d6</td><td>Trinket</td></tr>
+                </thead>
+                <tr><td>1</td><td>A shattered hand mirror</td></tr>
+                <tr><td>2</td><td>An invitation to a powerful person's home whom you've never met</td></tr>
+                <tr><td>3</td><td>A locket with your silhouette painted in it on both sides, facing each other</td></tr>
+                <tr><td>4</td><td>A short, derisive letter from yourself that you don't remember writing</td></tr>
+                <tr><td>5</td><td>A brooch delivered to you that you didn't purchase</td></tr>
+                <tr><td>6</td><td>A piece of chalk that writes in a different colo than it appears to be</td></tr>
+            </table>
+        </description>
+        <setters>
+            <set name="short">Deception, Investigation, Disguise kit</set>
+        </setters>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_DECEPTION" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INVESTIGATION" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_DISGUISE_KIT" />
+            <grant type="Background Feature" id="ID_LOA_TCM_BACKGROUND_FEATURE_REFLECTED_WANDERER_UNREFLECTED" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+        </rules>
+    </element>
+    <element name="Feature: Unreflected" type="Background Feature" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_FEATURE_REFLECTED_WANDERER_UNREFLECTED">
+        <description>
+            <p>You gain the Unreflected Feat.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Feat" id="ID_LOA_TCM_FEAT_UNREFLECTED" />
+        </rules>
+    </element>
+</elements>

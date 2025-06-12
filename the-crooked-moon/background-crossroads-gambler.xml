@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Crossroads Gambler</name>
+        <update version="0.0.1">
+            <file name="background-crossroads-gambler.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-crossroads-gambler.xml" />
+        </update>
+    </info>
+    <element name="Crossroads Gambler" type="Background" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_CROSSROADS_GAMBLER">
+        <description>
+            <p>You’ve made your bones on games of chance, and one day your games crossed the line into something far more serious. You might have played for your soul against a Fiend, matched wits with ancient forest Fey in a riddle contest, or rolled dice with the fabled Mister Crossroads.</p>
+            <ul class="unstyled">
+                <li><b>Skill Proficiencies:</b> Deception, Insight</li>
+                <li><b>Tool Proficiencies:</b> Choose one kind of gaming set</li>
+                <li><b>Equipment:</b> Gaming set (same as above), caltrops, fine clothes, fine wine, 23 gp; or 50 gp</li>
+            </ul>
+            <div element="ID_LOA_TCM_BACKGROUND_FEATURE_CROSSROADS_GAMBLER_FATE_GAMBLER" />
+            <h5>BUILDING A CROSSROADS GAMBLER</h5>
+            <p>Characters who live by their wits, such as rogues and bards, find the call of a crossroads gambler appealing, though anyone could find themselves in the position of playing for stakes higher than they could ever imagine... or pay. A spellcaster who conjured the wrong entity may find themself a gambler. The desperate who sought out a mysterious figure to throw dice and match wits for power or salvation can find their fates bound to the crossroads.</p>
+            <p class="indent"><b><i>Suggested Story Threads</i></b> The Crossroads Gambler Story Threads table suggests events and people who can be the start of story threads for your character that weave through the campaign.</p>
+            <p><b>Crossroads Gambler Story Threads</b></p>
+            <table>
+                <thead>
+                    <tr><td class="col-10">d6</td><td>Thread</td></tr>
+                </thead>
+                <tr><td>1</td><td>Someone you thought was a friend tricked you into making your bargain.</td></tr>
+                <tr><td>2</td><td>You've found that if you go too long without making a wager, your luck starts to turn sour.</td></tr>
+                <tr><td>3</td><td>You only feel alive in the midst of a contest.</td></tr>
+                <tr><td>4</td><td>You lost your bet, and you're on the run from the thing surely coming to collect.</td></tr>
+                <tr><td>5</td><td>Someone close to you made a wager and lost. You made your deal to try and find them.</td></tr>
+                <tr><td>6</td><td>You've been gambling for a long time, and you're tired. Now all you want is a way out.</td></tr>
+            </table>
+            <p class="indent"><b><i>Crossroads Gambler Trinkets.</i></b> When you make your character, you can roll once on the Crossroads Gambler Trinkets table instead of on the normal starting Trinkets table.</p>
+            <p><b>Crossroads Gambler Trinkets</b></p>
+            <table>
+                <thead>
+                    <tr><td class="col-10">d6</td><td>Trinket</td></tr>
+                </thead>
+                <tr><td>1</td><td>A lucky coin made of a strange material, such as green steel or bone</td></tr>
+                <tr><td>2</td><td>A battered, blood-stained six of hearts playing card</td></tr>
+                <tr><td>3</td><td>A torn journal page of a long-missing gambler who was hopeful to win their fortune from a being they describe but fail to name</td></tr>
+                <tr><td>4</td><td>The preserved foot of a rabbit, owl, or weasel</td></tr>
+                <tr><td>5</td><td>A six-sided die that somehow seems to have too many 2s when closely examined</td></tr>
+                <tr><td>6</td><td>A silver-plated ivory chess rook</td></tr>
+            </table>
+        </description>
+        <setters>
+            <set name="short">Deception, Insight, 1 Gaming Set</set>
+        </setters>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_DECEPTION" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" />
+            <select type="Proficiency" name="Gaming Set (Crossroads Gambler)" supports="" />
+            <grant type="Background Feature" id="ID_LOA_TCM_BACKGROUND_FEATURE_CROSSROADS_GAMBLER_FATE_GAMBLER" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+        </rules>
+    </element>
+    <element name="Feature: Fate Gambler" type="Background Feature" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_FEATURE_CROSSROADS_GAMBLER_FATE_GAMBLER">
+        <supports>Background Feature</supports>
+        <description>
+            <p>You gain the Fate Gambler Feat.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Feat" id="ID_LOA_TCM_FEAT_FATE_GAMBLER" />
+        </rules>
+    </element>
+</elements>

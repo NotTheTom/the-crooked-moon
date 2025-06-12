@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Druskenvald Dweller</name>
+        <update version="0.0.1">
+            <file name="background-druskenvald-dweller.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-druskenvald-dweller.xml" />
+        </update>
+    </info>
+    <element name="Druskenvald Dweller" type="Background" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_DRUSKENVALD_DWELLER">
+        <description>
+            <p>You hail from one of the thirteen baneful provinces of Druskenvald. You might be a member of the unique species known to originate from those diverse biomes, or you may be of a different heritage altogether. The skills and culture of your home (summarized below) shape your knowledge and early experiences.</p>
+            <ul class="unstyled">
+                <li><b>Skill Proficiencies:</b> Survival, choose one (Province Affinity table skill recommended)</li>
+                <li><b>Tool Proficiencies:</b> Choose one (Province Affinity table tool recommended)</li>
+                <li><b>Equipment:</b> Artisans's tools (same as above), map (Druskenvald's provinces), traveler's clothes, 10 gp; or 50 gp</li>
+            </ul>
+            <div element="ID_LOA_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_FEAT_SELECT" />
+            <p><b>Province Affinities</b></p>
+            <table>
+                <thead>
+                    <tr><td class="col-10">Province</td><td>Skill</td><td>Tool</td></tr>
+                </thead>
+                <tr><td>Ardengloom</td><td>History</td><td>Herbalism kit</td></tr>
+                <tr><td>Astramar</td><td>Arcana</td><td>Navigator's tools</td></tr>
+                <tr><td>Bubonia</td><td>Medicine</td><td>Poisoner#s kit</td></tr>
+                <tr><td>Chernabos</td><td>Deception</td><td>Calligrapher's supplies</td></tr>
+                <tr><td>Edwardia</td><td>Investigation</td><td>Tinker's tools</td></tr>
+                <tr><td>Enoch</td><td>Nature</td><td>Leatherworker's tools</td></tr>
+                <tr><td>Kalero</td><td>Performance</td><td>Musical instrument</td></tr>
+                <tr><td>Olmarsh</td><td>Arcana</td><td>Cartographer's supplies</td></tr>
+                <tr><td>Nerukhet</td><td>Persuasion</td><td>Weaver's tools</td></tr>
+                <tr><td>Pholsense</td><td>Religion</td><td>Mason's tools</td></tr>
+                <tr><td>Picco</td><td>Performance</td><td>Woodworker's tools</td></tr>
+                <tr><td>Syndramas</td><td>Athletics</td><td>Cook's utensils</td></tr>
+                <tr><td>Zulrogg</td><td>Survival</td><td>Herbalism kit</td></tr>
+            </table>
+            <h5>BUILDING A DRUSKENVALD DWELLER</h5>
+            <p>Any sort of character can be a Druskenvald dweller. When you make your character, decide if you belong to the species associated with your home province, or if you are of another kind who was raised outside the home of most of your species. This decision itself may determine truths about your character to be experienced throughout your journeys in Druskenvald.</p>
+            <p class="indent"><b><i>Suggested Story Threads.</i></b> The Druskenvald Dweller Story Threads table suggests events and people who can be the start of story threads for your character that weave through the campaign.</p>
+            <p><b>Druskenvald Dweller Story Threads</b></p>
+            <table>
+                <thead>
+                    <tr><td class="col-10">d6</td><td>Thread</td></tr>
+                </thead>
+                <tr><td>1</td><td>You were left on a church doorstep as an infant. The only clue to your origin is the torn cloak used as a blanket.</td></tr>
+                <tr><td>2</td><td>You fled your home home province after being accused of a crime, whether justly or not.</td></tr>
+                <tr><td>3</td><td>After hearing stories of other provinces, you struck out to see more of Druskenvald.</td></tr>
+                <tr><td>4</td><td>Members of a trade caravan stole something or harmed someone dear to you.</td></tr>
+                <tr><td>5</td><td>You made a desperate pact with an ashborn and now seek to nullify the contract.</td></tr>
+                <tr><td>6</td><td>A viscious bogborn bounty hunter trails you.</td></tr>
+            </table>
+            <p class="indent"><b><i>Druskenvald Dweller Trinkets.</i></b> When you make your character, you can roll once on the Druskenvald Dweller Trinkets table instead of on the normal starting Trinkets table.</p>
+            <p><b>Druskenvald Dweller Trinkets</b></p>
+            <table>
+                <thead>
+                    <tr><td class="col-10">d6</td><td>Trinket</td></tr>
+                </thead>
+                <tr><td>1</td><td>A brass needle with a dangling bit of broken thread</td></tr>
+                <tr><td>2</td><td>A dull, rusty sickle with a bone handle</td></tr>
+                <tr><td>3</td><td>A star chart etched onto a crystal plate</td></tr>
+                <tr><td>4</td><td>A wicker doll with bloodstained bead eyes</td></tr>
+                <tr><td>5</td><td>A length of chain that sometimes rattles when left unattended</td></tr>
+                <tr><td>6</td><td>A mummified hand preserved in bog peat</td></tr>
+            </table>
+        </description>
+        <setters>
+            <set name="short">Survival, 1 Skill, 1 Tool</set>
+        </setters>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
+            <select type="Proficiency" name="Skill Proficiency (Druskenvald Dweller)" supports="Skill" />
+            <select type="Proficiency" name="Tool Proficiency (Druskenvald Dweller)" supports="Tool" />
+            <grant type="Background Feature" id="ID_LOA_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_FEAT_SELECT" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+        </rules>
+    </element>
+    <element name="Feature: Feat" type="Background Feature" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_FEAT_SELECT">
+        <description>
+            <p>You can choose one of the Feats from The Crooked Moon.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Feat" name="Feat (Druskenvald Dweller)" supports="ID_LOA_TCM_FEAT_ALTERED|ID_LOA_TCM_FEAT_CHARM_TWISTER|ID_LOA_TCM_FEAT_CRIMSON_RITUALIST|ID_LOA_TCM_FEAT_CULT_INITIATE|ID_LOA_TCM_FEAT_DEATH_DEFIER|ID_LOA_TCM_FEAT_DREAD_SPEECH|ID_LOA_TCM_FEAT_FATE_GAMBLER|ID_LOA_TCM_FEAT_GHOSTLIGHT_MEDIUM|ID_LOA_TCM_FEAT_GRAVE_KEEPER|ID_LOA_TCM_FEAT_HUNTER_OF_HUNTERS|ID_LOA_TCM_FEAT_MEMORY_STARVED|ID_LOA_TCM_FEAT_REVELING_FOOL|ID_LOA_TCM_FEAT_UNREFLECTED|ID_LOA_TCM_FEAT_SWIFT_WITCHCRAFT" />
+        </rules>
+    </element>
+</elements>

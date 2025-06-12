@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Rest Warden</name>
+        <update version="0.0.1">
+            <file name="background-rest-warden.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-rest-warden.xml" />
+        </update>
+    </info>
+    <element name="Rest Warden" type="Background" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_REST_WARDEN">
+        <description>
+            <p>In a place closer to the lands of the dead than the living, those who tend the eternal rest and disposition of the deceased are held in a mixture of high esteem and apprehension. You have plied the trade of the gravedigger, the mortician, and the embalmer. There are times when you have been the only one to say a kind word in honor of those who passed. The depredations of the Undead are well-known to you, and you don’t suffer their meddling in the rest of your charges.</p>
+            <ul class="unstyled">
+                <li><b>Skill Proficiencies:</b> Religion, Survival</li>
+                <li><b>Tool Proficiencies:</b> Mason's tools</li>
+                <li><b>Equipment:</b> Mason's tools, hooded lantern, oil (3 flasks), shovel, soap, traveler's clothes (with thick gloves and dark-colored hood), 10 gp; or 50 gp</li>
+            </ul>
+            <div element="ID_LOA_TCM_BACKGROUND_FEATURE_REST_WARDEN_GRAVE_KEEPER" />
+            <h5>BUILDING A REST WARDEN</h5>
+            <p>Rest wardens tend to be either a dour and somber lot or—in contrast to their trade—are filled with the vibrance and joy of life. Those who understand the thin thread between life and death or who possess the strength to dig graves beneath moonlit skies and tend the bone orchards where the dead sleep are called to serve as rest wardens.</p>
+            <p class="indent"><b><i>Suggested Story Threads.</i></b> The Rest Warden Story Threads table suggests events and people who can be the start of story threads for your character that weave through the campaign.</p>
+            <p><b>Rest Warden Story Threads</b></p>
+            <table>
+                <thead>
+                    <tr><td class="col-10">d6</td><td>Thread</td></tr>
+                </thead>
+                <tr><td>1</td><td>A strange figure commissioned you to carve a headstone for someone who is very much in the prime of life.</td></tr>
+                <tr><td>2</td><td>In a time of desperation, you once accepted a sizeable bribe to look the other way when someone robbed a grave.</td></tr>
+                <tr><td>3</td><td>You spent time learning from Yorgrim, gravedigger and caretaker of the Maidenmist Cemetery.</td></tr>
+                <tr><td>4</td><td>Someone violated graves under your watch and stole away with the corpses.</td></tr>
+                <tr><td>5</td><td>You comforted a child at their parent's funeral and have taken a protective shine to them.</td></tr>
+                <tr><td>6</td><td>A loved one once rose from the grave as an Undead creature. You vowed to bring them to their final rest.</td></tr>
+            </table>
+            <p class="indent"><b><i>Rest Warden Trinkets.</i></b> When you make your character, you can roll once on the Rest Warden Trinkets table instead of on the normal starting Trinkets table.</p>
+            <p><b>Rest Warden Trinkets</b></p>
+            <table>
+                <thead>
+                    <tr><td class="col-10">d6</td><td>Trinket</td></tr>
+                </thead>
+                <tr><td>1</td><td>A prayer slip and seal covered in verses to protect the departed</td></tr>
+                <tr><td>2</td><td>A charcoal rubbing of a gravestone epitaph</td></tr>
+                <tr><td>3</td><td>A coffin nail that always ends up bent, no matter how many time you straighten it</td></tr>
+                <tr><td>4</td><td>A dried flower cleaned from one of the first graves you tended</td></tr>
+                <tr><td>5</td><td>A length of rusty iron chain and padlock</td></tr>
+                <tr><td>6</td><td>A sealed bottle containing a final breath</td></tr>
+            </table>
+        </description>
+        <setters>
+            <set name="short">Religion, Survival, Mason's tools</set>
+        </setters>
+        <rules>
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_RELIGION" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
+            <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_MASONS_TOOLS" />
+            <grant type="Background Feature" id="ID_LOA_TCM_BACKGROUND_FEATURE_REST_WARDEN_GRAVE_KEEPER" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
+        </rules>
+    </element>
+    <element name="Feature: Grave Keeper" type="Background Feature" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_FEATURE_REST_WARDEN_GRAVE_KEEPER">
+        <description>
+            <p>You gain the Grave Keeper Feat.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Feat" id="ID_LOA_TCM_FEAT_GRAVE_KEEPER" />
+        </rules>
+    </element>
+</elements>
