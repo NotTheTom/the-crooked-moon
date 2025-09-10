@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Ashborn</name>
+        <update version="0.0.1">
+            <file name="race-ashborn.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/race-ashborn.xml" />
+        </update>
+    </info>
+    <element name="Ashborn" type="Race" source="The Crooked Moon" id="ID_LOA_TCM_RACE_ASHBORN">
+        <description>
+            <p>Ashborn are an imp-like species native to Chernabos (see page 22), typically coalescing from the sulfuric ash of the province’s hellfire and brimstone volcanoes. Infused with the fiendish power of the Hells, this folk has managed to survive and even prosper in the barrens and badlands of the province through guile, boldness, and industriousness. Said to be favored by fortune itself, ashborn count on luck to twist the balance in the most dire of situations.</p>
+            <p class="indent">Their short stature ranges from slight to stout, but this makes them no less dangerous, for each ashborn has a venomous tail resembling a scorpion’s, always ready to strike. They sport horns and skin tones in varying shades of red and gray that reflect their devilish origin, and they typically live 100 years.</p>
+            <h4>ASHBORN TRAITS</h4>
+            <p>You have the following racial traits.</p>
+            <p class="indent"><b><i>Creature Type.</i></b> You are a Fiend.</p>
+            <p class="indent"><b><i>Size.</i></b> You are Small (about 2-3 feet tall).</p>
+            <p class="indent"><b><i>Speed.</i></b> Your walking speed is 30 feet.</p>
+            <p class="indent"><b><i>Ashen Legacy.</i></b> You know the <i>Minor Illusion</i> cantrip. Starting at 3rd level, you can cast the <i>Charm Person</i> spell using this trait, and starting at 5th level, you can cast the <i>Invisibility</i> spell using this trait, both without requiring material components. Once you cast <i>Charm Person</i> or <i>Invisibility</i> with this trait, you can’t cast that spell with it again until you finish a long rest. You can also cast either of those spells using any spell slots you have of the appropriate level.</p>
+            <p class="indent">Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select this species).</p>
+            <p class="indent"><b><i>Darkvision.</i></b> You have darkvision with a range of 60 feet.</p>
+            <p class="indent"><b><i>Fiendish Fortune.</i></b> When you’re hit by an attack roll that isn’t a critical hit, you can use your reaction to magically cause the attack to miss you, and a creature of your choice within 5 feet of you takes force damage equal to your proficiency bonus. Once you use this trait, you can’t do so again until you finish a short or long rest.</p>
+            <p class="indent"><b><i>Scorpion Sting.</i></b> You have a tail stinger you can use to make unarmed strikes using your Strength or Dexterity (your choice) for attack and damage rolls. On a hit, you deal 1d4 piercing damage, and you can deal an extra 1d6 poison damage. You can deal this extra damage a number of times equal to your proficiency bonus. You regain one expended use when you finish a short rest, and you regain all expended uses when you finish a long rest.</p>
+            <p class="indent">When you reach 10th level, this extra damage increases to 2d6.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Ability Score Improvement" name="Ability Score Improvement Option (Ashborn)" supports="Custom Ability Score Improvement Option" />
+            <grant type="Racial Feature" id="ID_INTERNAL_RACIAL_TRAIT_TYPE_FIEND" />
+            <grant type="Size" id="ID_SIZE_SMALL" />
+            <stat name="innate speed" value="30" bonus="base" />
+            <grant type="Racial Trait" id="ID_LOA_TCM_RACIAL_TRAIT_ASHEN_LEGACY" />
+            <grant type="Vision" id="ID_VISION_DARKVISION" />
+            <grant type="Racial Trait" id="ID_LOA_TCM_RACIAL_TRAIT_FIENDISH_FORTUNE" />
+            <grant type="Racial Trait" id="ID_LOA_TCM_RACIAL_TRAIT_SCORPION_STING" />
+            <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+            <select type="Language" name="Language (Ashborn)" supports="Standard||Exotic" />
+        </rules>
+    </element>
+    
+    <element name="Ashen Legacy" type="Racial Trait" source="The Crooked Moon" id="ID_LOA_TCM_RACIAL_TRAIT_ASHEN_LEGACY">
+        <description>
+            <p>You know the <i>Minor Illusion</i> cantrip. Starting at 3rd level, you can cast the <i>Charm Person</i> spell using this trait, and starting at 5th level, you can cast the <i>Invisibility</i> spell using this trait, both without requiring material components. Once you cast <i>Charm Person</i> or <i>Invisibility</i> with this trait, you can’t cast that spell with it again until you finish a long rest. You can also cast either of those spells using any spell slots you have of the appropriate level.</p>
+            <p class="indent">Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select this species).</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_MINOR_ILLUSION" />
+            <grant type="Spell" id="ID_PHB_SPELL_CHARM_PERSON" level="3" />
+            <grant type="Spell" id="ID_PHB_SPELL_INVISIBILITY" level="5" />
+            <select type="Racial Trait" name="Spellcasting Ability (Ashen Legacy)" supports="ID_LOA_TCM_RACIAL_TRAIT_ASHEN_LEGACY_INTELLIGENCE|ID_LOA_TCM_RACIAL_TRAIT_ASHEN_LEGACY_WISDOM|ID_LOA_TCM_RACIAL_TRAIT_ASHEN_LEGACY_CHARISMA" />
+        </rules>
+    </element>
+    <element name="Intelligence" type="Racial Trait" source="The Crooked Moon" id="ID_LOA_TCM_RACIAL_TRAIT_ASHEN_LEGACY_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for this feature’s spells is Intelligence.</p>
+		</description>
+		<sheet alt="Ashen Legacy">
+			<description>You know the Minor Illusion cantrip. Intelligence is your spellcasting ability for these spells.</description>
+			<description level="3">You know the Minor Illusion cantrip. You can cast the Charm Person spell once per long rest without using a spell slot or material components. You can also cast this spell using a spell slot. Intelligence is your spellcasting ability for these spells.</description>
+			<description level="5">You know the Minor Illusion cantrip. You can cast the Charm Person spell and the Darkness spell once per long rest without using a spell slot or material components. You can also cast this spell using a spell slot. Intelligence is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+	<element name="Wisdom" type="Racial Trait" source="The Crooked Moon" id="ID_LOA_TCM_RACIAL_TRAIT_ASHEN_LEGACY_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for this feature’s spells is Wisdom.</p>
+		</description>
+		<sheet alt="Ashen Legacy">
+            <description>You know the Minor Illusion cantrip. Wisdom is your spellcasting ability for these spells.</description>
+			<description level="3">You know the Minor Illusion cantrip. You can cast the Charm Person spell once per long rest without using a spell slot or material components. You can also cast this spell using a spell slot. Wisdom is your spellcasting ability for these spells.</description>
+			<description level="5">You know the Minor Illusion cantrip. You can cast the Charm Person spell and the Darkness spell once per long rest without using a spell slot or material components. You can also cast this spell using a spell slot. Wisdom is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+	<element name="Charisma" type="Racial Trait" source="The Crooked Moon" id="ID_LOA_TCM_RACIAL_TRAIT_ASHEN_LEGACY_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for this feature’s spells is Charisma.</p>
+		</description>
+		<sheet alt="Ashen Legacy">
+			<description>You know the Minor Illusion cantrip. Charisma is your spellcasting ability for these spells.</description>
+			<description level="3">You know the Minor Illusion cantrip. You can cast the Charm Person spell once per long rest without using a spell slot or material components. You can also cast this spell using a spell slot. Charisma is your spellcasting ability for these spells.</description>
+			<description level="5">You know the Minor Illusion cantrip. You can cast the Charm Person spell and the Darkness spell once per long rest without using a spell slot or material components. You can also cast this spell using a spell slot. Charisma is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+    <element name="Fiendish Fortune" type="Racial Trait" source="The Crooked Moon" id="ID_LOA_TCM_RACIAL_TRAIT_FIENDISH_FORTUNE">
+        <description>
+            <p>_______</p>
+            <p class="indent">_______</p>
+        </description>
+        <sheet>
+            <description>_______</description>
+        </sheet>
+    </element>
+
+    <element name="Scorpion Sting" type="Racial Trait" source="The Crooked Moon" id="ID_LOA_TCM_RACIAL_TRAIT_SCORPION_STING">
+        <description>
+            <p>_______</p>
+            <p class="indent">_______</p>
+        </description>
+        <sheet>
+            <description>_______</description>
+        </sheet>
+    </element>
+</elements>
