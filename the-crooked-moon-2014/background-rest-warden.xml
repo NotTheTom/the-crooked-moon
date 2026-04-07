@@ -3,10 +3,10 @@
     <info>
         <name>Rest Warden</name>
         <update version="0.0.1">
-            <file name="background-rest-warden.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-rest-warden.xml" />
+            <file name="background-rest-warden.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/background-rest-warden.xml" />
         </update>
     </info>
-    <element name="Rest Warden" type="Background" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_REST_WARDEN">
+    <element name="Rest Warden" type="Background" source="The Crooked Moon 2014" id="ID_LOA_TCM14_BACKGROUND_REST_WARDEN">
         <description>
             <p>In a place closer to the lands of the dead than the living, those who tend the eternal rest and disposition of the deceased are held in a mixture of high esteem and apprehension. You have plied the trade of the gravedigger, the mortician, and the embalmer. There are times when you have been the only one to say a kind word in honor of those who passed. The depredations of the Undead are well-known to you, and you don’t suffer their meddling in the rest of your charges.</p>
             <ul class="unstyled">
@@ -14,7 +14,7 @@
                 <li><b>Tool Proficiencies:</b> Mason's tools</li>
                 <li><b>Equipment:</b> Mason's tools, hooded lantern, oil (3 flasks), shovel, soap, traveler's clothes (with thick gloves and dark-colored hood), 10 gp; or 50 gp</li>
             </ul>
-            <div element="ID_LOA_TCM_BACKGROUND_FEATURE_REST_WARDEN_GRAVE_KEEPER" />
+            <div element="ID_LOA_TCM14_BACKGROUND_FEATURE_REST_WARDEN_GRAVE_KEEPER" />
             <h5>BUILDING A REST WARDEN</h5>
             <p>Rest wardens tend to be either a dour and somber lot or—in contrast to their trade—are filled with the vibrance and joy of life. Those who understand the thin thread between life and death or who possess the strength to dig graves beneath moonlit skies and tend the bone orchards where the dead sleep are called to serve as rest wardens.</p>
             <p class="indent"><b><i>Suggested Story Threads.</i></b> The Rest Warden Story Threads table suggests events and people who can be the start of story threads for your character that weave through the campaign.</p>
@@ -51,17 +51,17 @@
             <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_RELIGION" />
             <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
             <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_MASONS_TOOLS" />
-            <grant type="Background Feature" id="ID_LOA_TCM_BACKGROUND_FEATURE_REST_WARDEN_GRAVE_KEEPER" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <grant type="Background Feature" id="ID_LOA_TCM14_BACKGROUND_FEATURE_REST_WARDEN_GRAVE_KEEPER" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
             <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
         </rules>
     </element>
-    <element name="Feature: Grave Keeper" type="Background Feature" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_FEATURE_REST_WARDEN_GRAVE_KEEPER">
+    <element name="Feature: Grave Keeper" type="Background Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_BACKGROUND_FEATURE_REST_WARDEN_GRAVE_KEEPER">
         <description>
             <p>You gain the Grave Keeper Feat.</p>
         </description>
         <sheet display="false" />
         <rules>
-            <grant type="Feat" id="ID_LOA_TCM_FEAT_GRAVE_KEEPER" />
+            <grant type="Feat" id="ID_LOA_TCM14_FEAT_GRAVE_KEEPER" />
         </rules>
     </element>
 </elements>

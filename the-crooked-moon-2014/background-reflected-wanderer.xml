@@ -3,10 +3,10 @@
     <info>
         <name>Reflected Wanderer</name>
         <update version="0.0.1">
-            <file name="background-reflected-wanderer.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-reflected-wanderer.xml" />
+            <file name="background-reflected-wanderer.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/background-reflected-wanderer.xml" />
         </update>
     </info>
-    <element name="Reflected Wanderer" type="Background" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_REFLECTED_WANDERER">
+    <element name="Reflected Wanderer" type="Background" source="The Crooked Moon 2014" id="ID_LOA_TCM14_BACKGROUND_REFLECTED_WANDERER">
         <description>
             <p>You were once whole, but part of you has been separated from your being and now also wanders the world. This aspect of you took your reflection and shadow with it, and it travels about as a mirage that looks identical to you. You know this other self is out there—you can feel it—but what it wants and why is lost on you. Sometimes you encounter a stranger that knows you—for good or ill—though you’ve never met them before, and you can’t help but wonder if they met the other you.</p>
             <ul class="unstyled">
@@ -14,7 +14,7 @@
                 <li><b>Tool Proficiencies:</b> Disguise kit</li>
                 <li><b>Equipment:</b> Disguise kit, mirror, traveler's clothes, 16 gp; or 50 gp</li>
             </ul>
-            <div element="ID_LOA_TCM_BACKGROUND_FEATURE_REFLECTED_WANDERER_UNREFLECTED" />
+            <div element="ID_LOA_TCM14_BACKGROUND_FEATURE_REFLECTED_WANDERER_UNREFLECTED" />
             <h5>BUILDING A REFLECTED WANDERER</h5>
             <p>Any character can be a reflected wanderer. How was it that your being came to be divided? How much do you understand about your situation? Are you truly who you think you are, or are you, in reality, the very castoff reflection of your other self ?</p>
             <p class="indent"><b><i>Suggested Story Threads.</i></b> The Reflected Wanderer Story Threads table suggests events and people who can be the start of story threads for your character that weave through the campaign.</p>
@@ -51,17 +51,17 @@
             <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_DECEPTION" />
             <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INVESTIGATION" />
             <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_DISGUISE_KIT" />
-            <grant type="Background Feature" id="ID_LOA_TCM_BACKGROUND_FEATURE_REFLECTED_WANDERER_UNREFLECTED" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <grant type="Background Feature" id="ID_LOA_TCM14_BACKGROUND_FEATURE_REFLECTED_WANDERER_UNREFLECTED" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
             <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
         </rules>
     </element>
-    <element name="Feature: Unreflected" type="Background Feature" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_FEATURE_REFLECTED_WANDERER_UNREFLECTED">
+    <element name="Feature: Unreflected" type="Background Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_BACKGROUND_FEATURE_REFLECTED_WANDERER_UNREFLECTED">
         <description>
             <p>You gain the Unreflected Feat.</p>
         </description>
         <sheet display="false" />
         <rules>
-            <grant type="Feat" id="ID_LOA_TCM_FEAT_UNREFLECTED" />
+            <grant type="Feat" id="ID_LOA_TCM14_FEAT_UNREFLECTED" />
         </rules>
     </element>
 </elements>

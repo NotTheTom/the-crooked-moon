@@ -3,10 +3,10 @@
     <info>
         <name>Night Stalker</name>
         <update version="0.0.1">
-            <file name="background-night-stalker.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-night-stalker.xml" />
+            <file name="background-night-stalker.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/background-night-stalker.xml" />
         </update>
     </info>
-    <element name="Night Stalker" type="Background" source="The Crooked Moon" id="ID_author_source_BACKGROUND_Night Stalker">
+    <element name="Night Stalker" type="Background" source="The Crooked Moon 2014" id="ID_LOA_TCM14_BACKGROUND_NIGHT_STALKER">
         <description>
             <p>Once you were prey, stalked by a monster through the dark of night. Now, you are the hunter, and the things which you once feared will learn the true meaning of dread. You have become far deadlier, hungrier, and crueler than the monster that once hunted you. You are, yourself, the monster now—a fearsome creature once thought to slake its hunger on you or those close to you. You survived, and your would-be killer will have its own destruction in turn.</p>
             <ul class="unstyled">
@@ -14,7 +14,7 @@
                 <li><b>Tool Proficiencies:</b> Leatherworker's tools</li>
                 <li><b>Equipment:</b> Leatherworker's tools, book (one creature type), hooded lantern, hunting trap, oil (3 flasks), traveler's clothes, 8 gp; or 50 gp</li>
             </ul>
-            <div element="ID_LOA_TCM_BACKGROUND_FEATURE_NIGHT_STALKER_HUNTER_OF_HUNTERS" />
+            <div element="ID_LOA_TCM14_BACKGROUND_FEATURE_NIGHT_STALKER_HUNTER_OF_HUNTERS" />
             <h5>BUILDING A NIGHT STALKER</h5>
             <p>Consider how you joined the hunt against the creatures of the night. Did you lose someone close to you or survive an attack? Perhaps you were raised in a family line of dedicated hunters. Rangers, rogues, and barbarians make fearsome night stalkers, as does any character with a passion to oppose these deadly creatures.</p>
             <p class="indent"><b><i>Suggested Story Threads.</i></b> The Night Stalker Story Threads table suggests events and people who can be the start of story threads for your character that weave through the campaign.</p>
@@ -51,17 +51,17 @@
             <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_STEALTH" />
             <select type="Proficiency" name="Skill Proficiency (Night Stalker)" supports="ID_PROFICIENCY_SKILL_ARCANA|ID_PROFICIENCY_SKILL_HISTORY|ID_PROFICIENCY_SKILL_RELIGION|ID_PROFICIENCY_SKILL_NATURE" />
             <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_LEATHERWORKERS_TOOLS" />
-            <grant type="Background Feature" id="ID_LOA_TCM_BACKGROUND_FEATURE_NIGHT_STALKER_HUNTER_OF_HUNTERS" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <grant type="Background Feature" id="ID_LOA_TCM14_BACKGROUND_FEATURE_NIGHT_STALKER_HUNTER_OF_HUNTERS" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
             <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
         </rules>
     </element>
-    <element name="Feature: Hunter of Hunters" type="Background Feature" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_FEATURE_NIGHT_STALKER_HUNTER_OF_HUNTERS">
+    <element name="Feature: Hunter of Hunters" type="Background Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_BACKGROUND_FEATURE_NIGHT_STALKER_HUNTER_OF_HUNTERS">
         <description>
             <p>You gain the Hunter of Hunters Feat.</p>
         </description>
         <sheet display="false" />
         <rules>
-            <grant type="Feat" id="ID_LOA_TCM_FEAT_HUNTER_OF_HUNTERS" />
+            <grant type="Feat" id="ID_LOA_TCM14_FEAT_HUNTER_OF_HUNTERS" />
         </rules>
     </element>
 </elements>

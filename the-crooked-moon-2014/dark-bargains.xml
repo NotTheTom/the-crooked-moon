@@ -3,11 +3,11 @@
     <info>
         <name>Dark Bargains</name>
         <update version="0.0.1">
-            <file name="dark-bargains.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/dark-bargains.xml" />
+            <file name="dark-bargains.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/dark-bargains.xml" />
         </update>
     </info>
     
-    <element name="Bestial Awakening" type="Item" source="The Crooked Moon" id="ID_LOA_TCM_ITEM_BESTIAL_AWAKENINg">
+    <element name="Bestial Awakening" type="Item" source="The Crooked Moon 2014" id="ID_LOA_TCM14_ITEM_BESTIAL_AWAKENINg">
         <description>
             <p><i>Once equipped, this item grants you the Bestial Awakening Dark Bargain.</i></p>
             <p>The feral world calls to your soul, howling for you to join it. You can give in to the call and transform into a beast, but the touch of silver bites you more deeply than the sharpest fang.</p>
@@ -21,10 +21,10 @@
         </setters>
         <rules>
             <grant type="Spell" id="ID_PHB_SPELL_POLYMORPH" />
-            <select type="Feat Feature" name="Spellcasting Ability (Bestial Awakening)" supports="ID_LOA_TCM_DARK_BARGAIN_BESTIAL_AWAKENING_INTELLIGENCE|ID_LOA_TCM_DARK_BARGAIN_BESTIAL_AWAKENING_WISDOM|ID_LOA_TCM_DARK_BARGAIN_BESTIAL_AWAKENING_CHARISMA" />
+            <select type="Feat Feature" name="Spellcasting Ability (Bestial Awakening)" supports="ID_LOA_TCM14_DARK_BARGAIN_BESTIAL_AWAKENING_INTELLIGENCE|ID_LOA_TCM14_DARK_BARGAIN_BESTIAL_AWAKENING_WISDOM|ID_LOA_TCM14_DARK_BARGAIN_BESTIAL_AWAKENING_CHARISMA" />
         </rules>
     </element>
-    <element name="Intelligence" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_DARK_BARGAIN_BESTIAL_AWAKENING_INTELLIGENCE">
+    <element name="Intelligence" type="Feat Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_DARK_BARGAIN_BESTIAL_AWAKENING_INTELLIGENCE">
 		<compendium display="false" />
 		<description>
 			<p>Your spellcasting ability for this Dark Bargain's spells is Intelligence.</p>
@@ -34,7 +34,7 @@
             Damage from silvered weapons ignores any resistance or immunity to damage you have. If you take damage from a silvered weapon or touch silver with your bare skin, you cannot regain hit points until you finish a rest.</description>
 		</sheet>
 	</element>
-	<element name="Wisdom" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_DARK_BARGAIN_BESTIAL_AWAKENING_WISDOM">
+	<element name="Wisdom" type="Feat Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_DARK_BARGAIN_BESTIAL_AWAKENING_WISDOM">
 		<compendium display="false" />
 		<description>
 			<p>Your spellcasting ability for this Dark Bargain's spells is Wisdom.</p>
@@ -44,7 +44,7 @@
             Damage from silvered weapons ignores any resistance or immunity to damage you have. If you take damage from a silvered weapon or touch silver with your bare skin, you cannot regain hit points until you finish a rest.</description>
 		</sheet>
 	</element>
-	<element name="Charisma" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_DARK_BARGAIN_BESTIAL_AWAKENING_CHARISMA">
+	<element name="Charisma" type="Feat Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_DARK_BARGAIN_BESTIAL_AWAKENING_CHARISMA">
 		<compendium display="false" />
 		<description>
 			<p>Your spellcasting ability for this Dark Bargain's spells is Charisma.</p>
@@ -55,7 +55,7 @@
 		</sheet>
 	</element>
 
-    <element name="Call of the Lonely" type="Item" source="The Crooked Moon" id="ID_LOA_TCM_ITEM_CALL_OF_THE_LONELY">
+    <element name="Call of the Lonely" type="Item" source="The Crooked Moon 2014" id="ID_LOA_TCM14_ITEM_CALL_OF_THE_LONELY">
         <description>
             <p><i>Once equipped, this item grants you the Call of the Lonely Dark Bargain.</i></p>
             <p>In the depths of your solitude, and when your hope withered on the branch, you were granted a companion you can call on. You never have to be alone again. This companion is friendly toward you but is deeply unsettling to your allies.</p>
@@ -70,10 +70,10 @@
             <set name="inventory-hidden">true</set>
         </setters>
         <rules>
-            <grant type="Feat Feature" id="ID_LOA_TCM_DARK_BARGAIN_CALL_OF_THE_LONELY" />
+            <grant type="Feat Feature" id="ID_LOA_TCM14_DARK_BARGAIN_CALL_OF_THE_LONELY" />
         </rules>
     </element>
-    <element name="Call of the Lonely" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_DARK_BARGAIN_CALL_OF_THE_LONELY">
+    <element name="Call of the Lonely" type="Feat Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_DARK_BARGAIN_CALL_OF_THE_LONELY">
         <compendium display="false" />
         <description>
             <p></p>
@@ -85,7 +85,7 @@
         </sheet>
     </element>
     
-    <element name="Collector of Stories" type="Item" source="The Crooked Moon" id="ID_LOA_TCM_ITEM_COLLECTOR_OF_STORIES">
+    <element name="Collector of Stories" type="Item" source="The Crooked Moon 2014" id="ID_LOA_TCM14_ITEM_COLLECTOR_OF_STORIES">
         <description>
             <p><i>Once equipped, this item grants you the Collector of Stories Dark Bargain.</i></p>
             <p>You have an insatiable desire to gather the tales of the world. Sometimes, you inadvertently take the story of meeting another person and keep it to yourself, forever.</p>
@@ -99,10 +99,10 @@
         </setters>
         <rules>
             <grant type="Spell" id="ID_PHB_SPELL_LEGEND_LORE" />
-            <select type="Feat Feature" name="Spellcasting Ability (Collector of Stories)" supports="ID_LOA_TCM_DARK_BARGAIN_COLLECTOR_OF_STORIES_INTELLIGENCE|ID_LOA_TCM_DARK_BARGAIN_COLLECTOR_OF_STORIES_WISDOM|ID_LOA_TCM_DARK_BARGAIN_COLLECTOR_OF_STORIES_CHARISMA" />
+            <select type="Feat Feature" name="Spellcasting Ability (Collector of Stories)" supports="ID_LOA_TCM14_DARK_BARGAIN_COLLECTOR_OF_STORIES_INTELLIGENCE|ID_LOA_TCM14_DARK_BARGAIN_COLLECTOR_OF_STORIES_WISDOM|ID_LOA_TCM14_DARK_BARGAIN_COLLECTOR_OF_STORIES_CHARISMA" />
         </rules>
     </element>
-    <element name="Intelligence" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_DARK_BARGAIN_COLLECTOR_OF_STORIES_INTELLIGENCE">
+    <element name="Intelligence" type="Feat Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_DARK_BARGAIN_COLLECTOR_OF_STORIES_INTELLIGENCE">
 		<compendium display="false" />
 		<description>
 			<p>Your spellcasting ability for this Dark Bargain's spells is Intelligence.</p>
@@ -112,7 +112,7 @@
             When you use this bargain to cast Legend Lore, a friendly NPC forgets ever meeting you. The NPC's attitude towards you can't ever improve beyond indifferent, and you have disadvantage on all Charisma checks against them.</description>
 		</sheet>
 	</element>
-	<element name="Wisdom" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_DARK_BARGAIN_COLLECTOR_OF_STORIES_WISDOM">
+	<element name="Wisdom" type="Feat Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_DARK_BARGAIN_COLLECTOR_OF_STORIES_WISDOM">
 		<compendium display="false" />
 		<description>
 			<p>Your spellcasting ability for this Dark Bargain's spells is Wisdom.</p>
@@ -122,7 +122,7 @@
             When you use this bargain to cast Legend Lore, a friendly NPC forgets ever meeting you. The NPC's attitude towards you can't ever improve beyond indifferent, and you have disadvantage on all Charisma checks against them.</description>
 		</sheet>
 	</element>
-	<element name="Charisma" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_DARK_BARGAIN_COLLECTOR_OF_STORIES_CHARISMA">
+	<element name="Charisma" type="Feat Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_DARK_BARGAIN_COLLECTOR_OF_STORIES_CHARISMA">
 		<compendium display="false" />
 		<description>
 			<p>Your spellcasting ability for this Dark Bargain's spells is Charisma.</p>
@@ -133,7 +133,7 @@
 		</sheet>
 	</element>
 
-    <element name="Crooked Fortune" type="Item" source="The Crooked Moon" id="ID_LOA_TCM_ITEM_CROOKED_FORTUNE">
+    <element name="Crooked Fortune" type="Item" source="The Crooked Moon 2014" id="ID_LOA_TCM14_ITEM_CROOKED_FORTUNE">
         <description>
             <p><i>Once equipped, this item grants you the Crooked Fortune Dark Bargain.</i></p>
             <p>The crooked fate that governs Druskenvald has taken a liking to you. You can avoid calamity, but you must pay back your good fortune eventually.</p>
@@ -146,10 +146,10 @@
             <set name="inventory-hidden">true</set>
         </setters>
         <rules>
-            <grant type="Feat Feature" id="ID_LOA_TCM_DARK_BARGAIN_CROOKED_FORTUNE" />
+            <grant type="Feat Feature" id="ID_LOA_TCM14_DARK_BARGAIN_CROOKED_FORTUNE" />
         </rules>
     </element>
-    <element name="Crooked Fortune" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_DARK_BARGAIN_CROOKED_FORTUNE">
+    <element name="Crooked Fortune" type="Feat Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_DARK_BARGAIN_CROOKED_FORTUNE">
         <compendium display="false" />
         <description>
             <p></p>
@@ -160,7 +160,7 @@
         </sheet>
     </element>
 
-    <element name="Cult of Personality" type="Item" source="The Crooked Moon" id="ID_LOA_TCM_ITEM_CULT_OF_PERONALITY">
+    <element name="Cult of Personality" type="Item" source="The Crooked Moon 2014" id="ID_LOA_TCM14_ITEM_CULT_OF_PERONALITY">
         <description>
             <p><i>Once equipped, this item grants you the Cult of Personality Dark Bargain.</i></p>
             <p>You are a force of charm and allure with which to be reckoned. While others fall over themselves to stumble into your good graces, you might find that you end up needing them more than they need you.</p>
@@ -174,10 +174,10 @@
             <set name="inventory-hidden">true</set>
         </setters>
         <rules>
-            <grant type="Feat Feature" id="ID_LOA_TCM_DARK_BARGAIN_CULT_OF_PERSONALITY" />
+            <grant type="Feat Feature" id="ID_LOA_TCM14_DARK_BARGAIN_CULT_OF_PERSONALITY" />
         </rules>
     </element>
-    <element name="Cult of Personality" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_DARK_BARGAIN_CULT_OF_PERSONALITY">
+    <element name="Cult of Personality" type="Feat Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_DARK_BARGAIN_CULT_OF_PERSONALITY">
         <compendium display="false" />
         <description>
             <p></p>
@@ -188,7 +188,7 @@
         </sheet>
     </element>
 
-    <element name="Hand of Death" type="Item" source="The Crooked Moon" id="ID_LOA_TCM_ITEM_HAND_OF_DEATH">
+    <element name="Hand of Death" type="Item" source="The Crooked Moon 2014" id="ID_LOA_TCM14_ITEM_HAND_OF_DEATH">
         <description>
             <p><i>Once equipped, this item grants you the Hand of Death Dark Bargain.</i></p>
             <p>Death has no claim on you. In exchange for staying its cold hand without that hand closing, you become a maw through which death feeds on the world around you.</p>
@@ -202,10 +202,10 @@
             <set name="inventory-hidden">true</set>
         </setters>
         <rules>
-            <grant type="Feat feature" id="ID_LOA_TCM_DARK_BARGAIN_HAND_OF_DEATH" />
+            <grant type="Feat feature" id="ID_LOA_TCM14_DARK_BARGAIN_HAND_OF_DEATH" />
         </rules>
     </element>
-    <element name="Hand of Death" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_DARK_BARGAIN_HAND_OF_DEATH">
+    <element name="Hand of Death" type="Feat Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_DARK_BARGAIN_HAND_OF_DEATH">
         <compendium display="false" />
         <description>
             <p></p>
@@ -217,7 +217,7 @@
         </sheet>
     </element>
 
-    <element name="Might of the Old" type="Item" source="The Crooked Moon" id="ID_LOA_TCM_ITEM_MIGHT_OF_THE_OLD">
+    <element name="Might of the Old" type="Item" source="The Crooked Moon 2014" id="ID_LOA_TCM14_ITEM_MIGHT_OF_THE_OLD">
         <description>
             <p><i>Once equipped, this item grants you the Might of the Old Dark Bargain.</i></p>
             <p>Ancient and primeval power dwells within the oldest forests of Druskenvald. These powers pour their strength into you but can overwhelm you with their unchanging nature.</p>
@@ -234,10 +234,10 @@
             <stat name="strength" value="2" />
             <stat name="strength:max" value="2" />
             <stat name="dexterity" value="-2" />
-            <grant type="Feat Feature" id="ID_LOA_TCM_DARK_BARGAIN_MIGHT_OF_THE_OLD" />
+            <grant type="Feat Feature" id="ID_LOA_TCM14_DARK_BARGAIN_MIGHT_OF_THE_OLD" />
         </rules>
     </element>
-    <element name="Might of the Old" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_DARK_BARGAIN_MIGHT_OF_THE_OLD">
+    <element name="Might of the Old" type="Feat Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_DARK_BARGAIN_MIGHT_OF_THE_OLD">
         <compendium display="false" />
         <description>
             <p></p>
@@ -248,7 +248,7 @@
         </sheet>
     </element>
 
-    <element name="Self-Serving Sacrifice" type="Item" source="The Crooked Moon" id="ID_LOA_TCM_ITEM_SELFSERVING_SACRIFICE">
+    <element name="Self-Serving Sacrifice" type="Item" source="The Crooked Moon 2014" id="ID_LOA_TCM14_ITEM_SELFSERVING_SACRIFICE">
         <description>
             <p><i>Once equipped, this item grants you the Self-Serving Sacrifice Dark Bargain.</i></p>
             <p>You can snatch others from the jaws of death, but your own grip lingers too tightly. The feeling of saving others from suffering fills you with resolve, even as it drains the vigor from those you rescue.</p>
@@ -264,10 +264,10 @@
         </setters>
         <rules>
             <grant type="Spell" id="ID_PHB_SPELL_TRUE_RESURRECTION" />
-            <select type="Feat Feature" name="Spellcasting Ability (Self-Serving Sacrifice)" supports="ID_LOA_TCM_DARK_BARGAIN_SELFSERVING_SACRIFICE_INTELLIGENCE|ID_LOA_TCM_DARK_BARGAIN_SELFSERVING_SACRIFICE_WISDOM|ID_LOA_TCM_DARK_BARGAIN_SELFSERVING_SACRIFICE_CHARISMA" />
+            <select type="Feat Feature" name="Spellcasting Ability (Self-Serving Sacrifice)" supports="ID_LOA_TCM14_DARK_BARGAIN_SELFSERVING_SACRIFICE_INTELLIGENCE|ID_LOA_TCM14_DARK_BARGAIN_SELFSERVING_SACRIFICE_WISDOM|ID_LOA_TCM14_DARK_BARGAIN_SELFSERVING_SACRIFICE_CHARISMA" />
         </rules>
     </element>
-    <element name="Intelligence" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_DARK_BARGAIN_SELFSERVING_SACRIFICE_INTELLIGENCE">
+    <element name="Intelligence" type="Feat Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_DARK_BARGAIN_SELFSERVING_SACRIFICE_INTELLIGENCE">
 		<compendium display="false" />
 		<description>
 			<p>Your spellcasting ability for this Dark Bargain's spells is Intelligence.</p>
@@ -278,7 +278,7 @@
             You can cast the <i>True Resurrection</i> spell without requiring material components. Intelligence is your spellcasting ability modifier for this spell. When you cast this spell you ddie, nothing can prevent it, and you cannot be raised from the dead by any means. When the creature that you returned to life takes a long rest, it must roll a d20 halfway through the rest's duration. On a 1, your soul takes the form of a Wraith within 100 feet of the creature and tries to kill it. The Wraith vanishes after 8 hours, or when it dies. Once the Wraith appears, it can't appear again for 30 days.</description>
 		</sheet>
 	</element>
-	<element name="Wisdom" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_DARK_BARGAIN_SELFSERVING_SACRIFICE_WISDOM">
+	<element name="Wisdom" type="Feat Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_DARK_BARGAIN_SELFSERVING_SACRIFICE_WISDOM">
 		<compendium display="false" />
 		<description>
 			<p>Your spellcasting ability for this Dark Bargain's spells is Wisdom.</p>
@@ -289,7 +289,7 @@
             You can cast the <i>True Resurrection</i> spell without requiring material components. Wisdom is your spellcasting ability modifier for this spell. When you cast this spell you ddie, nothing can prevent it, and you cannot be raised from the dead by any means. When the creature that you returned to life takes a long rest, it must roll a d20 halfway through the rest's duration. On a 1, your soul takes the form of a Wraith within 100 feet of the creature and tries to kill it. The Wraith vanishes after 8 hours, or when it dies. Once the Wraith appears, it can't appear again for 30 days.</description>
 		</sheet>
 	</element>
-	<element name="Charisma" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_DARK_BARGAIN_SELFSERVING_SACRIFICE_CHARISMA">
+	<element name="Charisma" type="Feat Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_DARK_BARGAIN_SELFSERVING_SACRIFICE_CHARISMA">
 		<compendium display="false" />
 		<description>
 			<p>Your spellcasting ability for this Dark Bargain's spells is Charisma.</p>
@@ -301,7 +301,7 @@
 		</sheet>
 	</element>
 
-    <element name="Shrouded Spirit" type="Item" source="The Crooked Moon" id="ID_LOA_TCM_ITEM_SHROUDED_SPIRIT">
+    <element name="Shrouded Spirit" type="Item" source="The Crooked Moon 2014" id="ID_LOA_TCM14_ITEM_SHROUDED_SPIRIT">
         <description>
             <p><i>Once equipped, this item grants you the Shrouded Spirit Dark Bargain.</i></p>
             <p>The pall of death drapes over you like the Shroud of Druskenvald. This shroud protects you from the depredations of the Undead, but it draws you ever nearer to their cold embrace.</p>
@@ -316,10 +316,10 @@
         </setters>
         <rules>
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_NECROTIC" />
-            <grant type="Feat Feature" id="ID_LOA_TCM_DARK_BARGAIN_SHROUDED_SPIRIT" />
+            <grant type="Feat Feature" id="ID_LOA_TCM14_DARK_BARGAIN_SHROUDED_SPIRIT" />
         </rules>
     </element>
-    <element name="Shrouded Spirit" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_DARK_BARGAIN_SHROUDED_SPIRIT">
+    <element name="Shrouded Spirit" type="Feat Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_DARK_BARGAIN_SHROUDED_SPIRIT">
         <compendium display="false" />
         <description>
             <p></p>
@@ -331,7 +331,7 @@
         </sheet>
     </element>
 
-    <element name="Skin of Coffin Nails" type="Item" source="The Crooked Moon" id="ID_LOA_TCM_ITEM_SKIN_OF_COFFIN_NAILS">
+    <element name="Skin of Coffin Nails" type="Item" source="The Crooked Moon 2014" id="ID_LOA_TCM14_ITEM_SKIN_OF_COFFIN_NAILS">
         <description>
             <p><i>Once equipped, this item grants you the Skin of Coffin Nails Dark Bargain.</i></p>
             <p>Your body becomes as coldly unrelenting as iron nails sealing away the dead. You can shrug off staggering punishment, but the waters of the world no longer embrace you, as if spiting your defiance.</p>
@@ -344,10 +344,10 @@
             <set name="inventory-hidden">true</set>
         </setters>
         <rules>
-            <select type="Feat Feature" name="Damage Resistance (Skin of Coffin Nails)" supports="ID_LOA_TCM_DARK_BARGAIN_SKIN_OF_COFFIN_NAILS_BLUDGEONING|ID_LOA_TCM_DARK_BARGAIN_SKIN_OF_COFFIN_NAILS_PIERCING|ID_LOA_TCM_DARK_BARGAIN_SKIN_OF_COFFIN_NAILS_SLASHING" />
+            <select type="Feat Feature" name="Damage Resistance (Skin of Coffin Nails)" supports="ID_LOA_TCM14_DARK_BARGAIN_SKIN_OF_COFFIN_NAILS_BLUDGEONING|ID_LOA_TCM14_DARK_BARGAIN_SKIN_OF_COFFIN_NAILS_PIERCING|ID_LOA_TCM14_DARK_BARGAIN_SKIN_OF_COFFIN_NAILS_SLASHING" />
         </rules>
     </element>
-    <element name="Bludgeoning" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_DARK_BARGAIN_SKIN_OF_COFFIN_NAILS_BLUDGEONING">
+    <element name="Bludgeoning" type="Feat Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_DARK_BARGAIN_SKIN_OF_COFFIN_NAILS_BLUDGEONING">
         <compendium display="false" />
         <description>
             <p>You gain resistance to Bludgeoning damage, you can choose a different resistance after a rest.</p>
@@ -360,7 +360,7 @@
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_BLUDGEONING" />
         </rules>
     </element>
-    <element name="Piercing" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_DARK_BARGAIN_SKIN_OF_COFFIN_NAILS_PIERCING">
+    <element name="Piercing" type="Feat Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_DARK_BARGAIN_SKIN_OF_COFFIN_NAILS_PIERCING">
         <compendium display="false" />
         <description>
             <p>You gain resistance to Piercing damage, you can choose a different resistance after a rest.</p>
@@ -373,7 +373,7 @@
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_PIERCING" />
         </rules>
     </element>
-    <element name="Slashing" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_DARK_BARGAIN_SKIN_OF_COFFIN_NAILS_SLASHING">
+    <element name="Slashing" type="Feat Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_DARK_BARGAIN_SKIN_OF_COFFIN_NAILS_SLASHING">
         <compendium display="false" />
         <description>
             <p>You gain resistance to Slashing damage, you can choose a different resistance after a rest.</p>
@@ -387,7 +387,7 @@
         </rules>
     </element>
 
-    <element name="Stilled Hungers" type="Item" source="The Crooked Moon" id="ID_LOA_TCM_ITEM_STILLED_HUNGERS">
+    <element name="Stilled Hungers" type="Item" source="The Crooked Moon 2014" id="ID_LOA_TCM14_ITEM_STILLED_HUNGERS">
         <description>
             <p><i>Once equipped, this item grants you the Stilled Hungers Dark Bargain.</i></p>
             <p>Food, drink, and maladies of the flesh have lost their hold over you, but these are the very things that keep a soul vital while in the land of the living. Your mind grows ravenous absent those urges—your thoughts crack with gnawing fears, and your dreams wither into crooked nightmares.</p>
@@ -402,10 +402,10 @@
         <rules>
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
             <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_VULNERABILITY_PSYCHIC" />
-            <grant type="Feat Feature" id="ID_LOA_TCM_DARK_BARGAIN_STILLED_HUNGERS" />
+            <grant type="Feat Feature" id="ID_LOA_TCM14_DARK_BARGAIN_STILLED_HUNGERS" />
         </rules>
     </element>
-    <element name="Stilled Hungers" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_DARK_BARGAIN_STILLED_HUNGERS">
+    <element name="Stilled Hungers" type="Feat Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_DARK_BARGAIN_STILLED_HUNGERS">
         <compendium display="false" />
         <description>
             <p></p>
@@ -416,7 +416,7 @@
         </sheet>
     </element>
 
-    <element name="Unquenchable Fury" type="Item" source="The Crooked Moon" id="ID_LOA_TCM_ITEM_UNQUENCHABLE_FURY">
+    <element name="Unquenchable Fury" type="Item" source="The Crooked Moon 2014" id="ID_LOA_TCM14_ITEM_UNQUENCHABLE_FURY">
         <description>
             <p><i>Once equipped, this item grants you the Unquenchable Fury Dark Bargain.</i></p>
             <p>Anger is a powerful tool. This bargain stokes it into a formidable inferno, but it threatens to consume everything in its path.</p>
@@ -429,10 +429,10 @@
             <set name="inventory-hidden">true</set>
         </setters>
         <rules>
-            <grant type="Feat Feature" id="ID_LOA_TCM_DARK_BARGAIN_UNQUENCHABLE_FURY" />
+            <grant type="Feat Feature" id="ID_LOA_TCM14_DARK_BARGAIN_UNQUENCHABLE_FURY" />
         </rules>
     </element>
-    <element name="Unquenchable Fury" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_DARK_BARGAIN_UNQUENCHABLE_FURY">
+    <element name="Unquenchable Fury" type="Feat Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_DARK_BARGAIN_UNQUENCHABLE_FURY">
         <compendium display="false" />
         <description>
             <p></p>
@@ -443,7 +443,7 @@
         </sheet>
     </element>
 
-    <element name="Wings of Whispers" type="Item" source="The Crooked Moon" id="ID_LOA_TCM_ITEM_WINGS_OF_WHISPERS">
+    <element name="Wings of Whispers" type="Item" source="The Crooked Moon 2014" id="ID_LOA_TCM14_ITEM_WINGS_OF_WHISPERS">
         <description>
             <p><i>Once equipped, this item grants you the Wings of Whispers Dark Bargain.</i></p>
             <p>You have been gifted with secrets that you can call upon in the form of ravens and crows to bear you aloft, but at the risk of revealing your own secrets in turn.</p>
@@ -456,10 +456,10 @@
             <set name="inventory-hidden">true</set>
         </setters>
         <rules>
-            <grant type="Feat Feature" id="ID_LOA_TCM_DARK_BARGAIN_WINGS_OF_WHISPERS" />
+            <grant type="Feat Feature" id="ID_LOA_TCM14_DARK_BARGAIN_WINGS_OF_WHISPERS" />
         </rules>
     </element>
-    <element name="Wings of Whispers" type="Feat Feature" source="The Crooked Moon" id="ID_LOA_TCM_DARK_BARGAIN_WINGS_OF_WHISPERS">
+    <element name="Wings of Whispers" type="Feat Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_DARK_BARGAIN_WINGS_OF_WHISPERS">
         <compendium display="false" />
         <description>
             <p></p>

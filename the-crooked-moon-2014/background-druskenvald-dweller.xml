@@ -3,10 +3,10 @@
     <info>
         <name>Druskenvald Dweller</name>
         <update version="0.0.1">
-            <file name="background-druskenvald-dweller.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-druskenvald-dweller.xml" />
+            <file name="background-druskenvald-dweller.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/background-druskenvald-dweller.xml" />
         </update>
     </info>
-    <element name="Druskenvald Dweller" type="Background" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_DRUSKENVALD_DWELLER">
+    <element name="Druskenvald Dweller" type="Background" source="The Crooked Moon 2014" id="ID_LOA_TCM14_BACKGROUND_DRUSKENVALD_DWELLER">
         <description>
             <p>You hail from one of the thirteen baneful provinces of Druskenvald. You might be a member of the unique species known to originate from those diverse biomes, or you may be of a different heritage altogether. The skills and culture of your home (summarized below) shape your knowledge and early experiences.</p>
             <ul class="unstyled">
@@ -14,7 +14,7 @@
                 <li><b>Tool Proficiencies:</b> Choose one (Province Affinity table tool recommended)</li>
                 <li><b>Equipment:</b> Artisans's tools (same as above), map (Druskenvald's provinces), traveler's clothes, 10 gp; or 50 gp</li>
             </ul>
-            <div element="ID_LOA_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_FEAT_SELECT" />
+            <div element="ID_LOA_TCM14_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_FEAT_SELECT" />
             <p><b>Province Affinities</b></p>
             <table>
                 <thead>
@@ -70,17 +70,17 @@
             <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
             <select type="Proficiency" name="Skill Proficiency (Druskenvald Dweller)" supports="Skill" />
             <select type="Proficiency" name="Tool Proficiency (Druskenvald Dweller)" supports="Tool" />
-            <grant type="Background Feature" id="ID_LOA_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_FEAT_SELECT" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <grant type="Background Feature" id="ID_LOA_TCM14_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_FEAT_SELECT" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
             <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
         </rules>
     </element>
-    <element name="Feature: Feat" type="Background Feature" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_FEAT_SELECT">
+    <element name="Feature: Feat" type="Background Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_BACKGROUND_FEATURE_DRUSKENVALD_DWELLER_FEAT_SELECT">
         <description>
             <p>You can choose one of the Feats from The Crooked Moon.</p>
         </description>
         <sheet display="false" />
         <rules>
-            <select type="Feat" name="Feat (Druskenvald Dweller)" supports="ID_LOA_TCM_FEAT_ALTERED|ID_LOA_TCM_FEAT_CHARM_TWISTER|ID_LOA_TCM_FEAT_CRIMSON_RITUALIST|ID_LOA_TCM_FEAT_CULT_INITIATE|ID_LOA_TCM_FEAT_DEATH_DEFIER|ID_LOA_TCM_FEAT_DREAD_SPEECH|ID_LOA_TCM_FEAT_FATE_GAMBLER|ID_LOA_TCM_FEAT_GHOSTLIGHT_MEDIUM|ID_LOA_TCM_FEAT_GRAVE_KEEPER|ID_LOA_TCM_FEAT_HUNTER_OF_HUNTERS|ID_LOA_TCM_FEAT_MEMORY_STARVED|ID_LOA_TCM_FEAT_REVELING_FOOL|ID_LOA_TCM_FEAT_UNREFLECTED|ID_LOA_TCM_FEAT_SWIFT_WITCHCRAFT" />
+            <select type="Feat" name="Feat (Druskenvald Dweller)" supports="ID_LOA_TCM14_FEAT_ALTERED|ID_LOA_TCM14_FEAT_CHARM_TWISTER|ID_LOA_TCM14_FEAT_CRIMSON_RITUALIST|ID_LOA_TCM14_FEAT_CULT_INITIATE|ID_LOA_TCM14_FEAT_DEATH_DEFIER|ID_LOA_TCM14_FEAT_DREAD_SPEECH|ID_LOA_TCM14_FEAT_FATE_GAMBLER|ID_LOA_TCM14_FEAT_GHOSTLIGHT_MEDIUM|ID_LOA_TCM14_FEAT_GRAVE_KEEPER|ID_LOA_TCM14_FEAT_HUNTER_OF_HUNTERS|ID_LOA_TCM14_FEAT_MEMORY_STARVED|ID_LOA_TCM14_FEAT_REVELING_FOOL|ID_LOA_TCM14_FEAT_UNREFLECTED|ID_LOA_TCM14_FEAT_SWIFT_WITCHCRAFT" />
         </rules>
     </element>
 </elements>

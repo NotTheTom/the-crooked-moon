@@ -3,10 +3,10 @@
     <info>
         <name>Crimson Aspirant</name>
         <update version="0.0.1">
-            <file name="background-crimson-aspirant.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-crimson-aspirant.xml" />
+            <file name="background-crimson-aspirant.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/background-crimson-aspirant.xml" />
         </update>
     </info>
-    <element name="Crimson Aspirant" type="Background" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_CRIMSON_ASPIRANT">
+    <element name="Crimson Aspirant" type="Background" source="The Crooked Moon 2014" id="ID_LOA_TCM14_BACKGROUND_CRIMSON_ASPIRANT">
         <description>
             <p>You have delved into the forces that animate all life— even those that counterfeit life, such as Constructs and Undead. Many of these studies concentrate on the nature of blood and its power to sustain life and transmit vital essence, binding the soul to the flesh. You might have apprenticed under a sly-hearted mentor or a secret cabal focused on understanding or even manipulating life and death. You may have learned from a detailed treatise that you’ve put into practice, daring to become versed in the forbidden arts.</p>
             <ul class="unstyled">
@@ -14,7 +14,7 @@
                 <li><b>Tool Proficiencies:</b> Herbalism kit</li>
                 <li><b>Equipment:</b> Herbalism kit, dagger, fine clothes, healer's kit, 3 vials, 10 gp; or 50 gp</li>
             </ul>
-            <div element="ID_LOA_TCM_BACKGROUND_FEATURE_CRIMSON_ASPIRANT_CRIMSON_RITUALIST" />
+            <div element="ID_LOA_TCM14_BACKGROUND_FEATURE_CRIMSON_ASPIRANT_CRIMSON_RITUALIST" />
             <h5>BUILDING A CRIMSON ASPIRANT</h5>
             <p>Characters who value study and learning, as well as those with a capacity to heal the injuries and illnesses of others, readily become crimson aspirants. More physically inclined characters can be drawn to the teachings of blood to tap into their increased vital energies, as can those who are sickly or weak in hopes of overcoming that adversity.</p>
             <p class="indent"><b><i>Suggested Story Threads.</i></b> The Crimson Aspirant Story Threads table suggests events and people who can be the start of story threads for your character that weave through the campaign.</p>
@@ -51,18 +51,18 @@
             <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ARCANA" />
             <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_MEDICINE" />
             <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT" />
-            <grant type="Background Feature" id="ID_LOA_TCM_BACKGROUND_FEATURE_CRIMSON_ASPIRANT_CRIMSON_RITUALIST" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <grant type="Background Feature" id="ID_LOA_TCM14_BACKGROUND_FEATURE_CRIMSON_ASPIRANT_CRIMSON_RITUALIST" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
             <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
         </rules>
     </element>
-    <element name="Feature: Crimson Ritualist" type="Background Feature" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_FEATURE_CRIMSON_ASPIRANT_CRIMSON_RITUALIST">
+    <element name="Feature: Crimson Ritualist" type="Background Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_BACKGROUND_FEATURE_CRIMSON_ASPIRANT_CRIMSON_RITUALIST">
         <supports>Background Feature</supports>
         <description>
             <p>You gain the Crimson Ritualist Feat.</p>
         </description>
         <sheet display="false" />
         <rules>
-            <grant type="Feat" id="ID_LOA_TCM_FEAT_CRIMSON_RITUALIST" />
+            <grant type="Feat" id="ID_LOA_TCM14_FEAT_CRIMSON_RITUALIST" />
         </rules>
     </element>
 </elements>

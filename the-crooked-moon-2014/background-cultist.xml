@@ -3,10 +3,10 @@
     <info>
         <name>Cultist</name>
         <update version="0.0.1">
-            <file name="background-cultist.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon/background-cultist.xml" />
+            <file name="background-cultist.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/background-cultist.xml" />
         </update>
     </info>
-    <element name="Culltist" type="Background" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_CULTIST">
+    <element name="Culltist" type="Background" source="The Crooked Moon 2014" id="ID_LOA_TCM14_BACKGROUND_CULTIST">
         <description>
             <p>You have been inducted into a secret society that venerates or pursues power from some otherworldly source. The cultists might serve as minions of an entity they worship, or they may seek to understand and claim its might for their own. Depending on the malevolence of the cult’s patron or the malefic purposes they may serve, cultists could be a force of wickedness or a group of closely bonded and dedicated people who pursue a common, if esoteric, goal.</p>
             <ul class="unstyled">
@@ -15,7 +15,7 @@
                 <li><b>Languages:</b> Choose one (Cultist Affinity table language recommended)</li>
                 <li><b>Equipment:</b> Calligrapher's supplies, costume (cult garb), holy symbol (amulet: cult insignia), traveler's clothes, 10 gp; or 50 gp</li>
             </ul>
-            <div element="ID_LOA_TCM_BACKGROUND_FEATURE_CULTIST_CULT_INITIATE" />
+            <div element="ID_LOA_TCM14_BACKGROUND_FEATURE_CULTIST_CULT_INITIATE" />
             <p><b>Cultist Affinities</b></p>
             <table>
                 <thead>
@@ -71,18 +71,18 @@
             <select type="Proficiency" name="Skill Proficiency (Cultist)" supports="Skill" />
             <select type="Language" name="Language (Cultist)" supports="Standard||Exotic" />
             <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_CALLIGRAPHERS_SUPPLIES" />
-            <grant type="Background Feature" id="ID_LOA_TCM_BACKGROUND_FEATURE_CULTIST_CULT_INITIATE" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
+            <grant type="Background Feature" id="ID_LOA_TCM14_BACKGROUND_FEATURE_CULTIST_CULT_INITIATE" requirements="!ID_INTERNAL_GRANT_OPTIONAL_BACKGROUND_FEATURE"/>
             <select type="Background Feature" name="Variant Feature" supports="Optional Background Feature" optional="true" />
         </rules>
     </element>
-    <element name="Feature: Cult Initiate" type="Background Feature" source="The Crooked Moon" id="ID_LOA_TCM_BACKGROUND_FEATURE_CULTIST_CULT_INITIATE">
+    <element name="Feature: Cult Initiate" type="Background Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_BACKGROUND_FEATURE_CULTIST_CULT_INITIATE">
         <supports>Background Feature</supports>
         <description>
             <p>You gain the Cult Initiate Feat.</p>
         </description>
         <sheet display="false" />
         <rules>
-            <grant type="Feat" id="ID_lOA_TCM_FEAT_CULT_INITIATE" />
+            <grant type="Feat" id="ID_lOA_TCM14_FEAT_CULT_INITIATE" />
         </rules>
     </element>
 </elements>
