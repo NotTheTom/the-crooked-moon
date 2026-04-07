@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Azureborn</name>
+        <update version="0.0.1">
+            <file name="race-azureborn.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/race-azureborn.xml" />
+        </update>
+    </info>
+    <element name="Azureborn" type="Race" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACE_AZUREBORN">
+        <description>
+            <p>Azureborn (A‑zher‑born) are a harpy-like species native to Astramar (see page 16), often materializing from the bright blue night sky filled with twinkling stars and winds of arcane power. Bearing a connection to the aither that courses through the air and land of the province, they are an inherently prescient folk that can divine the future by looking to the cosmos. They have built a society of magical wonder through grand vision, endless curiosity, and dedication to study.</p>
+            <p class="indent">Sprouting feathers across their entire body and wings attached to each of their arms, this diverse folk can resemble all manner of avian creatures, from raptors with earthy tones to tropical birds of vibrant and colorful plumage. They typically live 100 years, although many of the wisest among them have lived up to 400.</p>
+            <h4>AZUREBORN TRAITS</h4>
+            <p>You have the following racial traits.</p>
+            <p class="indent"><b><i>Creature Type.</i></b> You are a Humanoid.</p>
+            <p class="indent"><b><i>Size.</i></b> You are Medium (about 4-7 feet tall).</p>
+            <p class="indent"><b><i>Speed.</i></b> Your walking speed is 30 feet, and you have a flying speed equal to your walking speed.</p>
+            <p class="indent"><b><i>Azure Legacy.</i></b> You know the <i>Guidance</i> cantrip. Starting at 3rd level, you can cast the <i>Augury</i> spell with this trait without requiring a material component. Once you cast <i>Augury</i> with this trait, you can’t cast it in that way again until you finish a long rest. You can also cast it using any spell slots you have of the appropriate level.</p>
+            <p class="indent">Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select this species).</p>
+            <p class="indent"><b><i>Darkvision.</i></b> You have darkvision with a range of 60 feet.</p>
+            <p class="indent"><b><i>Glimpse Fate.</i></b> When you roll initiative, if you aren’t surprised, you can choose a number of creatures that you can see equal to your proficiency bonus. The targets have advantage on their initiative rolls. Once you use this trait, you can’t do so again until you finish a short or long rest.</p>
+            <p class="indent"><b><i>Winds of Magic.</i></b> As a bonus action, you can take the Dash action and increase your flying speed by 10 feet until the end of the turn. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Ability Score Improvement" name="Ability Score Improvement Option (Azureborn)" supports="Custom Ability Score Improvement Option" />
+            <grant type="Racial Trait" id="ID_INTERNAL_RACIAL_TRAIT_TYPE_HUMANOID" />
+            <grant type="Size" id="ID_SIZE_MEDIUM" />
+            <stat name="innate speed" value="30" bonus="base" />
+            <stat name="innate speed:fly" value="innate speed" bonus="base" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_AZURE_LEGACY" />
+            <grant type="Vision" id="ID_VISION_DARKVISION" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_GLIMPSE_FATE" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_WINDS_OF_MAGIC" />
+        </rules>
+    </element>
+
+    <element name="Azure Legacy" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_AZURE_LEGACY">
+        <description>
+            <p>You know the <i>Guidance</i> cantrip. Starting at 3rd level, you can cast the <i>Augury</i> spell with this trait without requiring a material component. Once you cast <i>Augury</i> with this trait, you can’t cast it in that way again until you finish a long rest. You can also cast it using any spell slots you have of the appropriate level.</p>
+            <p class="indent">Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select this species).</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_GUIDANCE" />
+            <grant type="Spell" id="ID_PHB_SPELL_AUGURY" level="3" />
+            <select type="Racial Trait" name="Spellcasting Ability (Azure Legacy)" supports="ID_LOA_TCM14_RACIAL_TRAIT_AZURE_LEGACY_INTELLIGENCE|ID_LOA_TCM14_RACIAL_TRAIT_AZURE_LEGACY_WISDOM|ID_LOA_TCM14_RACIAL_TRAIT_AZURE_LEGACY_CHARISMA" />
+        </rules>
+    </element>
+    <element name="Intelligence" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_AZURE_LEGACY_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for this feature’s spells is Intelligence.</p>
+		</description>
+		<sheet alt="Azure Legacy">
+			<description>You know the Guidance cantrip. Intelligence is your spellcasting ability for these spells.</description>
+			<description level="3">You know the Guidance cantrip. You can cast the Augury spell once per long rest without using a spell slot or material components. You can also cast this spell using a spell slot. Intelligence is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+	<element name="Wisdom" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_AZURE_LEGACY_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for this feature’s spells is Wisdom.</p>
+		</description>
+		<sheet alt="Azure Legacy">
+            <description>You know the Guidance cantrip. Wisdom is your spellcasting ability for these spells.</description>
+			<description level="3">You know the Guidance cantrip. You can cast the Augury spell once per long rest without using a spell slot or material components. You can also cast this spell using a spell slot. Wisdom is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+	<element name="Charisma" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_AZURE_LEGACY_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for this feature’s spells is Charisma.</p>
+		</description>
+		<sheet alt="Azure Legacy">
+			<description>You know the Guidance cantrip. Charisma is your spellcasting ability for these spells.</description>
+			<description level="3">You know the Guidance cantrip. You can cast the Augury spell once per long rest without using a spell slot or material components. You can also cast this spell using a spell slot. Charisma is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+    <element name="Glimpse Fate" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_GLIMPSE_FATE">
+        <description>
+            <p>When you roll initiative, if you aren’t surprised, you can choose a number of creatures that you can see equal to your proficiency bonus. The targets have advantage on their initiative rolls. Once you use this trait, you can’t do so again until you finish a short or long rest.</p>
+        </description>
+        <sheet usage="1/Rest">
+            <description>When you roll initiative, if you aren't surprise, you can choose up to {{proficency}} creatures. The targets have advantage on their initiate rolls.</description>
+        </sheet>
+    </element>
+
+    <element name="Winds of Magic" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_WINDS_OF_MAGIC">
+        <description>
+            <p>As a bonus action, you can take the Dash action and increase your flying speed by 10 feet until the end of the turn. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+        </description>
+        <sheet action="Bonus Action" usage="{{proficiency}}/Long Rest">
+            <description>You take the Dash action and increase your flying speed by 10 feet until the end of your turn.</description>
+        </sheet>
+    </element>
+</elements>
