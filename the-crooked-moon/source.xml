@@ -12,8 +12,8 @@
         </description>
         <setters>
             <set name="abbreviation">TCM</set>
-            <set name="url"></set>
-            <set name="image"></set>
+            <set name="url">https://avantris.com/en-gb/collections/the-crooked-moon?srsltid=AfmBOopq4WICNb0EGCV1A5-9ipRgmKAVJHWu2RNr-KxsbvcEEzf0e9wG</set>
+            <set name="image">https://github.com/NotTheTom/the-crooked-moon/blob/main/TheCrookedMoon.png?raw=true</set>
             <set name="author" abbreviation="LOA" url="https://legendsofavantris.com/">Legends of Avantris</set>
             <set name="third-party">true</set>
             <set name="release">20250613</set>
