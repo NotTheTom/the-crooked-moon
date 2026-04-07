@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Bogborn</name>
+        <update version="0.0.1">
+            <file name="race-bogborn.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/race-bogborn.xml" />
+        </update>
+    </info>
+    <element name="Bogborn" type="Race" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACE_BOGBORN">
+        <description>
+            <p>Bogborn are a troll-like species native to Zulrogg, usually rising from the still, dark waters of the swampy province. From the moment of rebirth, they have a symbiotic relationship with flora and fauna of the wild—and often treacherous—mire. Their ability to survive is further enhanced by the naturally regenerative biology often found in trolls.</p>
+            <p class="indent">Towering over most, these hearty folk can face any trial of nature, and they often utilize their athleticism in pursuits of hunting and survival. Bearing prominent noses and tusks, their tough hides are generally shades of green or blue. Bogborn typically live 100 years before moving on to the spirit world.</p>
+            <h4>BOGBORN TRAITS</h4>
+            <p>You have the following racial traits.</p>
+            <p class="indent"><b><i>Creature Type.</i></b> Youare a Giant.</p>
+            <p class="indent"><b><i>Size.</i></b> You are Medium (about 7-8 feet tall).</p>
+            <p class="indent"><b><i>Speed.</i></b> Your walking speed is 30 feet.</p>
+            <p class="indent"><b><i>Bog Bulk.</i></b> You have advantage on any ability check or saving throw you make to avoid or end the grappled condition. You also count as one size larger when determining your carrying capacity.</p>
+            <p class="indent"><b><i>Darvision.</i></b> You have darkvision with a range of 60 feet.</p>
+            <p class="indent"><b><i>Guiding Bond.</i></b> As a bonus action, you can magically place a mark on a creature you can see within 60 feet of yourself. The mark lasts for 1 minute, and takes the form of ephemeral plants, moss, fungus, or swamp animals that only you can see. For the duration, you can add 1d4 to ability checks and attack rolls you make against the marked creature. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+            <p class="indent"><b><i>Keen Senses.</i></b> You have proficency in the Perception or Survival skill.</p>
+            <p class="indent"><b><i>Regeneration.</i></b> As a bonus action, you can expend one of your Hit Dice, roll the die, and regain a number of hit points equal to the number rolled plus your Constitution modifier (minimum of 1 hit point).</p>
+            <p class="ident">If you take acid or fire damage, this trait doesn’t function until the end of your next turn.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Ability Score Improvement" name="Ability Score Improvement Option (Bogborn)" supports="Custom Ability Score Improvement Option" />
+            <grant type="Racial Trait" id="ID_INTERNAL_RACIAL_TRAIT_TYPE_FIEND" />
+            <grant type="Size" id="ID_SIZE_MEDIUM" />
+            <stat name="innate speed" value="30" bonus="base" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_BOG_BULK" />
+            <grant type="Vision" id="ID_VISION_DARKVISION" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_GUIDING_BOND" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_KEEN_SENSES" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_REGENERATION" />
+        </rules>
+    </element>
+    
+    <element name="Bog Bulk" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_BOG_BULK">
+        <description>
+            <p>You have advantage on any ability check or saving throw you make to avoid or end the grappled condition. You also count as one size larger when determining your carrying capacity.</p>
+        </description>
+        <sheet>
+            <description>You have advantage on any ability check or saving throw you make to avoid or end the grappled condition.</description>
+        </sheet>
+        <rules>
+			<grant type="Grants" id="ID_INTERNAL_GRANTS_WEIGHT_CAPACITY_COUNTS_AS_LARGER" />
+		</rules>
+    </element>
+
+    <element name="Guiding Bond" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_GUIDING_BOND">
+        <description>
+            <p>As a bonus action, you can magically place a mark on a creature you can see within 60 feet of yourself. The mark lasts for 1 minute, and takes the form of ephemeral plants, moss, fungus, or swamp animals that only you can see. For the duration, you can add 1d4 to ability checks and attack rolls you make against the marked creature. You can use this bonus action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+        </description>
+        <sheet action="Bonus Action" usage="{{proficiency}}/Long Rest">
+            <description>You place a mark on a creature you can see withing 60 feet of yourself. The mark lasts 1 minute, for the duration you can add 1d4 to ability checks and attack rolls you make against the marked creature.</description>
+        </sheet>
+    </element>
+
+    <element name="Keen Senses" type="Racial Trait" source="The Crooked Moon" id="ID_LOA_TCM14_RACIAL_TRAIT_KEEN_SENSES">
+        <description>
+            <p>You have proficency in the Perception or Survival skill.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Proficiency" name="Skill Proficiecny (Keen Senses)" supports="ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIECNY_SKILL_SURVIVAL" />
+        </rules>
+    </element>
+
+    <element name="Regeneration" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_REGENERATION">
+        <description>
+            <p>As a bonus action, you can expend one of your Hit Dice, roll the die, and regain a number of hit points equal to the number rolled plus your Constitution modifier (minimum of 1 hit point).</p>
+            <p class="indent">If you take acid or fire damage, this trait doesn’t function until the end of your next turn.</p>
+        </description>
+        <sheet action="Bonus Action">
+            <description>You can expend one of your Hit Dice, roll the dice, and regain a number of hit points equal to the number rolled plus {{constitution:modifier}}. If you take acid or fire damage, this trait doesn't function until the end of your next turn.</description>
+        </sheet>
+    </element>
+</elements>
