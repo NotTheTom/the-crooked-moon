@@ -93,7 +93,7 @@
         <sheet display="false" />
         <rules>
             <grant type="Feat Feature" id="ID_LOA_TCM14_FEAT_FEATURE_NIGHT_VISION_PLUS" requirements="ID_VISION_DARKVISION|ID_VISION_SUPERIORDARKVISION" />
-            <grant type="Vision" id="ID_VISION_DARKVISION" requirements="!ID_VISION_DARKVISION|ID_VISION_SUPERIORDARKVISION" />
+            <grant type="Vision" id="ID_VISION_DARKVISION" requirements="!ID_VISION_DARKVISION|!ID_VISION_SUPERIORDARKVISION" />
         </rules>
     </element>
     <element name="Night Vision Plus" type="Feat Feature" source="The Crooked Moon 2014" id="ID_LOA_TCM14_FEAT_FEATURE_NIGHT_VISION_PLUS">
