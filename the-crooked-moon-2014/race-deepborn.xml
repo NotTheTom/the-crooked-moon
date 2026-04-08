@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Deepborn</name>
+        <update version="0.0.1">
+            <file name="race-deepborn.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/race-ashborn.xml" />
+        </update>
+    </info>
+    <element name="Deepborn" type="Race" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACE_DEEPBORN">
+        <description>
+            <p>Deepborn are a fish-like species native to Olmarsh, typically rising up from the abyssal depths of the province’s black sea—home to terrors beyond imagining known as the Hungry Ones. Immersed in a near constant eldritch presence that emerges from the deep and descends from beyond the stars, these folk manage their state of paranoia by embracing and harnessing the uncanny and cosmic.</p>
+            <p class="indent">While they are primarily piscine in their anatomy, they can possess features found in a wide variety of sea creatures, including cephalopods and crustaceans. They typically live for around 150 years, but certain members of occult orders have been known to live for 600 years.</p>
+            <h4>DEEPBORN TRAITS</h4>
+            <p>You have the following racial traits.</p>
+            <p class="indent"><b><i>Creature Type.</i></b> You are an Aberration.</p>
+            <p class="indent"><b><i>Size.</i></b> You are Medium (about 5-7 feet tall).</p>
+            <p class="indent"><b><i>Speed.</i></b> Your walking speed is 30 feet, and you have a swimming speed equal to your walking speed.</p>
+            <p class="indent"><b><i>Amphibious.</i></b> You can breathe air and water.</p>
+            <p class="indent"><b><i>Darkvision.</i></b> You have darkvision with a range of 60 feet.</p>
+            <p class="indent"><b><i>Eldritch Gibbering.</i></b> Thanks to your eldritch connection to the Hungering Ones, you speak Deep Speech. As an action, you can gibber in that language. Each creature of your choice within 30 feet of you must succeed on a Wisdom saving throw (DC 8 plus your proficiency bonus and Intelligence, Wisdom, or Charisma modifier; choose the ability when you select this species) or roll a d6 and consult the table below. The effect lasts until thestart of your next turn. Once any target fails its save against this trait, you can’t use it again until you finish a short or long rest.</p>
+            <table>
+                <thead>
+                    <tr><td>1d6</td><td>Effect</td></tr>
+                </thead>
+                <tr><td>1-2</td><td>The target has disadavantage on attack rolls.</td></tr>
+                <tr><td>3-4</td><td>The target's speed becomes 0.</td></tr>
+                <tr><td>5-6</td><td>The target can't take reactions.</td></tr>
+            </table>
+            <p class="indent"><b><i>Endless Hunger.</i></b> As a bonus action, you can embrace your connection to the Hungering Ones. Until the start of your next turn, you know the location of any creatures that aren’t Constructs or Undead within 60 feet of yourself, and your attack rolls against those creatures can’t have disadvantage. Once you use this trait, you can’t use it again until you finish a short or long rest.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Ability Score Improvement" name="Ability Score Improvement Option (Deepborn)" supports="Custom Ability Score Improvement Option" />
+            <grant type="Racial Feature" id="ID_INTERNAL_RACIAL_TRAIT_TYPE_ABERRATION" />
+            <grant type="Size" id="ID_SIZE_MEDIUM" />
+            <stat name="innate speed" value="30" bonus="base" />
+            <stat name="innate speed:swim" value="innate speed" bonus="base" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_AMPHIBIOUS" />
+            <grant type="Vision" id="ID_VISION_DARKVISION" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_ELDRITCH_GIBBERING" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_ENDLESS_HUNGER" />
+            <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+            <select type="Language" name="Language (Ashborn)" supports="Standard||Exotic" />
+        </rules>
+    </element>
+    
+    <element name="Amphibious" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_AMPHIBIOUS">
+        <description>
+            <p>You can breathe air and water.</p>
+        </description>
+        <sheet>
+            <description>You can breathe air and water.</description>
+        </sheet>
+    </element>
+    
+    <element name="Eldritch Gibbering" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_ELDRITCH_GIBBERING">
+        <description>
+            <p>Thanks to your eldritch connection to the Hungering Ones, you speak Deep Speech. As an action, you can gibber in that language. Each creature of your choice within 30 feet of you must succeed on a Wisdom saving throw (DC 8 plus your proficiency bonus and Intelligence, Wisdom, or Charisma modifier; choose the ability when you select this species) or roll a d6 and consult the table below. The effect lasts until the start of your next turn. Once any target fails its save against this trait, you can’t use it again until you finish a short or long rest.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Language" id="ID_LANGUAGE_DEEP_SPEECH" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+            <select type="Racial Trait" name="Ability Modifier (Eldritch Gibbering)" supports="ID_LOA_TCM14_RACIAL_TRAIT_ELDRITCH_GIBBERING_INTELLIGENCE|ID_LOA_TCM14_RACIAL_TRAIT_ELDRITCH_GIBBERING_WISDOM|ID_LOA_TCM14_RACIAL_TRAIT_ELDRITCH_GIBBERING_CHARISMA" />
+        </rules>
+    </element>
+    <element name="Intelligence" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_ELDRITCH_GIBBERING_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>Your ability modifier for this feature is Intelligence.</p>
+		</description>
+		<sheet alt="Eldritch Gibbering" action="Action">
+			<description>Each creature of your choice within 30 feet of you must succeed on a DC {{eldritch gibbering:dc}} Wisdom saving throw or roll a d6. On a 1-2 the targets have disadvantage on attack rolls. On a 3-4 the targets' speed becomes 0. On a 5-6 the targets can't take reactions. The effect lasts until the start of your next turn. Once any target fails its save against this trait you can't use it again until you finihs a rest.</description>
+		</sheet>
+        <rules>
+            <stat name="eldritch gibbering:dc" value="8" />
+			<stat name="eldritch gibbering:dc" value="intelligence:modifier" />
+			<stat name="eldritch gibbering:dc" value="proficiency" />
+        </rules>
+	</element>
+	<element name="Wisdom" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_ELDRITCH_GIBBERING_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>Your ability modifier for this feature is Wisdom.</p>
+		</description>
+		<sheet alt="Eldritch Gibbering" action="Action">
+            <description>Each creature of your choice within 30 feet of you must succeed on a DC {{eldritch gibbering:dc}} Wisdom saving throw or roll a d6. On a 1-2 the targets have disadvantage on attack rolls. On a 3-4 the targets' speed becomes 0. On a 5-6 the targets can't take reactions. The effect lasts until the start of your next turn. Once any target fails its save against this trait you can't use it again until you finihs a rest.</description>
+		</sheet>
+        <rules>
+            <stat name="eldritch gibbering:dc" value="8" />
+			<stat name="eldritch gibbering:dc" value="wisdom:modifier" />
+			<stat name="eldritch gibbering:dc" value="proficiency" />
+        </rules>
+	</element>
+	<element name="Charisma" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_ELDRITCH_GIBBERING_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>Your ability modifier for this feature is Charisma.</p>
+		</description>
+		<sheet alt="Eldritch Gibbering" action="Action">
+			<description>Each creature of your choice within 30 feet of you must succeed on a DC {{eldritch gibbering:dc}} Wisdom saving throw or roll a d6. On a 1-2 the targets have disadvantage on attack rolls. On a 3-4 the targets' speed becomes 0. On a 5-6 the targets can't take reactions. The effect lasts until the start of your next turn. Once any target fails its save against this trait you can't use it again until you finihs a rest.</description>
+		</sheet>
+        <rules>
+            <stat name="eldritch gibbering:dc" value="8" />
+			<stat name="eldritch gibbering:dc" value="charisma:modifier" />
+			<stat name="eldritch gibbering:dc" value="proficiency" />
+        </rules>
+	</element>
+
+    <element name="Endless Hunger" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_ENDLESS_HUNGER">
+        <description>
+            <p>As a bonus action, you can embrace your connection to the Hungering Ones. Until the start of your next turn, you know the location of any creatures that aren’t Constructs or Undead within 60 feet of yourself, and your attack rolls against those creatures can’t have disadvantage. Once you use this trait, you can’t use it again until you finish a short or long rest.</p>
+        </description>
+        <sheet action="Bonus Action" usage="1/Rest">
+            <description>Until the start of your next turn, you know the location of any creatures that aren't Constructs or Undead within 60 feet of yourself, and your attack rolls against those creatures can't have disadvantage.</description>
+        </sheet>
+    </element>
+</elements>

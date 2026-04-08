@@ -59,7 +59,7 @@
         </sheet>
     </element>
 
-    <element name="Keen Senses" type="Racial Trait" source="The Crooked Moon" id="ID_LOA_TCM14_RACIAL_TRAIT_KEEN_SENSES">
+    <element name="Keen Senses" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_KEEN_SENSES">
         <description>
             <p>You have proficency in the Perception or Survival skill.</p>
         </description>
