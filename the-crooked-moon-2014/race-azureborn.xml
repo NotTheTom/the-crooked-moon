@@ -32,6 +32,8 @@
             <grant type="Vision" id="ID_VISION_DARKVISION" />
             <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_GLIMPSE_FATE" />
             <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_WINDS_OF_MAGIC" />
+            <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+            <select type="Language" name="Language (Azureborn)" supports="Standard||Exotic" />
         </rules>
     </element>
 

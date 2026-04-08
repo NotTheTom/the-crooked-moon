@@ -33,6 +33,8 @@
             <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_GUIDING_BOND" />
             <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_KEEN_SENSES" />
             <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_REGENERATION" />
+            <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+            <select type="Language" name="Language (Bogborn)" supports="Standard||Exotic" />
         </rules>
     </element>
     
@@ -63,7 +65,7 @@
         </description>
         <sheet display="false" />
         <rules>
-            <select type="Proficiency" name="Skill Proficiecny (Keen Senses)" supports="ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIECNY_SKILL_SURVIVAL" />
+            <select type="Proficiency" name="Skill Proficiecny (Keen Senses)" supports="ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_SURVIVAL" />
         </rules>
     </element>
 

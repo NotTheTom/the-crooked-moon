@@ -109,8 +109,8 @@
             <p>Your ability modifier for unarmed attacks using this feature is Strength.</p>
         </description>
         <sheet alt="Scorpion Sting (Strength)">
-            <description>You can use your tail for unarmed strikes. When you hit with it you deal 1d4 piercing damage plus an extra 1d6 poison damage. You can deal this extra damage {{proficiency}} times. regaining one expended use when you finish a short rest, and all expended uses when you finish a long rest.</description>
-            <description level="10">You can use your tail for unarmed strikes. When you hit with it you deal 1d4 piercing damage plus an extra 2d6 poison damage. You can deal this extra damage {{proficiency}} times, regaining one expended use when you finish a short rest, and all expended uses when you finish a long rest.</description>
+            <description>You can use your tail for unarmed strikes. When you hit with it you deal 1d4 plus {{strength:modifier}} piercing damage and an extra 1d6 poison damage. You can deal this extra damage {{proficiency}} times. regaining one expended use when you finish a short rest, and all expended uses when you finish a long rest.</description>
+            <description level="10">You can use your tail for unarmed strikes. When you hit with it you deal 1d4 piercing damage plus {{strength:modifier}} and an extra 2d6 poison damage. You can deal this extra damage {{proficiency}} times, regaining one expended use when you finish a short rest, and all expended uses when you finish a long rest.</description>
         </sheet>
     </element>
     <element name="Dexterity" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_SCORPION_STING_DEXTERITY">
@@ -119,8 +119,8 @@
             <p>Your ability modifier for unarmed attacks using this feature is Dexterity.</p>
         </description>
         <sheet alt="Scorpion Sting (Dexterity)">
-            <description>You can use your tail for unarmed strikes. When you hit with it you deal 1d4 piercing damage plus an extra 1d6 poison damage. You can deal this extra damage {{proficiency}} times. regaining one expended use when you finish a short rest, and all expended uses when you finish a long rest.</description>
-            <description level="10">You can use your tail for unarmed strikes. When you hit with it you deal 1d4 piercing damage plus an extra 2d6 poison damage. You can deal this extra damage {{proficiency}} times, regaining one expended use when you finish a short rest, and all expended uses when you finish a long rest.</description>
+            <description>You can use your tail for unarmed strikes. When you hit with it you deal 1d4 plus {{dexterity:modifier}} piercing damage and an extra 1d6 poison damage. You can deal this extra damage {{proficiency}} times. regaining one expended use when you finish a short rest, and all expended uses when you finish a long rest.</description>
+            <description level="10">You can use your tail for unarmed strikes. When you hit with it you deal 1d4 plus {{dexterity:modifier}} piercing damage and an extra 2d6 poison damage. You can deal this extra damage {{proficiency}} times, regaining one expended use when you finish a short rest, and all expended uses when you finish a long rest.</description>
         </sheet>
     </element>
 </elements>
