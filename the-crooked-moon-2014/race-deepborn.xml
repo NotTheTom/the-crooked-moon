@@ -40,7 +40,7 @@
             <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_ELDRITCH_GIBBERING" />
             <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_ENDLESS_HUNGER" />
             <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
-            <select type="Language" name="Language (Ashborn)" supports="Standard||Exotic" />
+            <select type="Language" name="Language (Gnarlborn)" supports="Standard||Exotic" />
         </rules>
     </element>
     
