@@ -6,6 +6,7 @@
             <file name="background-amnesiac.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/background-amnesiac.xml" />
         </update>
     </info>
+    
     <element name="Amnesiac" type="Background" source="The Crooked Moon 2014" id="ID_LOA_TCM14_BACKGROUND_AMNESIAC">
         <description>
             <p>Some portion of your past has been swallowed by nothingness. The missing time could be a short interval—mere days or weeks gone from your memory— or you might have only vague hints at best of who you are and where you are from. Flashes of déjà vu are common, taunting you with recollection, but they almost always slip away, as ungraspable as the mists of Druskenvald. An injury, some traumatic experience, or the magical workings of a spell or curse could be the culprit behind your amnesia.</p>

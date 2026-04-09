@@ -6,7 +6,7 @@
             <file name="race-graveborn.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/race-graveborn.xml" />
         </update>
     </info>
-    
+
     <element name="Graveborn" type="Race" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACE_GRAVEBORN">
         <description>
             <p>Graveborn are a ghoul-like species native to Syndramas, typically rising from one of the countless graves that mark the frozen battlefields of the province. They were first created in a kingdom-wide ritual that twisted countless humans into new Undead creatures that barely resembled who they once were. Graveborn now wage war endlessly and perpetuate a culture of martial prowess, relentlessness, and grave honor. These people are infused with the necrotic and draconic essence of the powerful Drakkonite metal found throughout the province, which has given them a strange taste for spoiled flesh of any variety.</p>

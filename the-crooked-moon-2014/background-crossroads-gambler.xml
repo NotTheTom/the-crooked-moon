@@ -6,6 +6,7 @@
             <file name="background-crossroads-gambler.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/background-crossroads-gambler.xml" />
         </update>
     </info>
+    
     <element name="Crossroads Gambler" type="Background" source="The Crooked Moon 2014" id="ID_LOA_TCM14_BACKGROUND_CROSSROADS_GAMBLER">
         <description>
             <p>You’ve made your bones on games of chance, and one day your games crossed the line into something far more serious. You might have played for your soul against a Fiend, matched wits with ancient forest Fey in a riddle contest, or rolled dice with the fabled Mister Crossroads.</p>

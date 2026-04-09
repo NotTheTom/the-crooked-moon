@@ -6,6 +6,7 @@
             <file name="background-reveler.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/background-reveler.xml" />
         </update>
     </info>
+    
     <element name="Reveler" type="Background" source="The Crooked Moon 2014" id="ID_LOA_TCM14_BACKGROUND_REVELER">
         <description>
             <p>For a time, you traveled with the Lord of Fools’ strange and unsettling revelry. Whether you are still welcome in that company, or you’ve struck off on your own, your time with the troupe revealed some of its nature to you—that the Lord of Fools serves some great entity who prizes humor and merriment, often at the expense of the mighty. But he is no mere jester. Beneath the mask of mockery and merriment is a mad creature who demands sacrifice.</p>

@@ -6,6 +6,7 @@
             <file name="background-wicker-weaver.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/background-wicker-weaver.xml" />
         </update>
     </info>
+    
     <element name="Wicker Weaver" type="Background" source="The Crooked Moon 2014" id="ID_LOA_TCM14_BACKGROUND_WICKER_WEAVER">
         <description>
             <p>You know the ancient rites kept alive by secretive druids and hedge practitioners in the shadowed groves of the primordial forests. Remedies and hexes woven into wicker charms can stave off misfortune and ward away evil. They could just as likely invite gloom and the ire of the old spirits.</p>

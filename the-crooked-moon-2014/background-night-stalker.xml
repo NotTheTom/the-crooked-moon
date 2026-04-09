@@ -6,6 +6,7 @@
             <file name="background-night-stalker.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/background-night-stalker.xml" />
         </update>
     </info>
+    
     <element name="Night Stalker" type="Background" source="The Crooked Moon 2014" id="ID_LOA_TCM14_BACKGROUND_NIGHT_STALKER">
         <description>
             <p>Once you were prey, stalked by a monster through the dark of night. Now, you are the hunter, and the things which you once feared will learn the true meaning of dread. You have become far deadlier, hungrier, and crueler than the monster that once hunted you. You are, yourself, the monster now—a fearsome creature once thought to slake its hunger on you or those close to you. You survived, and your would-be killer will have its own destruction in turn.</p>

@@ -6,6 +6,7 @@
             <file name="race-curseborn.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/race-curseborn.xml" />
         </update>
     </info>
+    
     <element name="Curseborn" type="Race" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACE_CURSEBORN">
         <description>
             <p>Curseborn are a werewolf-like species native to Edwardia, often emerging from the dense, cursed fog that rolls across the province. Sharing a strong connection to a malediction called the Grey, which demands balance at the threat of certain doom, they have managed to build a civilization of advancement and progress, countered by rampant strife, pollution, and hunger.</p>

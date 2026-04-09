@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Harvestborn</name>
+        <update version="0.0.1">
+            <file name="race-harvestborn.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/race-harvestborn.xml" />
+        </update>
+    </info>
+    
+    <element name="Harvestborn" type="Race" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACE_HARVESTBORN">
+        <description>
+            <p>Harvestborn are a scarecrow-like species native to Enoch, most often crafted with great care by Methuselah, the lord of the province. Infused with the vital, green magic that surges through the immensely fertile land, they have a strong connection to the cycle of both the harvest and life, death, and rebirth. They feed much of Druskenvald with the crops they grow in a relatively peaceful society that puts a focus on community, family, and fellowship.</p>
+            <p class="indent">As a constructed species resembling any manner of scarecrow, their bodies are comprised of a mixture of wood, metal, straw, and other implements. Their glowing-eyed heads might be made from a burlap sack or a crop such as a pumpkin or turnip. Staying true to the cycle, they generally live 100 years before accepting the next step of death and becoming reborn once more.</p>
+            <h4>HARVESTBORN TRAITS</h4>
+            <p>You have the following racial traits.</p>
+            <p class="indent"><b><i>Creature Type.</i></b> You are a Construct.</p>
+            <p class="indent"><b><i>Size.</i></b> You are Medium (about 4-7 feet tall).</p>
+            <p class="indent"><b><i>Speed.</i></b> Your walking speed is 30 feet.</p>
+            <p class="indent"><b><i>Culling.</i></b> When you damage a creature with half its hit points or fewer, you can deal an extra 1d12 necrotic damage to it. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+            <p class="indent"><b><i>Gift of the Green.</i></b> As a bonus action, you can touch the ground and choose a creature also touching the ground within 30 feet of yourself. That creature can expend and roll one Hit Die, and it regains a number of hit points equal to the number rolled plus your proficiency bonus.</p>
+            <p class="indent">You can use this trait a number of times equal to your proficiency bonus. You regain one expended use when you finish a short rest, and you regain all expended uses when you finish a long rest.</p>
+            <p class="indent"><b><i>Jack-O-Lantern.</i></b> You know the Dancing Lights cantrip. Intelligence, Wisdom, or Charisma is your spellcasting ability for it (choose the ability when you select this species).</p>
+            <p class="indent"><b><i>Scarecrow Nature.</i></b> You don't require air, food, or drink.</p>
+            <p class="indent"><b><i>Watchful Rest.</i></b> You don’t need to sleep, and magic can’t put you to sleep. Moreover, you can finish a long rest in 4 hours if you spend those hours in an inactive, motionless state, during which you retain consciousness.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Ability Score Improvement" name="Ability Score Improvement Option (Harvestborn)" supports="Custom Ability Score Improvement Option" />
+            <grant type="Racial Feature" id="ID_INTERNAL_RACIAL_TRAIT_TYPE_CONSTRUCT" />
+            <grant type="Size" id="ID_SIZE_MEDIUM" />
+            <stat name="innate speed" value="30" bonus="base" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_CULLING" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_GIFT_OF_THE_GREEN" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_JACK_O_LANTERN" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_SCARECROW_NATURE" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_WATCHFUL_REST" />
+            <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+            <select type="Language" name="Language (Harvestborn)" supports="Standard||Exotic" />
+        </rules>
+    </element>
+    
+    <element name="Culling" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_CULLING">
+        <description>
+            <p>When you damage a creature with half its hit points or fewer, you can deal an extra 1d12 necrotic damage to it. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+        </description>
+        <sheet usage="{{proficiency}}/Long Rest">
+            <description>When you damage a creature with half its hit points or fewer, you can deal an extra 1d12 necrotic damage to it.</description>
+        </sheet>
+    </element>
+
+    <element name="Gift of the Green" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_GIFT_OF_THE_GREEN">
+        <description>
+            <p>As a bonus action, you can touch the ground and choose a creature also touching the ground within 30 feet of yourself. That creature can expend and roll one Hit Die, and it regains a number of hit points equal to the number rolled plus your proficiency bonus.</p>
+            <p class="indent">You can use this trait a number of times equal to your proficiency bonus. You regain one expended use when you finish a short rest, and you regain all expended uses when you finish a long rest.</p>
+        </description>
+        <sheet action="Bonus Action">
+            <description>You can choose a creature touching the ground with 30 feet of yourself. That creature can expend and roll one Hit Die, and it regains a number of hit points equal to the number rolled plus {{proficiency}}. You can use this trait {{proficiency}} times. Regaining one expened use when you finish a short rest, and you regain all expened uses when you finish a long rest.</description>
+        </sheet>
+    </element>
+
+    <element name="Jack-O-Lantern" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_JACK_O_LANTERN">
+        <description>
+            <p>You know the Dancing Lights cantrip. Intelligence, Wisdom, or Charisma is your spellcasting ability for it (choose the ability when you select this species).</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_DANCING_LIGHTS" />
+        </rules>
+    </element>
+
+    <element name="Scarecrow Nature" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_SCARECROW_NATURE">
+        <description>
+            <p>You don't require air, food, or drink.</p>
+        </description>
+        <sheet>
+            <description>You don't require air, food, or drink.</description>
+        </sheet>
+    </element>
+
+    <element name="Watchful Rest" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_WATCHFUL_REST">
+        <description>
+            <p>You don’t need to sleep, and magic can’t put you to sleep. Moreover, you can finish a long rest in 4 hours if you spend those hours in an inactive, motionless state, during which you retain consciousness.</p>
+        </description>
+        <sheet>
+            <description>You don’t need to sleep, and magic can’t put you to sleep. Moreover, you can finish a long rest in 4 hours if you spend those hours in an inactive, motionless state, during which you retain consciousness.</description>
+        </sheet>
+    </element>
+</elements>

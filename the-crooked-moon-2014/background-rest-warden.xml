@@ -6,6 +6,7 @@
             <file name="background-rest-warden.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/background-rest-warden.xml" />
         </update>
     </info>
+    
     <element name="Rest Warden" type="Background" source="The Crooked Moon 2014" id="ID_LOA_TCM14_BACKGROUND_REST_WARDEN">
         <description>
             <p>In a place closer to the lands of the dead than the living, those who tend the eternal rest and disposition of the deceased are held in a mixture of high esteem and apprehension. You have plied the trade of the gravedigger, the mortician, and the embalmer. There are times when you have been the only one to say a kind word in honor of those who passed. The depredations of the Undead are well-known to you, and you don’t suffer their meddling in the rest of your charges.</p>

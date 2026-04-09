@@ -6,6 +6,7 @@
             <file name="background-ghostlight-passenger.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/background-ghostlight-passenger.xml" />
         </update>
     </info>
+    
     <element name="Ghostlight Passenger" type="Background" source="The Crooked Moon 2014" id="ID_LOA_TCM14_BACKGROUND_GHOSTLIGHT_PASSENGER">
         <description>
             <p>Once, even before your most recent travel to Druskenvald, you rode the deathly train known as the <i>Ghostlight Express</i>. Your memories of that journey might be hazy and dreamlike, or they could be sharp and jarring in their clarity. You learned some of the workings of the ghostly engine and formed a connection with the conductor and fellow travelers that has stayed with you. At times, you are even more comfortable with the dead than the living.</p>

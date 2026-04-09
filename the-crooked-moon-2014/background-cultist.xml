@@ -6,6 +6,7 @@
             <file name="background-cultist.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/background-cultist.xml" />
         </update>
     </info>
+    
     <element name="Culltist" type="Background" source="The Crooked Moon 2014" id="ID_LOA_TCM14_BACKGROUND_CULTIST">
         <description>
             <p>You have been inducted into a secret society that venerates or pursues power from some otherworldly source. The cultists might serve as minions of an entity they worship, or they may seek to understand and claim its might for their own. Depending on the malevolence of the cult’s patron or the malefic purposes they may serve, cultists could be a force of wickedness or a group of closely bonded and dedicated people who pursue a common, if esoteric, goal.</p>
