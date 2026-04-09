@@ -3,7 +3,7 @@
     <info>
         <name>Deepborn</name>
         <update version="0.0.1">
-            <file name="race-deepborn.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/race-ashborn.xml" />
+            <file name="race-deepborn.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/race-deepborn.xml" />
         </update>
     </info>
     <element name="Deepborn" type="Race" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACE_DEEPBORN">

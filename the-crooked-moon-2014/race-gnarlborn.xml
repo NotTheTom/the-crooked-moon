@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Gnarlborn</name>
+        <update version="0.0.1">
+            <file name="race-gnarlborn.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/race-gnarlborn.xml" />
+        </update>
+    </info>
+    <element name="Gnarlborn" type="Race" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACE_GNARLBORN">
+        <description>
+            <p>Gnarlborn (NAR‑ull‑born) are a tree-like species native to Ardengloom, usually sprouting up from the soil of the twisted, dark forest. Their home is forever haunted by the souls of long-dead fey, which inhabit the enormous, face-bearing trees known as Elderwoods. These folk commune with these beings to receive primordial wisdom.</p>
+            <p class="indent">Resembling gnarled trees with glowing faces hollowed into the bark, their individual patterns of branches, moss, and lichen can result in a wide diversity of appearances. Most gnarlborn live for over 500 years, but those with the strongest connection to the Elderwoods have been said to live to be thousands of years old.</p>
+            <h4>GNARLBORN TRAITS</h4>
+            <p>You have the following racial traits.</p>
+            <p class="indent"><b><i>Creature Type.</i></b> You are a Plant.</p>
+            <p class="indent"><b><i>Size.</i></b> You are Medium (about 5-8 feet tall).</p>
+            <p class="indent"><b><i>Speed.</i></b> Your walking speed is 30 feet</p>
+            <p class="indent"><b><i>Deep Roots.</i></b> You have advantage on ability checks and saving throws against being moved against your will or to avoid being knocked prone.</p>
+            <p class="indent"><b><i>Elderwood Whisper</i></b> You can draw on the memory of the Elderwood spirits. When you finish a long rest, you gain proficiency with a skill, a tool, or learn one language of your choice until you next finish a long rest.</p>
+            <p class="indent"><b><i>Grasping Branches.</i></b> As a bonus action, you can magically unleash the binding power of the dark wood. Choose a Large or smaller creature within 30 feet of yourself. The creature must make a Strength saving throw (DC 8 plus your Constitution modifier and proficiency bonus). On a failed save, the target is restrained for 1 minute as branches appear and ensnare it. On a successful save, its speed is halved until the end of its next turn. A restrained creature repeats the save at the end of each of its turns, ending the effect on itself on a success. The branches vanish when the condition ends.</p>
+            <p class="indent">Once you use this trait, you can’t do so again until you finish a short or long rest.</p>
+            <p class="indent"><b><i>Root Sense.</i></b> As a bonus action, you gain tremorsense with a range of 60 feet for 10 minutes. Once you use this trait, you can’t do so again until you finish a short or long rest.</p>
+            <p class="indent"><b><i>Towering Size.</i></b> You have advantage on any ability check you make to escape a grapple. You also count as one size larger when determining your carrying capacity.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Ability Score Improvement" name="Ability Score Improvement Option (Gnarlborn)" supports="Custom Ability Score Improvement Option" />
+            <grant type="Racial Feature" id="ID_INTERNAL_RACIAL_TRAIT_TYPE_PLANT" />
+            <grant type="Size" id="ID_SIZE_MEDIUM" />
+            <stat name="innate speed" value="30" bonus="base" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_DEEP_ROOTS" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_ELDERWOOD_WHISPERS" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_GRASPING_BRANCHES" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_ROOT_SENSE" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_TOWERING_SIZE" />
+            <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+            <select type="Language" name="Language (Ashborn)" supports="Standard||Exotic" />
+        </rules>
+    </element>
+
+    <element name="Deep Roots" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_DEEP_ROOTS">
+        <description>
+            <p>You have advantage on ability checks and saving throws against being moved against your will or to avoid being knocked prone.</p>
+        </description>
+        <sheet>
+            <description>You have advantage on ability checks and saving throws against being moved against your will or to avoid being knocked prone.</description>
+        </sheet>
+    </element>
+    
+    <element name="Elderwood Whispers" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_ELDERWOOD_WHISPERS">
+        <description>
+            <p>You can draw on the memory of the Elderwood spirits. When you finish a long rest, you gain proficiency with a skill, a tool, or learn one language of your choice until you next finish a long rest.</p>
+        </description>
+        <sheet>
+            <description>When you finish a long rest, you gain proficiency with a skill, a tool, or learn one language of your choice until you next finish a long rest.</description>
+        </sheet>
+    </element>
+
+    <element name="Grasping Branches" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_GRASPING_BRANCHES">
+        <description>
+            <p>As a bonus action, you can magically unleash the binding power of the dark wood. Choose a Large or smaller creature within 30 feet of yourself. The creature must make a Strength saving throw (DC 8 plus your Constitution modifier and proficiency bonus). On a failed save, the target is restrained for 1 minute as branches appear and ensnare it. On a successful save, its speed is halved until the end of its next turn. A restrained creature repeats the save at the end of each of its turns, ending the effect on itself on a success. The branches vanish when the condition ends.</p>
+            <p class="indent">Once you use this trait, you can’t do so again until you finish a short or long rest.</p>
+        </description>
+        <sheet action="Bonus Action" usage="1/Rest">
+            <description>Choose a Large or smaller creature within 30 feet of yourself. The creature must make a DC {{grasping branches:dc}} Strength saving throw. On a failed saved, the target is restrained for 1 minute. On a successful save, its speed is halved until the end of its next turn. A restrained creature repeats the save at the end of each of its turns, ending the effect on itself on a success.</description>
+        </sheet>
+        <rules>
+            <stat name="grasping branches:dc" value="8" />
+			<stat name="grasping branches:dc" value="constitution:modifier" />
+			<stat name="grasping branches:dc" value="proficiency" />
+        </rules>
+    </element>
+
+    <element name="Root Sense" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_ROOT_SENSE">
+        <description>
+            <p>As a bonus action, you gain tremorsense with a range of 60 feet for 10 minutes. Once you use this trait, you can’t do so again until you finish a short or long rest.</p>
+        </description>
+        <sheet action="Bonus Action" usage="1/Rest">
+            <description>You gain tremorsense with a range of 60 feet for 10 minutes.</description>
+        </sheet>
+    </element>
+
+    <element name="Towering Size" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_TOWERING_SIZE">
+        <description>
+            <p>You have advantage on any ability check you make to escape a grapple. You also count as one size larger when determining your carrying capacity.</p>
+        </description>
+        <sheet>
+            <description>You have advantage on any ability check you make to escape a grapple.</description>
+        </sheet>
+        <rules>
+			<grant type="Grants" id="ID_INTERNAL_GRANTS_WEIGHT_CAPACITY_COUNTS_AS_LARGER" />
+		</rules>
+    </element>
+</elements>
