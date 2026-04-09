@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Plagueborn</name>
+        <update version="0.0.1">
+            <file name="race-plagueborn.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/race-plagueborn.xml" />
+        </update>
+    </info>
+    
+    <element name="Plagueborn" type="Race" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACE_PLAGUEBORN">
+        <description>
+            <p>Plagueborn are a rat-like species native to Bubonia, typically coalescing in the pestilent haze that hangs over the province. They are deeply connected to the virulent and deadly plague that afflicts and shapes their society, which persists through cunning, ruthlessness, and the sheer will to live. They are the most adaptable species of Druskenvald, quickly discovering the means to survive even the harshest environments.</p>
+            <p class="indent">Appearing as large plague rats with humanoid physiology, their short fur ranges from grays and browns to various shades of green. They bear jagged teeth and claws that all carry a strain of plague to which they are immune but can prove deadly to others. Their nimble tails can vary greatly in length and thickness, often reflecting their family, clan, or guild. Plagueborn usually live no longer than 100 years.</p>
+            <h4>PLAGUEBORN TRAITS</h4>
+            <p>You have the following racial traits.</p>
+            <p class="indent"><b><i>Creature Type.</i></b> You are a Humanoid.</p>
+            <p class="indent"><b><i>Size.</i></b> You are Medium (about 4-6 feet tall) or Small (about 2-4 feet tall). You choose the size when you select this species.</p>
+            <p class="indent"><b><i>Speed.</i></b> You walking speed is 30 feet, and you have a climbing speed equal to your walking speed.</p>
+            <p class="indent"><b><i>Born in Filth.</i></b> You have advantage on saving throws against diseases, or to avoid or end the poisoned condition on yourself.</p>
+            <p class="indent"><b><i>Darkvision.</i></b> You have darkvsion with a range of 60 feet.</p>
+            <p class="indent"><b><i>Infected Cunning.</i></b> The plague you carry binds you to rats and imparts their cunning. You gain proficiency in the Deception or Stealth skill.</p>
+            <p class="indent"><b><i>Plague Bearer.</i></b> When you hit a creature with an attack roll, you can magically spread your plague to the target. The target must succeed on a Constitution saving throw (DC 8 plus your Constitution modifier and proficiency bonus) or become afflicted with your plague for 1 minute.</p>
+            <p class="indent">While afflicted, the target has disadvantage on attack rolls and ability checks and takes 1d4 poison damage at the start of each of its turns. The target repeats the save at the end of each of its turns, ending the plague on itself on a success.</p>
+            <p class="indent">Once you use this trait, you can’t do so again until you finish a long rest.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Ability Score Improvement" name="Ability Score Improvement Option (Plagueborn)" supports="Custom Ability Score Improvement Option" />
+            <grant type="Racial Feature" id="ID_INTERNAL_RACIAL_TRAIT_TYPE_HUMANOID" />
+            <grant type="Size" id="ID_SIZE_MEDIUM" />
+            <stat name="innate speed" value="30" bonus="base" />
+            <stat name="innate speed:climb" value="innate speed" bonus="base" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_BORN_IN_FILTH" />
+            <grant type="Vision" id="ID_VISION_DARKVISION" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_INFECTED_CUNNING" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_PLAGUE_BEARER" />
+            <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+            <select type="Language" name="Language (Plagueborn)" supports="Standard||Exotic" />
+        </rules>
+    </element>
+    
+    <element name="Born in Filth" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_BORN_IN_FILTH">
+        <description>
+            <p>You have advantage on saving throws against diseases, or to avoid or end the poisoned condition on yourself.</p>
+        </description>
+        <sheet>
+            <description>You have advantage on saving throws against diseases, or to avoid or end the poisoned condition on yourself.</description>
+        </sheet>
+    </element>
+
+    <element name="Infected Cunning" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_INFECTED_CUNNING">
+        <description>
+            <p>The plague you carry binds you to rats and imparts their cunning. You gain proficiency in the Deception or Stealth skill.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Proficiency" name="Skill Proficiecny (Infected Cunning)" supports="ID_PROFICIENCY_SKILL_DECEPTION|ID_PROFICIENCY_SKILL_STEALTH" />
+        </rules>
+    </element>
+
+    <element name="Plague Bearer" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_PLAGUE_BEARER">
+        <description>
+            <p>When you hit a creature with an attack roll, you can magically spread your plague to the target. The target must succeed on a Constitution saving throw (DC 8 plus your Constitution modifier and proficiency bonus) or become afflicted with your plague for 1 minute.</p>
+            <p class="indent">While afflicted, the target has disadvantage on attack rolls and ability checks and takes 1d4 poison damage at the start of each of its turns. The target repeats the save at the end of each of its turns, ending the plague on itself on a success.</p>
+            <p class="indent">Once you use this trait, you can’t do so again until you finish a long rest.</p>
+        </description>
+        <sheet usage="1/Long Rest">
+            <description>When you hit a creature with an attack roll, the target must succeed on a DC {{plague bearer:dc}} Constitution saving throw or become afflicted for 1 minute. While afflicted, the target has disadvantage on attack rolls and ability checks and takes 1d4 poison damage at the start of each of its turns. The target repeats the save at the end of each of it's turns, ending the affliction on iself on a success.</description>
+        </sheet>
+        <rules>
+            <stat name="plague bearer:dc" value="8" />
+			<stat name="plague bearer:dc" value="constitution:modifier" />
+			<stat name="plague bearer:dc" value="proficiency" />
+        </rules>
+    </element>
+</elements>
