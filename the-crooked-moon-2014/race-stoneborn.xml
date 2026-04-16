@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Stoneborn</name>
+        <update version="0.0.1">
+            <file name="race-stoneborn.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/race-stoneborn.xml" />
+        </update>
+    </info>
+    
+    <element name="Stoneborn" type="Race" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACE_STONEBORN">
+        <description>
+            <p>Stoneborn are a gargoyle-like species native to Pholsense, usually meticulously carved by the lord of the province, Archbishop Danton Alexandre Renault. Blessed by the divine power known as the Silver Path, these people can call upon the godliness that suffuses their construction. In a domain of darkness, they have looked to the light of their god to build a civilization that attempts to uphold what is good and lawful at all costs.</p>
+            <p class="indent">Their stony skin matches the same hue and pattern as the stone they were carved from. While all of their kind have broad wings that carry their dense, heavy bodies, their biology can evoke a wide variety of creatures—including bats, fiends, dragons, birds, angels, dogs, and lizards— often combining features into a chimeric blend. They usually live for 300 years before crumbling into rubble.</p>
+            <h4>STONEBORN TRAITS</h4>
+            <p>You have the following racial traits.</p>
+            <p class="indent"><b><i>Creature Type.</i></b> You are a Construct.</p>
+            <p class="indent"><b><i>Size.</i></b> You are Medium (about 4-7 feet tall) or Small (about 3-4 feet tall). You choose the size when you select this species.</p>
+            <p class="indent"><b><i>Speed.</i></b> Your walking speed is 30 feet, and you have a flying speed equal to half your walking speed.</p>
+            <p class="indent"><b><i>Argent Gleam.</i></b> As a bonus action, you can channel a mote of the Silver Path’s light with your choice of one of the following options:</p>
+            <ul>
+                <li>PATH'S GRACE. You cast the <i>Bless</i> spell, requiring no material components.</li>
+                <li>ZEALOUS CHARGE. You take the Dash action. The first time you make an attack roll before the end of your turn, on a hit or miss, the target takes an extra 2d6 radiant damage.</li>
+            </ul>
+            <p class="indent">Once you use this trait's bonus action, you can't do so again until you finish a long rest.</p>
+            <p class="indent"><b><i>Silver Bulwark.</i></b> You can call upon the Silver Path to protect you. When you take bludgeoning, piercing, or slashing damage, you can use your reaction to gain resistance to those three damage types until the start of your next turn. Once you use this trait, you can’t do so again until you finish a short or long rest.</p>
+            <p class="indent"><b><i>Watchful Senses.</i></b> You gain proficiency in the Insight, Perception, or Survival skill.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Ability Score Improvement" name="Ability Score Improvement Option (Stoneborn)" supports="Custom Ability Score Improvement Option" />
+            <grant type="Racial Feature" id="ID_INTERNAL_RACIAL_TRAIT_TYPE_CONSTRUCT" />
+            <grant type="Size" id="ID_SIZE_MEDIUM" />
+            <stat name="innate speed" value="30" bonus="base" />
+            <stat name="innate speed:fly" value="15" bonus="base" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_ARGENT_GLEAM" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_SILVER_BULWARK" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_WATCHFUL_SENSES" />
+            <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+            <select type="Language" name="Language (Stoneborn)" supports="Standard||Exotic" />
+        </rules>
+    </element>    
+    
+    <element name="Argent Gleam" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_ARGENT_GLEAM">
+        <description>
+            <p class="indent">As a bonus action, you can channel a mote of the Silver Path’s light with your choice of one of the following options:</p>
+            <ul>
+                <li>PATH'S GRACE. You cast the <i>Bless</i> spell, requiring no material components.</li>
+                <li>ZEALOUS CHARGE. You take the Dash action. The first time you make an attack roll before the end of your turn, on a hit or miss, the target takes an extra 2d6 radiant damage.</li>
+            </ul>
+            <p class="indent">Once you use this trait's bonus action, you can't do so again until you finish a long rest.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Racial Trait" name="Argent Gleam (Stoneborn)" supports="ID_LOA_TCM14_RACIAL_TRAIT_PATHS_GRACE|ID_LOA_TCM14_RACIAL_TRAIT_ZEALOUS_CHARGE" />
+        </rules>
+    </element>
+    <element name="Path's Grace" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_PATHS_GRACE">
+        <description>
+            <p>You cast the <i>Bless</i> spell, requiring no material component.</p>
+        </description>
+        <sheet action="Bonus Action" usage="1/Long Rest">
+            <description>You cast the <i>Bless</i> spell, requiring no material components</description>
+        </sheet>
+    </element>
+    <element name="Zealous Charge" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_ZEALOUS_CHARGE">
+        <description>
+            <p>You take the Dash action. The first time you make an attack roll before the end of your turn, on a hit or miss, the target takes an extra 2d6 radiant damage.</p>
+        </description>
+        <sheet action="Bonus Action" usage="1/Long Rest">
+            <description>You take the Dash action. The first time you make an attack roll before the end of your turn, on a hit or miss, the target takes an extra 2d6 radiant damage.</description>
+        </sheet>
+    </element>
+
+    <element name="Silver Bulwark" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_SILVER_BULWARK">
+        <description>
+            <p>You can call upon the Silver Path to protect you. When you take bludgeoning, piercing, or slashing damage, you can use your reaction to gain resistance to those three damage types until the start of your next turn. Once you use this trait, you can’t do so again until you finish a short or long rest.</p>
+        </description>
+        <sheet action="Reaction" usage="1/Rest">
+            <description>When you take bludgeoning, piercing, or slashing damage, you can gain resistance to those three damage types until the start of your next turn.</description>
+        </sheet>
+    </element>
+
+    <element name="Watchful Senses" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_WATCHFUL_SENSES">
+        <description>
+            <p>_______</p>
+            <p class="indent">_______</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Proficiency" name="Skill Proficiency (Watchful Senses)" supports="ID_PROFICIENCY_SKILL_INSIGHT|ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_SURVIVAL" />
+        </rules>
+    </element>
+</elements>
