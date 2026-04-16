@@ -32,7 +32,7 @@
             <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_MOMENT_OF_REMEMBERANCE" />
             <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_SOUL_OF_REVELRY" />
             <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
-            <select type="Language" name="Language (Plagueborn)" supports="Standard||Exotic" />
+            <select type="Language" name="Language (Relicborn)" supports="Standard||Exotic" />
         </rules>
     </element>
 
