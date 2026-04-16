@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Relicborn</name>
+        <update version="0.0.1">
+            <file name="race-relicborn.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/race-relicborn.xml" />
+        </update>
+    </info>
+    
+    <element name="Relicborn" type="Race" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACE_RELICBORN">
+        <description>
+            <p>Relicborn are a skeleton-like species native to Kalero, generally emerging from the numerous tombs and crypts that line the canyon walls of the province. They thrive in a culture of celebration and remembrance, which infuses the very essence of every member of the species. Dancing between the energy of a vivacious party and the serenity of peaceful reflection, this folk holds a deep appreciation for both the living and the dead.</p>
+            <p class="indent">They appear as skeletons decorated with a wide array of vibrant colors, patterns, and styles, and their bones are encased in a translucent, glowing substance that provides them with a similar mass and shape to other Humanoid species, allowing them to comfortably wear clothing and armor. Some relicborn can even grow hair from their skulls, which is often shaped into bombastic styles.</p>
+            <h4>RELICBORN TRAITS</h4>
+            <p>You have the following racial traits.</p>
+            <p class="indent"><b><i>Creature Type.</i></b> You are an Undead.</p>
+            <p class="indent"><b><i>Size.</i></b> You are Medium (about 4-6 feet tall).</p>
+            <p class="indent"><b><i>Speed.</i></b> Your walking speed is 30 feet.</p>
+            <p class="indent"><b><i>Dance of Death.</i></b> As a bonus action, you can make a DC 15 Charisma (musical instrument or Performance) check. If you succeed, the next attack roll you make before the end of your turn has advantage. If you succeed on the check by 5 or more, you can roll one of your Hit Dice (without expending it) and gain temporary hit points equal to the number rolled.</p>
+            <p class="indent"><b><i>Eternal Party.</i></b> You don’t need to sleep, and you can finish a long rest in 4 hours if you spend those hours enjoying revelry, such as telling stories or playing music.</p>
+            <p class="indent"><b><i>Moment of Remembrance.</i></b> When another creature you can see within 30 feet of you fails an ability check, attack roll, or saving throw, you can use your reaction to let the target add 1d4 to the total, potentially causing it to succeed. Once this trait changes a failed roll into a success, you can’t use it again until you finish a short or long rest.</p>
+            <p class="indent"><b><i>Soul of Revelry.</i></b> You gain proficiency in the Performance skill or with one kind of musical instrument.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Ability Score Improvement" name="Ability Score Improvement Option (Relicborn)" supports="Custom Ability Score Improvement Option" />
+            <grant type="Racial Feature" id="ID_INTERNAL_RACIAL_TRAIT_TYPE_UNDEAD" />
+            <grant type="Size" id="ID_SIZE_MEDIUM" />
+            <stat name="innate speed" value="30" bonus="base" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_DANCE_OF_DEATH" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_ETERNAL_PARTY" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_MOMENT_OF_REMEMBERANCE" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_SOUL_OF_REVELRY" />
+            <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+            <select type="Language" name="Language (Plagueborn)" supports="Standard||Exotic" />
+        </rules>
+    </element>
+
+    <element name="Dance of Death" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_DANCE_OF_DEATH">
+        <description>
+            <p>As a bonus action, you can make a DC 15 Charisma (musical instrument or Performance) check. If you succeed, the next attack roll you make before the end of your turn has advantage. If you succeed on the check by 5 or more, you can roll one of your Hit Dice (without expending it) and gain temporary hit points equal to the number rolled.</p>
+        </description>
+        <sheet action="Bonus Action">
+            <description>You make a DC 15 Charisma (musical instrument or Performance) check. If you succeed, the next attack roll you make before the end of your turn had advantage. If you succeed on the check by 5 or more, you can roll one of your Hit Die (without expending it) and gain temporary hit points equal to the number rolled.</description>
+        </sheet>
+    </element>
+
+    <element name="Eternal Party" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_ETERNAL_PARTY">
+        <description>
+            <p>You don’t need to sleep, and you can finish a long rest in 4 hours if you spend those hours enjoying revelry, such as telling stories or playing music.</p>
+        </description>
+        <sheet>
+            <description>You don’t need to sleep, and you can finish a long rest in 4 hours if you spend those hours enjoying revelry, such as telling stories or playing music.</description>
+        </sheet>
+    </element>
+
+    <element name="Moment of Remembrance" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_MOMENT_OF_REMEMBERANCE">
+        <description>
+            <p>When another creature you can see within 30 feet of you fails an ability check, attack roll, or saving throw, you can use your reaction to let the target add 1d4 to the total, potentially causing it to succeed. Once this trait changes a failed roll into a success, you can’t use it again until you finish a short or long rest.</p>
+        </description>
+        <sheet action="Reaction">
+            <description>When another creature you can see within 30 feet of you fails an ability check, attack roll, or saving throw, you can let the target add 1d4 to the total, potentially causing it to succeed. Once this trait changes a failed roll into a success, you can’t use it again until you finish a short or long rest.</description>
+        </sheet>
+    </element>
+
+    <element name="Soul of Revelry" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_SOUL_OF_REVELRY">
+        <description>
+            <p>You gain proficiency in the Performance skill or with one kind of musical instrument.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+        <select type="Proficiency" name="Skill or Instrument (Soul of Revelry)" supports="ID_PROFICIENCY_SKILL_PERFORMANCE|ID_PROFICIENCY_TOOL_PROFICIENCY_BAGPIPES|ID_PROFICIENCY_TOOL_PROFICIENCY_DRUM|ID_PROFICIENCY_TOOL_PROFICIENCY_DULCIMER|ID_PROFICIENCY_TOOL_PROFICIENCY_FLUTE|ID_PROFICIENCY_TOOL_PROFICIENCY_LUTE|ID_PROFICIENCY_TOOL_PROFICIENCY_LYRE|ID_PROFICIENCY_TOOL_PROFICIENCY_HORN|ID_PROFICIENCY_TOOL_PROFICIENCY_PAN_FLUTE|ID_PROFICIENCY_TOOL_PROFICIENCY_SHAWM|ID_PROFICIENCY_TOOL_PROFICIENCY_VIOL" />
+        </rules>
+    </element>
+</elements>
