@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Threadborn</name>
+        <update version="0.0.1">
+            <file name="race-threadborn.xml" url="https://raw.githubusercontent.com/NotTheTom/the-crooked-moon/main/the-crooked-moon-2014/race-threadborn.xml" />
+        </update>
+    </info>
+    
+    <element name="Threadborn" type="Race" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACE_THREADBORN">
+        <description>
+            <p>Threadborn are a doll-like species native to Picco, most often built with love by Blinski II, the master toymaker and lord of the province. In a land that is mostly fabricated and constructed to maximize the fun of all who live there, the essence of joy, thrill, and friendship are woven into a threadborn’s very nature. They cherish the bonds made between loved ones and always maintain a childlike wonder and whimsy, no matter one’s age.</p>
+            <p class="indent">As living dolls, these folk are constructed with a variety of materials, including cloth, wood, metal, porcelain, stuffing, yarn, and anything else a toy might be made of. With the most varied body shapes of all Druskenvald’s species, each threadborn represents a unique representation of fun. They usually live for 100 years before falling apart and needing to be rebuilt.</p>
+            <h4>THREADBORN TRAITS</h4>
+            <p>You have the following racial traits.</p>
+            <p class="indent"><b><i>Creature Type.</i></b> You are a Construct.</p>
+            <p class="indent"><b><i>Size.</i></b> You are Medium (about 4-7 feet tall) or Small (about 2-4 feet tall). You choose the size when you select this species.</p>
+            <p class="indent"><b><i>Speed.</i></b> Your walking speed is 30 feet.</p>
+            <p class="indent"><b><i>Ball jointed.</i></b> You can move through a space as narrow as 1 foot wide as if it were difficult terrain.</p>
+            <p class="indent"><b><i>Innocent Mind.</i></b> You have resistance to psychic damage.</p>
+            <p class="indent"><b><i>Sewn Nature.</i></b> You don't require air, food, or drink.</p>
+            <p class="indent"><b><i>Soothing Heart.</i></b> You know the <i>Guidance</i> cantrip. Starting at 3rd level, you can cast the <i>Sanctuary</i> spell using this trait, and starting at 5th level, you can cast the <i>Calm Emotions</i> spell using this trait without a material component. Once you cast <i>Sanctuary</i> or <i>Calm Emotions</i> with this trait, you can’t cast that spell with it again until you finish a long rest. When you cast <i>Calm Emotions</i> in this way, it can target creatures of any type. You can also cast either spell using any spell slots you have of the appropriate level.</p>
+            <p class="indent">Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select this species).</p>
+            <p class="indent"><b><i>You've Got a Friend.</i></b> When a creature you can see within 30 feet of yourself fails an ability check using a skill, you can use your reaction to cast Guidance on the creature, ignoring the spell’s normal range. The creature can add the spell’s 1d4 to its ability check, potentially causing it to succeed. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <select type="Ability Score Improvement" name="Ability Score Improvement Option (Threadborn)" supports="Custom Ability Score Improvement Option" />
+            <grant type="Racial Feature" id="ID_INTERNAL_RACIAL_TRAIT_TYPE_CONSTRUCT" />
+            <select type="Size" name="Size (Threadborn)" supports="ID_SIZE_SMALL|ID_SIZE_MEDIUM" />
+            <stat name="innate speed" value="30" bonus="base" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_BALL_JOINTED" />
+            <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_PSYCHIC" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_SEWN_NATURE" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_SOOTHING_HEART" />
+            <grant type="Racial Trait" id="ID_LOA_TCM14_RACIAL_TRAIT_YOUVE_GOT_A_FRIEND" />
+            <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+            <select type="Language" name="Language (Threadborn)" supports="Standard||Exotic" />
+        </rules>
+    </element>
+
+    <element name="Ball Jointed" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_BALL_JOINTED">
+        <description>
+            <p>You can move through a space as narrow as 1 foot wide as if it were difficult terrain.</p>
+        </description>
+        <sheet>
+            <description>You can move through a space as narrow as 1 foot wide as if it were difficult terrain.</description>
+        </sheet>
+    </element>
+
+    <element name="Sewn Nature" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_SEWN_NATURE">
+        <description>
+            <p>You don't require air, food, or drink.</p>
+        </description>
+        <sheet>
+            <description>You don't require air, food, or drink.</description>
+        </sheet>
+    </element>
+
+    <element name="Soothing Heart" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_SOOTHING_HEART">
+        <description>
+            <p>You know the <i>Guidance</i> cantrip. Starting at 3rd level, you can cast the <i>Sanctuary</i> spell using this trait, and starting at 5th level, you can cast the <i>Calm Emotions</i> spell using this trait without a material component. Once you cast <i>Sanctuary</i> or <i>Calm Emotions</i> with this trait, you can’t cast that spell with it again until you finish a long rest. When you cast <i>Calm Emotions</i> in this way, it can target creatures of any type. You can also cast either spell using any spell slots you have of the appropriate level.</p>
+            <p class="indent">Intelligence, Wisdom, or Charisma is your spellcasting ability for the spells you cast with this trait (choose the ability when you select this species).</p>
+        </description>
+        <sheet display="false" />
+        <rules>
+            <grant type="Spell" id="ID_PHB_SPELL_GUIDANCE" />
+            <grant type="Spell" id="ID_PHB_SPELL_SANCTUARY" level="3" />
+            <grant type="Spell" id="ID_PHB_SPELL_CALM_EMOTIONS" level="5" />
+            <select type="Racial Trait" name="Spellcasting Ability (Soothing Heart)" supports="ID_LOA_TCM14_RACIAL_TRAIT_SOOTHING_HEART_INTELLIGENCE|ID_LOA_TCM14_RACIAL_TRAIT_SOOTHING_HEART_WISDOM|ID_LOA_TCM14_RACIAL_TRAIT_SOOTHING_HEART_CHARISMA" />
+        </rules>
+    </element>
+    <element name="Intelligence" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_SOOTHING_HEART_INTELLIGENCE">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for this feature’s spells is Intelligence.</p>
+		</description>
+		<sheet alt="Soothing Heart">
+			<description>You know the Guidance cantrip. Intelligence is your spellcasting ability for these spells.</description>
+			<description level="3">You know the Guidance cantrip. You can cast the Sanctuary spell once per long rest without using a spell slot or material components. You can also cast this spell using a spell slot. Intelligence is your spellcasting ability for these spells.</description>
+			<description level="5">You know the Guidance cantrip. You can cast the Sanctuary spell and the Calm Emotions spell, targetting any creature type, once per long rest without using a spell slot or material components. You can also cast this spell using a spell slot. Intelligence is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+	<element name="Wisdom" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_SOOTHING_HEART_WISDOM">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for this feature’s spells is Wisdom.</p>
+		</description>
+		<sheet alt="Soothing Heart">
+            <description>You know the Guidance cantrip. Wisdom is your spellcasting ability for these spells.</description>
+			<description level="3">You know the Guidance cantrip. You can cast the Sanctuary spell once per long rest without using a spell slot or material components. You can also cast this spell using a spell slot. Wisdom is your spellcasting ability for these spells.</description>
+			<description level="5">You know the Guidance cantrip. You can cast the Sanctuary spell and the Calm Emotions spell, targetting any creature type, once per long rest without using a spell slot or material components. You can also cast this spell using a spell slot. Wisdom is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+	<element name="Charisma" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_SOOTHING_HEART_CHARISMA">
+		<compendium display="false" />
+		<description>
+			<p>Your spellcasting ability for this feature’s spells is Charisma.</p>
+		</description>
+		<sheet alt="Soothing Heart">
+			<description>You know the Guidance cantrip. Charisma is your spellcasting ability for these spells.</description>
+			<description level="3">You know the Guidance cantrip. You can cast the Sanctuary spell once per long rest without using a spell slot or material components. You can also cast this spell using a spell slot. Charisma is your spellcasting ability for these spells.</description>
+			<description level="5">You know the Guidance cantrip. You can cast the Sanctuary spell and the Calm Emotions, targetting any creature type, spell once per long rest without using a spell slot or material components. You can also cast this spell using a spell slot. Charisma is your spellcasting ability for these spells.</description>
+		</sheet>
+	</element>
+
+    <element name="You've got a Friend" type="Racial Trait" source="The Crooked Moon 2014" id="ID_LOA_TCM14_RACIAL_TRAIT_YOUVE_GOT_A_FRIEND">
+        <description>
+            <p>When a creature you can see within 30 feet of yourself fails an ability check using a skill, you can use your reaction to cast Guidance on the creature, ignoring the spell’s normal range. The creature can add the spell’s 1d4 to its ability check, potentially causing it to succeed. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+        </description>
+        <sheet action="Reaction" usage="{{proficiency}}/Long Rest">
+            <description>When a creature you can see within 30 feet of yourself fails an ability check using a skill, you can cast Guidance on the creature, ignoring the spell’s normal range. The creature can add the spell’s 1d4 to its ability check, potentially causing it to succeed.</description>
+        </sheet>
+    </element>
+</elements>
